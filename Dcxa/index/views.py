@@ -19,3 +19,6 @@ def dashboard(request):
 
 def update_profile(request):
     return render(request,"update_profile.html")
+
+def add_new_person(request):
+    return render(request,"add_new_person.html")
