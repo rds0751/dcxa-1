@@ -5,5 +5,7 @@ from index import views
 urlpatterns = [
     path('', views.signin),
     path('signup/',views.signup),
+    path('forgotpassword/',views.forgotpassword),
+    path('loginwithotp/',views.loginwithotp),
     path('admin/',admin.site.urls)
 ]

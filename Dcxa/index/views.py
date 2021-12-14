@@ -7,3 +7,10 @@ def signin(request):
     
 def signup(request):
     return render(request,'sign-up.html')    
+
+def forgotpassword(request):
+    return render(request, 'forgotpassword.html')
+
+def loginwithotp(request):
+    return render(request,"loginwithotp.html")
+    
