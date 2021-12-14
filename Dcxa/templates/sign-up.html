@@ -1,33 +1,8 @@
+{% extends 'base.html' %} 
+{% block title %}Sign-up {% endblock title %}
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Description" content="DCXA Admin & Dashboard Template">
-    <meta name="Author" content="Spruko Technologies Private Limited">
-    <meta name="Keywords" content="cryptocurrency, dashboard, admin, crypto, ico, bootstrap admin template, admin template, bootstrap dashboard template, crypto dashboard, cryptocurrency dashboard, ico dashboard, crypto admin, dashboard cryptocurrency, cryptocurrency trading dashboard, crypto dashboard template " />
     {%load static%}
-    <title>DCXa Coin - Registration </title>
-    <link rel="icon" href="{%static 'assets/img/brand/favicon.png'%}" type="image/x-icon" />
-    <link href="{%static 'assets/css/icons.html'%}" rel="stylesheet">
-    <link href="{%static 'assets/plugins/fontawesome-free/css/all.min.css'%}" rel="stylesheet">
-    <link href="{%static 'assets/plugins/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
-    <link href="{%static 'assets/plugins/typicons.font/typicons.css'%}" rel="stylesheet">
-    <link href="{%static 'assets/plugins/feather/feather.css'%}" rel="stylesheet">
-    <link href="{%static 'assets/plugins/flag-icon-css/css/flag-icon.min.css'%}" rel="stylesheet">
-    <link href="{%static 'assets/css/style.css'%}" rel="stylesheet">
-    <link href="{%static 'assets/css/style-dark.css'%}" rel="stylesheet">
-    <link href="{%static 'assets/css/skin-modes.css'%}" rel="stylesheet">
-    <link href="{%static 'assets/css/animate.css'%}" rel="stylesheet">
-    <link href="{%static 'assets/switcher/css/switcher.css'%}" rel="stylesheet">
-    <link rel="stylesheet" href="{%static 'assets/switcher/demo.css'%}">
-    <link href="{%static 'assets/css/alertify.core.css'%}" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
 
     <style type="text/css'%}">
         .iti.iti--allow-dropdown {
@@ -37,10 +12,7 @@
     <script type="text/javascript">
 
 </script>
-</head>
-
-<body class="main-body" id="bdy">
-
+{%block body %}
     <!-- Loader -->
     <div id="global-loader" class="light-loader">
         <img src="{%static 'assets/img/loaders/loader.svg'%}" class="loader-img" alt="Loader">
@@ -189,17 +161,6 @@ Sys.Application.add_init(function() {
         </div>
     </div>
 
-    <script src="{%static 'assets/plugins/jquery/jquery.min.js'%}"></script>
-    <script src="{%static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
-    <script src="{%static 'assets/plugins/ionicons/ionicons.js'%}"></script>
-    <script src="{%static 'assets/plugins/moment/moment.js'%}"></script>
-    <script src="{%static 'assets/js/eva-icons.min.js'%}"></script>
-    <script src="{%static 'assets/plugins/rating/jquery.rating-stars.js'%}"></script>
-    <script src="{%static 'assets/plugins/rating/jquery.barrating.js'%}"></script>
-    <script src="{%static 'assets/js/custom.js'%}"></script>
-    <script src="{%static 'assets/switcher/js/switcher.js'%}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js'%}"></script>
-    <script src="{% static 'assets/js/alertify.min.js'%}"></script>
     <script type="text/javascript">
         var phoneInputField = null;
         var phoneInput = null;
@@ -349,6 +310,6 @@ Sys.Application.add_init(function() {
 
 
 
-</body>
 
-</html>
+
+    {% endblock body %}
