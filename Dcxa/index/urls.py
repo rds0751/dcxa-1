@@ -10,5 +10,6 @@ urlpatterns = [
     path('dashboard/',views.dashboard),
     path('update_profile/',views.update_profile),
     path('add_new_person/',views.add_new_person),
+    path('buy_wallet/',views.buy_wallet),
     path('admin/',admin.site.urls)
 ]
