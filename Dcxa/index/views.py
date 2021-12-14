@@ -16,3 +16,6 @@ def loginwithotp(request):
 
 def dashboard(request):
     return render(request,"dashboard.html")
+
+def update_profile(request):
+    return render(request,"update_profile.html")
