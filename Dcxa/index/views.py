@@ -13,4 +13,6 @@ def forgotpassword(request):
 
 def loginwithotp(request):
     return render(request,"loginwithotp.html")
-    
+
+def dashboard(request):
+    return render(request,"dashboard.html")
