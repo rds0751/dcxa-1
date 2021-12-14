@@ -9,5 +9,6 @@ urlpatterns = [
     path('loginwithotp/',views.loginwithotp),
     path('dashboard/',views.dashboard),
     path('update_profile/',views.update_profile),
+    path('change_password/',views.change_password),
     path('admin/',admin.site.urls)
 ]

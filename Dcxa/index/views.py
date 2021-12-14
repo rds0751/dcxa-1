@@ -19,3 +19,6 @@ def dashboard(request):
 
 def update_profile(request):
     return render(request,"update_profile.html")
+
+def change_password(request):
+    return render(request,"change_password.html")
