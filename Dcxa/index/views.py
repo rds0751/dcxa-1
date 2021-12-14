@@ -25,3 +25,6 @@ def change_password(request):
   
 def add_new_person(request):
     return render(request,"add_new_person.html")
+
+def buy_wallet(request):
+    return render(request,"buy_wallet.html")
