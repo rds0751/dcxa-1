@@ -44,7 +44,7 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side frame
 </div>
         <!-- Loader -->
         <div id="global-loader" class="light-loader">
-            <img src="../assets/img/loaders/loader.svg" class="loader-img" alt="Loader">
+            <img src="{% static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
         </div>
         <!-- /Loader -->
         <!-- main-signin-wrapper -->
@@ -54,13 +54,13 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side frame
                     <div class="wd-md-50p login d-none d-md-flex page-signin-style p-5 text-white align-items-center justify-content-center">
                         <div class="my-auto authentication-pages d-flex justify-content-center align-items-center">
                             <div style="max-width: 380px;">
-                                <img src="../assets/img/brand/logo-white.png" class=" m-0 mb-4" alt="logo">
+                                <img src="{% static 'assets/img/brand/logo-white.png'%}" class=" m-0 mb-4" alt="logo">
                                 <h5 class="mb-4">Invest Money Right Way with Token</h5>
                                 <p class="mb-5">
                                     Create a great strategy to get more profit by investing in DCXa tokens. Additionally, there are some crypto experts you can use to get some opinions that may be beneficial before expanding your crypto investment.
                                 </p>
                                 <a href="https://dcxa.io/blog" class="btn btn-outline-warning">Learn More</a>
-				<img src="../assets/img/three-coins.png" class="mt-4">
+				<img src="{% static 'assets/img/three-coins.png'%}" class="mt-4">
                             </div>
                         </div>
                     </div>
