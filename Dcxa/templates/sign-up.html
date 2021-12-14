@@ -1,76 +1,354 @@
-{% extends 'base-fullscreen.html' %}
 
-{% block title %} Sign UP {% endblock title %}
 
-<!-- Specific CSS goes HERE -->
-{% block stylesheets %}{% endblock stylesheets %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-{% block content %}
 
-  <section>
-    <div class="page-header section-height-75">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
-            <div class="card card-plain mt-8">
-              <div class="card-header pb-0 text-left bg-transparent">
-                <h3 class="font-weight-bolder text-info text-gradient">Sign UP</h3>
-                <p class="mb-0">Please provide your credentials</p>
-              </div>
-              <div class="card-body">
-                <form role="form text-left">
-                  <label>Username</label>
-                  <div class="mb-3">
-                    <input class="form-control" placeholder="Username" aria-label="Username">
-                  </div>
-                  <label>Email</label>
-                  <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
-                  </div>
-                  <label>Password</label>
-                  <div class="mb-3">
-                    <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
-                  </div>
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
-                    <label class="form-check-label" for="rememberMe">Terms</label>
-                  </div>
-                  <div class="text-center">
-                    <button type="button" class="btn bg-gradient-info w-100 mt-4 mb-0">Sign UP</button>
-                  </div>
-                </form>
-              </div>
-              <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                <p class="mb-4 text-sm mx-auto">
-                  Already have an account?
-                  <a href="/sign-in.html" class="text-info text-gradient font-weight-bold">Sign IN</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
-              <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url('/static/assets/img/curved-images/curved6.jpg')"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="DCXA Admin & Dashboard Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="Keywords" content="cryptocurrency, dashboard, admin, crypto, ico, bootstrap admin template, admin template, bootstrap dashboard template, crypto dashboard, cryptocurrency dashboard, ico dashboard, crypto admin, dashboard cryptocurrency, cryptocurrency trading dashboard, crypto dashboard template " />
+    {%load static%}
+    <title>DCXa Coin - Registration </title>
+    <link rel="icon" href="{%static 'assets/img/brand/favicon.png'%}" type="image/x-icon" />
+    <link href="{%static 'assets/css/icons.html'%}" rel="stylesheet">
+    <link href="{%static 'assets/plugins/fontawesome-free/css/all.min.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/plugins/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/plugins/typicons.font/typicons.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/plugins/feather/feather.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/plugins/flag-icon-css/css/flag-icon.min.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/css/style.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/css/style-dark.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/css/skin-modes.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/css/animate.css'%}" rel="stylesheet">
+    <link href="{%static 'assets/switcher/css/switcher.css'%}" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'assets/switcher/demo.css'%}">
+    <link href="{%static 'assets/css/alertify.core.css'%}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+    <style type="text/css'%}">
+        .iti.iti--allow-dropdown {
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+
+</script>
+</head>
+
+<body class="main-body" id="bdy">
+
+    <!-- Loader -->
+    <div id="global-loader" class="light-loader">
+        <img src="{%static 'assets/img/loaders/loader.svg'%}" class="loader-img" alt="Loader">
     </div>
-  </section>
+    <!-- /Loader -->
 
-{% endblock content %}
 
-<!-- Specific JS goes HERE --> 
-{% block javascripts %}
 
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    <!-- main-signin-wrapper -->
+    <div class="my-auto page page-h">
+        <div class="main-signin-wrapper">
+            <div class="main-card-signin d-md-flex wd-100p">
+                <div class="wd-md-50p login d-none d-md-block page-signin-style p-5 text-white">
+                    <div class="my-auto authentication-pages">
+                        <div>
+                            <img src="{%static 'assets/img/brand/logo-white.png'%}" class=" m-0 mb-4" alt="logo">
+                            <h5 class="mb-4">Invest Money Right Way with Token</h5>
+                            <p class="mb-5">
+                                Create a great strategy to get more profit by investing in DCXa tokens. Additionally, there are some crypto experts you can use to get some opinions that may be beneficial before expanding your crypto investment.
+                            </p>
+                            <a href="http://dcxa.io/blog" target="_blank" style="border-radius: .5rem; background-image: linear-gradient(310deg,#141727 0%,#3A416F 100%);" class="btn btn-danger">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sign-up-body wd-md-50p">
+                    <div class="main-signin-header">
+                        <h2>Hello Mr/s. Anonymous! </h2>
+                        <h4>You can apply now for a new DCXa card. </h4>
+                        <form name="fr" method="post" action="./UserRegOpen.aspx" id="fr">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MDU5OTIxNjAPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCAgEPZBYEAhMPFgIeB1Zpc2libGVoZAIVDxYCHwFoZGSuRctzQE//ar4JSrfBjHdQw5hvyEFSGbRHBypGElUxyA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['fr'];
+if (!theForm) {
+    theForm = document.fr;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
     }
-  </script>
+}
+//]]>
+</script>
 
-{% endblock javascripts %}
+
+<script src="/WebResource.axd?d=f3B_zO2ET5BZu0NWd-VGKvhWRqxL8B-DDJwXVcSXVSoS_YMZb3ONJzLPMKGnxRcKjl8q1bAiXAAkSYfq1vMS_GnG-3PXDDo0Mzdbjb3OlSQ1&amp;t=637454068754849868" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/core.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/UserRegOpen,App_Web_q4jhjftr.ashx"></script>
+
+<script src="/ScriptResource.axd?d=zmiABBZHH6k-tBVvpkr0cIPuCp0gBJ7szRGvz7aYb2NipCiln2D5ZnlWKMknCn7_ebl3hUdDqPjbumT_A3PmLapdJtWF-qucPKpU3paRbgnYcVPi05UV8V3Vd6NCZu9gYWrMVy93A5MtRHI2sbgruouj6SwuER1OyX0T3zubex9H7KJUiMn4OaKo3F9ENyM80&amp;t=363be08" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=IQfcZPVQ7g_cFzXNdQETqBRWOM0zcL7RfV-2vfJFJUsaX7cqLTc1GU0L2sxZiq3jAWDuvROq0Ulxwz7kYyzrBLqw5ROPpN1sESRNyXzF89nQXt74R0rsd9K3aF5A4I522NLtro3IFWg844vzAHFN6s59Pgy3jnm5M4rBhHhoyVrrffpSuD-XaGhVulgJVfMU0&amp;t=363be08" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3CAB387F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAApXTVaRjQuqP7JtYoKU+k0qzHWT0NhF5f7Xm5lW/1wNjcLEB2UoLWpNBnJFX99K9wcxJq7FPlKOHFBhS9vJjXHQ5eHB/EIGph9sNfLtmNRkShRNA7q4iku9pYzjMtBTX0WtgSFbfExlPGWc3lgN911p7ikiig59OpcE7tk8oYbfDK5TmSCSiQuanF7W5BKmzA5iFQ1XQhIg65RAjTkn+OTknaOn5cvvKJODIATxmX5J10gEGl/jeaPPR8HUIE1cnPs=" />
+</div>
+                            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'fr', ['tUpdatePanel1',''], [], [], 90, '');
+//]]>
+</script>
+
+
+
+                            <div class="form-group">
+                                <label>Full Name (as per document)*</label>
+                                <input name="textname" id="textname" type="text" placeholder="Full Name" class="form-control" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label>Email*</label>
+                                <input name="txtemail" id="txtemail" type="text" placeholder="Email ID" class="form-control" required="" />
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>Mobile*</label>
+                                <input name="txtmobile" id="txtmobile" type="text" placeholder="Mobile Number" class="form-control" required="" />
+                                <input type="hidden" name="hidCountry" id="hidCountry" />
+                                <input type="hidden" name="hidCountryCode" id="hidCountryCode" />
+                                <input type="hidden" name="hidMobile" id="hidMobile" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Passcode*</label>
+                                <input name="textpwd" id="textpwd" type="password" placeholder="Passcode" class="form-control" required="" style="font-size: 15px;" />
+
+                            </div>
+                            <div class="form-group">
+                                <label>Passcode Check*</label>
+                                <input name="textcheckpwd" id="textcheckpwd" type="password" placeholder="Passcode" class="form-control" required="" style="font-size: 15px;" />
+
+                            </div>
+                            
+                            
+
+                            <input class="form-check-input" required="" type="checkbox" id="rememberMe" checked="">
+                            <label class="form-check-label" for="rememberMe">Terms</label>
+                            <div id="UpdatePanel1">
+	
+                                    <div id="ctl01" style="display:none;">
+		
+                                            <div class="global-loader light-loader">
+                                                <img src="{% static 'assets/img/loaders/loader.svg'%}" class="loader-img" alt="Loader">
+                                            </div>
+                                        
+	</div>
+
+                                    <input type="button" id="btnSaveJS" value="Apply for DCXa Card" class="btn btn-main-primary btn-block"
+                                        style="border-radius: .5rem; background-image: linear-gradient(310deg,#141727 0%,#656fb3 100%);" onclick="return validate()" />
+                                    <input type="submit" name="btnsave" value="Apply for DCXa Card" id="btnsave" type="submit" class="btn btn-main-primary btn-block" style="border-radius: .5rem; background-image: linear-gradient(310deg,#141727 0%,#656fb3 100%); display: none;" />
+                                
+</div>
+                        
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl01"));
+});
+//]]>
+</script>
+</form>
+                    </div>
+                    <div class="main-signup-footer mg-t-10;text-align: center !important;">
+                        <p>Already have a DCXa card? <a href="https://app.dcxa.io/Userlogin.aspx">Show DCXa Card </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{%static 'assets/plugins/jquery/jquery.min.js'%}"></script>
+    <script src="{%static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'assets/plugins/ionicons/ionicons.js'%}"></script>
+    <script src="{%static 'assets/plugins/moment/moment.js'%}"></script>
+    <script src="{%static 'assets/js/eva-icons.min.js'%}"></script>
+    <script src="{%static 'assets/plugins/rating/jquery.rating-stars.js'%}"></script>
+    <script src="{%static 'assets/plugins/rating/jquery.barrating.js'%}"></script>
+    <script src="{%static 'assets/js/custom.js'%}"></script>
+    <script src="{%static 'assets/switcher/js/switcher.js'%}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js'%}"></script>
+    <script src="{% static 'assets/js/alertify.min.js'%}"></script>
+    <script type="text/javascript">
+        var phoneInputField = null;
+        var phoneInput = null;
+        function ActivateCountryCode() {
+
+            phoneInputField = document.querySelector("#txtmobile");
+            phoneInput = window.intlTelInput(phoneInputField, {
+                preferredCountries: ["in", "us", "co", "de"],
+                utilsScript:
+                    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js'%}",
+            });
+
+            var phoneNumber = phoneInput.getSelectedCountryData();
+            $('#hidCountry').val(phoneNumber.name);
+            $('#hidCountryCode').val(phoneNumber.dialCode);
+            $('#hidMobile').val($("#txtmobile").val());
+        }
+        ActivateCountryCode();
+        function IsIntroExist() {
+
+            if ($('#txtintro').val() != "") {
+                var response = Gatimoduleproj.UserRegOpen.CheckIntro($('#txtintro').val());
+
+                if (response.value == "Distributor Does Not Exist !" || response.value == "Distributor Already Has Both Left And Right Side Members !") {
+                    $('#txtintro').val('');
+                    $('#txtintroname').val('');
+
+                    alertify.alert("Distributor Does Not Exist !");
+                    return false;
+                }
+                else {
+                    $('#txtintroname').val('');
+                    return true;
+                }
+            }
+            else {
+                return true;
+            }
+
+        }
+        function ChkMobile(str) {
+
+            if (str.value != "") {
+
+                if (str.length != 10) {
+                    alertify.alert("Mobile number should be 10 digit number.");
+                    document.getElementById("txtmobile").value = "";
+                    document.getElementById("txtmobile").focus();
+                    return false;
+                }
+
+            }
+            return true;
+        }
+        function ValidateEmail(str) {
+            if (str != '') {
+                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(str);
+            }
+        }
+        function vpass(Str) {
+            if (Str.value != "") {
+                if (Str.value != document.getElementById("txtpassword").value) {
+                    alertify.alert('Password and Confirm Password Should Be Same');
+                    Str.value = "";
+                    Str.focus();
+                    return false;
+                }
+            }
+        }
+        function ChkMember() {
+            if (document.getElementById("TxtMemberId").value != "") {
+                var response = Gatimoduleproj.UserRegOpen.ChkMember(document.getElementById("TxtMemberId").value);
+                if (response.value != "$") {
+                    alertify.alert("DistribuitorId Already Existed.\nPlease Enter Another DistributorId.");
+                    document.getElementById("TxtMemberId").value = "";
+                    document.getElementById("TxtMemberId").focus();
+                    return false;
+                }
+            }
+        }
+        function validate() {
+            const phoneNumber1 = phoneInput.getSelectedCountryData();
+
+            $('#hidCountry').val(phoneNumber1.name);
+            $('#hidCountryCode').val(phoneNumber1.dialCode);
+            $('#hidMobile').val($("#txtmobile").val())
+
+
+
+            if (document.getElementById("textname").value == "") {
+                alertify.alert("Please Enter Member Name");
+                document.getElementById("textname").focus();
+                return false;
+            }
+
+            if (document.getElementById("txtmobile").value == "") {
+                alertify.alert("Please Enter Mobile Number");
+                document.getElementById("txtmobile").focus();
+                return false;
+            }
+
+            if (!ChkMobile(document.getElementById("txtmobile").value)) {
+                return false;
+            }
+            if (document.getElementById("txtemail").value == "") {
+                alertify.alert("Please Enter Email ID");
+                document.getElementById("txtemail").focus();
+                return false;
+            }
+            if (!ValidateEmail(document.getElementById("txtemail").value)) {
+                alertify.alert("Invalid Email ID");
+                return false;
+            }
+            if (document.getElementById("textpwd").value == "") {
+                alertify.alert("Please Enter Passcode");
+                document.getElementById("textpwd").focus();
+                return false;
+            }
+            if (document.getElementById("textcheckpwd").value == "") {
+                alertify.alert("Please Enter in Confirm Passcode");
+                document.getElementById("textcheckpwd").focus();
+                return false;
+            }
+            if (document.getElementById("textpwd").value != "" && document.getElementById("textcheckpwd").value != "") {
+                if (document.getElementById("textpwd").value != document.getElementById("textcheckpwd").value) {
+                    alertify.alert("Passcode does not match");
+                    document.getElementById("textcheckpwd").focus();
+                    return false;
+                }
+
+            }
+
+            alertify.confirm("Are you sure, you want to submit?", function (e) {
+                if (e) {
+                    $('#btnsave').trigger('click');
+                } else {
+                    return false;
+                }
+            });
+
+
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
