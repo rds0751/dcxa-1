@@ -22,6 +22,9 @@ def update_profile(request):
 
 def change_password(request):
     return render(request,"change_password.html")
+
+def buy_tokens(request):
+    return render(request,"buy_tokens.html")
   
 def add_new_person(request):
     return render(request,"add_new_person.html")
