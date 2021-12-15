@@ -65,6 +65,10 @@ def buysip(request):
 
 def forex(request):
     return render(request, "forex.html")
+
 def wallet_transfer(request):
     return render(request,"wallet_transfer.html")
+
+def kyc(request):
+    return render(request,"kyc.html")
 
