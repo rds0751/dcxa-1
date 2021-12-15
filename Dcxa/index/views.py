@@ -71,7 +71,7 @@ def wallet_transfer(request):
 def ticket(request):
     return render(request, "ticket.html")
 
-  def kyc(request):
+def kyc(request):
     return render(request,"kyc.html")
 
 def ticket_status(request):
