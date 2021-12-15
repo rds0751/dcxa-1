@@ -17,6 +17,7 @@ urlpatterns = [
     path('directteam/',views.directteam),
     path('levelview/', views.levelview),
     path('roiview/', views.roiview),
+     path('wallet_transfer/', views.wallet_transfer),
     path('allteammember/', views.allteammember),
     path('treeview/', views.treeview)
 ]
