@@ -13,5 +13,10 @@ urlpatterns = [
     path('add_new_person/',views.add_new_person),
     path('buy_wallet/',views.buy_wallet),
     path('buy_tokens/',views.buy_tokens),
-    path('admin/',admin.site.urls)
+    path('admin/',admin.site.urls),
+    path('directteam/',views.directteam),
+    path('levelview/', views.levelview),
+    path('roiview/', views.roiview),
+    path('allteammember/', views.allteammember),
+    path('treeview/', views.treeview)
 ]
