@@ -68,7 +68,11 @@ def forex(request):
 
 def wallet_transfer(request):
     return render(request,"wallet_transfer.html")
+def ticket(request):
+    return render(request, "ticket.html")
 
-def kyc(request):
+  def kyc(request):
     return render(request,"kyc.html")
 
+def ticket_status(request):
+    return render(request,"ticket_status.html")

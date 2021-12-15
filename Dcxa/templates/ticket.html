@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="BRxMhRISiQkd467kl8HuKHM7DfWRK8xofVphwkW2">
+
+    <title>
+            Create Ticket
+ - DCXA
+    </title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://support.dcxa.io/logo/favicon.png">
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://support.dcxa.io/assets/libs/select2/dist/css/select2.min.css">
+
+        <link rel="stylesheet" href="https://support.dcxa.io/assets/css/floating_chat.css">
+
+    <link rel="stylesheet" href="https://support.dcxa.io/assets/css/site.css" id="stylesheet">
+    <link rel="stylesheet" href="https://support.dcxa.io/assets/css/stylesheet.css">
+    <link rel="stylesheet" href="https://support.dcxa.io/assets/css/ac.css">
+    </head>
+
+<body class="bg-gradient-primary">
+<div class="main-content">
+    <div class="container">
+        <div class="row justify-content-center">
+                <div class="col-lg-12 col-md-12">
+        <div class="card bg-secondary border-0 mt-6">
+            <div class="card-body px-lg-5 py-lg-5">
+                <div class="text-center text-muted mb-4">
+                    <h2 class="mb-3 text-18">Create Ticket</h2>
+                </div>
+                                                <form method="post" action="https://support.dcxa.io/home" class="create-form" enctype="multipart/form-data">
+                    <input type="hidden" name="_token" value="BRxMhRISiQkd467kl8HuKHM7DfWRK8xofVphwkW2">                    <div class="row">
+                                                    <div class="form-group col-md-6">
+                <label for="name" class="form-control-label">Name</label>
+                <div class="form-icon-user">
+                    <span class="prefix-icon"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control " id="name" name="name" placeholder="Name" required=""  value="Nishant Rajput"  >
+                    <div class="invalid-feedback d-block">
+                        
+                    </div>
+                </div>
+            </div>
+                                <div class="form-group col-md-6">
+                <label for="email" class="form-control-label">Email</label>
+                <div class="form-icon-user">
+                    <span class="prefix-icon"><i class="fa fa-envelope"></i></span>
+                    <input type="email" class="form-control " id="email" name="email" placeholder="Email" required=""  value="rajputnishantyou@gmail.com"  >
+                    <div class="invalid-feedback d-block">
+                        
+                    </div>
+                </div>
+            </div>
+                                <div class="form-group col-md-6">
+                <label for="category" class="form-control-label">Category</label>
+                <select class="select2 select2" id="category" name="category" data-placeholder="Select Category">
+                    <option value="">Select Category</option>
+                                            <option value="3" >Login/Signup</option>
+                                            <option value="4" >Deposit</option>
+                                            <option value="5" >Withdrawal</option>
+                                            <option value="6" >KYC</option>
+                                            <option value="7" >Profile</option>
+                                            <option value="8" >Referral</option>
+                                            <option value="9" >Other</option>
+                                    </select>
+                <div class="invalid-feedback d-block">
+                    
+                </div>
+            </div>
+                                <div class="form-group col-md-6">
+                <label for="subject" class="form-control-label">Subject</label>
+                <div class="form-icon-user">
+                    <span class="prefix-icon"><i class="fa fa-file"></i></span>
+                    <input type="text" class="form-control " id="subject" name="subject" placeholder="Subject" required="" value="">
+                    <div class="invalid-feedback d-block">
+                        
+                    </div>
+                </div>
+            </div>
+                                <div class="form-group col-md-12">
+                <label for="description" class="form-control-label">Description</label>
+                <textarea name="description" class="form-control ckdescription " placeholder="Description"></textarea>
+                <div class="invalid-feedback">
+                    
+                </div>
+            </div>
+                                <div class="form-group col-md-12">
+                <label class="form-control-label">Attachments <small>(You can select multiple files)</small></label>
+                <div class="choose-file form-group">
+                    <label for="file" class="form-control-label">
+                        <div>Choose File Here</div>
+                        <input type="file" class="form-control " multiple="" name="attachments[]" id="file" data-filename="multiple_file_selection">
+                    </label>
+                    <p class="multiple_file_selection"></p>
+                </div>
+            </div>
+            <div class="invalid-feedback d-block">
+                
+            </div>
+                <input type="hidden" name="dcxa_id"  value="DCXa-232173"  >
+                        
+                                            </div>
+                    <div class="mt-3 text-center">
+                        <input type="hidden" name="status" value="In Progress"/>
+                        <button class="btn-submit mt-2">Create Ticket</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+<footer class="py-2 footer-auto-bottom1" id="footer-main">
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-xl-between">
+            <div class="col-lg-12 col-xl-12">
+                    <div class="row w-100 pb-2">
+        <div class="col-sm-12 col-md-2 col-lg-2">
+                    </div>
+        <div class="col-sm-12 col-md-10 col-lg-10 text-right">
+            <a href="https://support.dcxa.io/faq" class="btn-submit">FAQ</a>
+            
+            <a href="https://support.dcxa.io/search" class="btn-submit">Search Ticket</a>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://support.dcxa.io/assets/js/jquery.min.js"></script>
+<script src="https://support.dcxa.io/assets/js/site.core.js"></script>
+<script src="https://support.dcxa.io/assets/libs/select2/dist/js/select2.min.js"></script>
+<script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+
+    
+    <script src="//cdn.ckeditor.com/4.12.1/basic/ckeditor.js"></script>
+    <script src="https://support.dcxa.io/assets/js/editorplaceholder.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.each($('.ckdescription'), function (i, editor) {
+                CKEDITOR.replace(editor, {
+                    // contentsLangDirection: 'rtl',
+                    extraPlugins: 'editorplaceholder',
+                    editorplaceholder: editor.placeholder
+                });
+            });
+        });
+
+        if ($(".select2").length) {
+            $('.select2').select2({
+                "language": {
+                    "noResults": function () {
+                        return "No result found";
+                    }
+                },
+            });
+        }
+
+        // for Choose file
+        $(document).on('change', 'input[type=file]', function () {
+            var names = '';
+            var files = $('input[type=file]')[0].files;
+
+            for (var i = 0; i < files.length; i++) {
+                names += files[i].name + '<br>';
+            }
+            $('.' + $(this).attr('data-filename')).html(names);
+        });
+    </script>
+    
+
+
+</body>
+</html>
