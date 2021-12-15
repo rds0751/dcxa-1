@@ -68,3 +68,5 @@ def forex(request):
 def wallet_transfer(request):
     return render(request,"wallet_transfer.html")
 
+def ticket_status(request):
+    return render(request,"ticket_status.html")
