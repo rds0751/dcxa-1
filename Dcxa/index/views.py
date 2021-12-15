@@ -31,6 +31,16 @@ def add_new_person(request):
 
 def buy_wallet(request):
     return render(request,"buy_wallet.html")
+
+def wallet_statement(request):
+    return render(request,"wallet_statement.html")
+
+def income_details(request):
+    return render(request,"income_details.html")
+
+def investment_details(request):
+    return render(request,"investment_details.html")
+
 def directteam(request):
     return render (request, "Directteam.html")
 def levelview(request):
@@ -43,3 +53,4 @@ def treeview(request):
     return render(request,"teamview.html")
 def wallet_transfer(request):
     return render(request,"wallet_transfer.html")
+

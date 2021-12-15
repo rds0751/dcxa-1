@@ -12,6 +12,10 @@ urlpatterns = [
     path('change_password/',views.change_password),
     path('add_new_person/',views.add_new_person),
     path('buy_wallet/',views.buy_wallet),
+    path('wallet_statement/',views.wallet_statement),
+    path('income_details/',views.income_details),
+    path('investment_details/',views.investment_details),
+    path('admin/',admin.site.urls)
     path('buy_tokens/',views.buy_tokens),
     path('admin/',admin.site.urls),
     path('directteam/',views.directteam),
