@@ -26,5 +26,6 @@ urlpatterns = [
     path('buysip/',views.buysip),
     path('buyproperty',views.buyproperty),
     path('forex',views.forex),
+    path('ticket',views.ticket),
     path('ticket_status',views.ticket_status)
 ]
