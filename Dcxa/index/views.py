@@ -41,3 +41,5 @@ def allteammember(request):
     return render(request,'allteam.html')
 def treeview(request):
     return render(request,"teamview.html")
+def wallet_transfer(request):
+    return render(request,"wallet_transfer.html")
