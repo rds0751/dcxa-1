@@ -25,5 +25,6 @@ urlpatterns = [
     path('treeview/', views.treeview),
     path('buysip/',views.buysip),
     path('buyproperty',views.buyproperty),
-    path('forex',views.forex)
+    path('forex',views.forex),
+    path('ticket',views.ticket)
 ]
