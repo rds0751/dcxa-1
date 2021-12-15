@@ -22,6 +22,9 @@ def update_profile(request):
 
 def change_password(request):
     return render(request,"change_password.html")
+
+def buy_tokens(request):
+    return render(request,"buy_tokens.html")
   
 def add_new_person(request):
     return render(request,"add_new_person.html")
@@ -37,3 +40,17 @@ def income_details(request):
 
 def investment_details(request):
     return render(request,"investment_details.html")
+
+def directteam(request):
+    return render (request, "Directteam.html")
+def levelview(request):
+    return render(request,"levelteam.html")
+def roiview(request):
+    return render(request,'roiview.html')
+def allteammember(request):
+    return render(request,'allteam.html')
+def treeview(request):
+    return render(request,"teamview.html")
+def wallet_transfer(request):
+    return render(request,"wallet_transfer.html")
+

@@ -1,14 +1,17 @@
+
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" /><meta http-equiv="Cache-Control" content="no-cache" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="Description" content="DCXa Coin Panel" /><meta name="Author" content="DCXa Coin" /><meta name="Keywords" content="cryptocurrency, dashboard, admin, crypto, ico, bootstrap admin template, admin template, bootstrap dashboard template, crypto dashboard, cryptocurrency dashboard, ico dashboard, crypto admin, dashboard cryptocurrency, cryptocurrency trading dashboard, crypto dashboard template " /><title>
 	DCXa Admin & Dashboard  
-</title><link rel="icon" href="{% static 'assets/img/brand/favicon.png' %}" type="image/x-icon" /><link href="{% static 'assets/plugins/icons/icons.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/sidemenu.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/morris.js/morris.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/jquery-nice-select/css/nice-select.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/jquery-countdown/countdown.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/style.css'%}" rel="stylesheet" /><link href="{% static 'assets/css/countercss.css' %}" rel="stylesheet" />
+</title><link rel="icon" href="{% static 'assets/img/brand/favicon.png' %}" type="image/x-icon" /><link href="{% static 'assets/plugins/icons/icons.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/sidemenu.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/morris.js/morris.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/jquery-nice-select/css/nice-select.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/jquery-countdown/countdown.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/style.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/skin-modes.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/style-dark.css' %}" rel="stylesheet" /><link href="{% static 'assets/switcher/css/switcher.css' %}" rel="stylesheet" /><link rel="stylesheet" href="{% static 'assets/switcher/demo.css' %}" /><link href="{% static 'assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/fileuploads/css/fileupload.css' %}" rel="stylesheet" type="text/css" /><link href="{% static 'assets/plugins/fancyuploder/fancy_fileupload.css' %}" rel="stylesheet" /><link rel="stylesheet" href="{% static 'assets/plugins/sumoselect/sumoselect.css' %}" /><link rel="stylesheet" href="{% static 'assets/plugins/telephoneinput/telephoneinput.css' %}" /><link href="{% static 'assets/css/alertify.core.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/countercss.css' %}" rel="stylesheet" />
     <script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'assets/js/alertify.min.js' %}"></script>
-
+    <script src="{% static 'assets/js/mainjs.js' %}"></script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
@@ -70,7 +73,7 @@
                             <i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">My Profile</span><i class="angle fe fe-chevron-down"></i></a>
                         <ul class="slide-menu">
                             <li><a class="slide-item" href="UserProfile.aspx">Update Profile</a></li>
-                            <li><a class="slide-item" href="UserKycUpload.aspx">KYC</a></li>
+                            <li><a class="slide-item" href="UserKYC.aspx">KYC</a></li>
                             <li><a class="slide-item" href="#">Bank Information</a></li>
                             <li><a class="slide-item" href="ChangePassword.aspx">Change Password</a></li>
                         </ul>
@@ -624,11 +627,12 @@
 
 
             <div class="container-fluid">
-                <form name="aspnetForm" method="post" action="./ChangePassword.aspx" id="aspnetForm">
+                <form name="aspnetForm" method="post" action="./UserWalletTransfer.aspx" id="aspnetForm">
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTIxNDQzMTEwNA8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgJmD2QWAgIBDxYCHgRUZXh0BQQwLjUwZGTHFXD/raYt+6kGc/HYC/LgStRfAMOByY2HH3LhV9DZIg==" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTU3OTM3OTcyNQ8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgJmD2QWBAIBDxYCHgRUZXh0BQQwLjUwZAICD2QWAgIBD2QWAgIBD2QWAmYPZBYCAgEPZBYOAgEPFgIfAQUEMC4wMGQCAw8WAh4HY2hlY2tlZAUHY2hlY2tlZGQCBQ8WAh8BBQQwLjAwZAIJDxYCHwEFBDAuMDBkAg0PDxYCHwEFC0RDWGEtMzQzOTk5ZGQCDw8PFgIfAQUPU2hpdmFuZ2kgTWlzaHJhZGQCEQ8PFgIfAQUEMC4wMGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYDBStjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJidG5Xb3JraW5nV2FsbGV0BS5jdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJidG5BY3RpdmF0aW9uV2FsbGV0BTBjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJHJidG5XaXRoZHJhd2FibGVXYWxsZXSmiHlYGx+NHlfNIt5YHTPaaBkx4m/dhvxF78iGEPwIbw==" />
 </div>
 
 <script type="text/javascript">
@@ -651,6 +655,11 @@ function __doPostBack(eventTarget, eventArgument) {
 <script src="/WebResource.axd?d=f3B_zO2ET5BZu0NWd-VGKvhWRqxL8B-DDJwXVcSXVSoS_YMZb3ONJzLPMKGnxRcKjl8q1bAiXAAkSYfq1vMS_GnG-3PXDDo0Mzdbjb3OlSQ1&amp;t=637454068754849868" type="text/javascript"></script>
 
 
+<script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/core.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/UserPages_UserWalletTransfer,App_Web_03ffos4k.ashx"></script>
+
 <script src="/ScriptResource.axd?d=zmiABBZHH6k-tBVvpkr0cIPuCp0gBJ7szRGvz7aYb2NipCiln2D5ZnlWKMknCn7_ebl3hUdDqPjbumT_A3PmLapdJtWF-qucPKpU3paRbgnYcVPi05UV8V3Vd6NCZu9gYWrMVy93A5MtRHI2sbgruouj6SwuER1OyX0T3zubex9H7KJUiMn4OaKo3F9ENyM80&amp;t=363be08" type="text/javascript"></script>
 <script type="text/javascript">
 //<![CDATA[
@@ -661,10 +670,102 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side frame
 <script src="/ScriptResource.axd?d=IQfcZPVQ7g_cFzXNdQETqBRWOM0zcL7RfV-2vfJFJUsaX7cqLTc1GU0L2sxZiq3jAWDuvROq0Ulxwz7kYyzrBLqw5ROPpN1sESRNyXzF89nQXt74R0rsd9K3aF5A4I522NLtro3IFWg844vzAHFN6s59Pgy3jnm5M4rBhHhoyVrrffpSuD-XaGhVulgJVfMU0&amp;t=363be08" type="text/javascript"></script>
 <div>
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="05C593E1" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAXsT8yhOWm3on6S1BbUDBQ/kPf30pQoA7VmzXQFA7KOubP2gWPSoI2P7Zu/Bty4OQOGA2IEaqfZRRbgy+ElSNxUq1c4+VWaxQieYN0UgPTjsnL72E4b1RYH/8Og9HkPUUhPb5PsliTbH+jmeVElyoi3" />
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="27109C28" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAvpxw5WKoclyJiBFXsTDxkWUdnr48dxkscr3CFUQFlBsdDu49hhDJXXrYm0YRDnk0zhUPaYa4Lz67jEW8z913DrqiY2JgUF27N8GzneirISfyEwAv8n0Y6mSIsZp2T0X4tbPU85E1qQmWmHT2ITUmhD/LZSB1ZpndjU7c4Ncbe0yC3IskhgeC27KIxeVHUKzQg9WPIkK2AxmCnA9COQ1IIIslo6yC1xdqujPk3wdDna95L8Hz++MtmSKGYx7wV2kibj6F1wm0r4axUItrcRDb2X" />
 </div>
                     
+
+    <script language="javascript" type="text/javascript">
+
+        function ChkIssueMember() {
+
+            var response = Gatimoduleproj.UserFundTransfer.ChkDownMember(document.getElementById("ctl00_ContentPlaceHolder1_TxtId").value);
+            if (response.value == "$") {
+                alert("Distributor Does Not Exist");
+                document.getElementById("ctl00_ContentPlaceHolder1_TxtId").value = "";
+                document.getElementById("ctl00_ContentPlaceHolder1_TxtId").focus();
+                return false;
+
+            }
+            //         if (response.value == "!") {
+            //             alert("Distributor Does Not Exist In Your Downline");
+            //             document.getElementById("ctl00_ContentPlaceHolder1_TxtId").value = "";
+            //             document.getElementById("ctl00_ContentPlaceHolder1_TxtId").focus();
+            //             return false;
+
+            //         }
+            //         if (response.value != "!" && response.value != "$") {
+
+            //             document.getElementById("ctl00_ContentPlaceHolder1_txtname").value = response.value;  
+            //         }
+
+            if (response.value != "$") {
+
+                document.getElementById("ctl00_ContentPlaceHolder1_txtname").value = response.value;
+            }
+
+
+        }
+        function CheckAmount() {
+
+            var inamt = document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").value;
+            if (inamt == 0) {
+                alertify.alert("Please enter amount more then $0");
+                document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").value = "";
+                document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").value.focus();
+                return false;
+            }
+            if (inamt != "") {
+                if (!inamt.match(/^[0-9]*$/)) {
+                    alertify.alert("Please Enter only  Numeric Value  ");
+                    document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").value = "";
+                    document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").value.focus();
+                    return false;
+                }
+            }
+
+
+        }
+        function validation() {
+
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").value == "") {
+                alertify.alert("Please Enter Amount For Transfer");
+                document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").value = "";
+                document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").focus();
+                return false;
+            }
+
+            if (document.getElementById("ctl00_ContentPlaceHolder1_txttid").value == "") {
+                alertify.alert("Please Enter Beneficiary ID");
+                document.getElementById("ctl00_ContentPlaceHolder1_txttid").value = "";
+                document.getElementById("ctl00_ContentPlaceHolder1_txttid").focus();
+                return false;
+
+            }
+
+            if (isNaN(document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").value) == true) {
+                alertify.alert("Please Enter Amount  In Numeric Only");
+                document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").value = 0;
+                document.getElementById("ctl00_ContentPlaceHolder1_Txt_transferAmount").focus();
+                return false;
+            }
+
+
+
+
+            CheckAmount();
+            alertify.confirm("Are you sure, you want to transfer amount?", function (e) {
+                if (e) {
+                    $('#' + "ctl00_ContentPlaceHolder1_btnsave1").trigger('click');
+                } else {
+                    return false;
+                }
+            });
+        }
+
+
+    </script>
 
     <script type="text/javascript">
 //<![CDATA[
@@ -672,56 +773,135 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptMan
 //]]>
 </script>
 
+
     <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
 	
-            <div id="ctl00_ContentPlaceHolder1_ctl01" style="display:none;">
-		
-                    <div class="global-loader light-loader">
-                        <img src="{% static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
-                    </div>
-                
-	</div>
+
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="card">
                         <div class="card-body">
+                            <div class="main-content-label mg-b-5">
+                                Wallet Transfer
+                            </div>
 
-                            <div class="row">
-                                <div class="col-md-10 col-lg-5 col-xl-5 mx-auto d-block">
+                            <div id="ctl00_ContentPlaceHolder1_div1" class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-6 mx-auto d-block">
                                     <div class="card card-body pd-10 pd-md-20 border shadow-none">
-                                        <h5 class="card-title mg-b-20">Change Password</h5>
+                                        <h5 class="card-title mg-b-20">Your Payment Details</h5>
+
                                         <div class="form-group">
-                                            <div class="row">
+                                            <div class="row row-sm">
                                                 <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Old Password *</label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtOldPass" type="password" id="txtOldPass" class="form-control" required="" />
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-12">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Choose Wallet</label>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row row-sm">
+                                                        <div class="col-12">
+                                                            <div class="multigrid">
+                                                                <div class="gridcol" style="width: 33%;">
+                                                                    <label class="checkbox radiobox orange bold">
+                                                                        Working Wallet
+                                                                        <i>$0.00
+                                                                        </i>
+                                                                        <input value="rbtnWorkingWallet" name="ctl00$ContentPlaceHolder1$radioWallet" type="radio" id="rbtnWorkingWallet" onclick="FunFillBalance();" checked="checked" />
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="gridcol" style="width: 33%;">
+                                                                    <label class="checkbox radiobox green bold">
+                                                                        Activation Wallet
+                                                                         <i>$0.00</i>
+                                                                        <input value="rbtnActivationWallet" name="ctl00$ContentPlaceHolder1$radioWallet" type="radio" id="rbtnActivationWallet" onclick="FunFillBalance();" />
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="gridcol" style="width: 33%;">
+                                                                    <label class="checkbox radiobox blue bold">
+                                                                        Withdrawable Wallet
+                                                                         <i>$0.00</i>
+                                                                        <input value="rbtnWithdrawableWallet" name="ctl00$ContentPlaceHolder1$radioWallet" type="radio" id="rbtnWithdrawableWallet" onclick="FunFillBalance();" />
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row row-sm">
+                                                <div class="col-sm-12">
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-7">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Your ID</label>
+
+                                                            <input name="ctl00$ContentPlaceHolder1$TxtId" type="text" value="DCXa-343999" id="ctl00_ContentPlaceHolder1_TxtId" disabled="disabled" class="form-control" />
+
+                                                        </div>
+                                                        <div class="col-sm-5 mg-t-10 mg-sm-t-0">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Your Name</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txtname" type="text" value="Shivangi Mishra" id="ctl00_ContentPlaceHolder1_txtname" disabled="disabled" class="form-control" />
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row row-sm">
+                                                <div class="col-sm-12">
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-7">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Wallet Balance</label>
+
+                                                            <input name="ctl00$ContentPlaceHolder1$txtwamount" type="text" value="0.00" id="txtwamount" disabled="disabled" class="form-control" />
+                                                        </div>
+                                                        <div class="col-sm-5 mg-t-10 mg-sm-t-0">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Transfer Amount</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$Txt_transferAmount" type="text" value="0" id="ctl00_ContentPlaceHolder1_Txt_transferAmount" class="form-control" />
+
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
 
+
                                         <div class="form-group">
-                                            <div class="row">
+                                            <div class="row row-sm">
                                                 <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">New Password *</label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtPWD" type="password" id="txtPWD" class="form-control" required="" />
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-7">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Dcxa ID (Beneficiery)</label>
+
+                                                            <div class="divMemberID">
+                                                                <input name="ctl00$ContentPlaceHolder1$txttid" type="text" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$txttid\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_ContentPlaceHolder1_txttid" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-5 mg-t-10 mg-sm-t-0">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Dcxa Name</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txttname" type="text" id="ctl00_ContentPlaceHolder1_txttname" disabled="disabled" class="form-control" />
+
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Confirm New Password *</label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtCPWD" type="password" id="txtCPWD" class="form-control" required="" />
-                                                </div>
-                                            </div>
-                                        </div>
 
+                                        <input type="button" class="btn btn-main-primary btn-block" value="Complete Transaction" onclick="validation();" />
 
+                                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnsave1" value="Complete Transaction" id="ctl00_ContentPlaceHolder1_btnsave1" type="submit" class="btn btn-main-primary btn-block" style="display: none;" />
 
-
-                                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnsubmit" value="Update" onclick="return FunValidate();" id="ctl00_ContentPlaceHolder1_btnsubmit" class="btn btn-main-primary btn-block" />
-
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -729,52 +909,30 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptMan
                     </div>
                 </div>
             </div>
+
         
 </div>
     <script type="text/javascript">
-        function FunValidate() {
-            if (document.getElementById("txtOldPass").value == "") {
-                alertify.alert("Please Old Password");
-                document.getElementById("txtOldPass").focus();
-                return false;
-            }
-            if (document.getElementById("txtPWD").value == "") {
-                alertify.alert("Please Enter Password");
-                document.getElementById("txtPWD").focus();
-                return false;
-            }
-            var strpwd = document.getElementById("txtPWD").value;
-            if (strpwd.length<6) {
-                alertify.alert("New password lenght must be 6 character");
-                document.getElementById("txtPWD").focus();
-                return false;
-            }
-            if (document.getElementById("txtCPWD").value == "") {
-                alertify.alert("Please Enter in Confirm New Password");
-                document.getElementById("txtCPWD").focus();
-                return false;
-            }
-            if (document.getElementById("txtPWD").value != "" && document.getElementById("txtCPWD").value != "") {
-                if (document.getElementById("txtPWD").value != document.getElementById("txtCPWD").value) {
-                    alertify.alert("Password and confirm new password does not match");
-                    document.getElementById("txtCPWD").focus();
-                    return false;
-                }
 
+        function FunFillBalance() {
+            var balamt = "";
+            if ($('#rbtnWorkingWallet').is(':checked')) {
+                balamt = $('#rbtnWorkingWallet').parent().find('i').html();
             }
+            else if ($('#rbtnActivationWallet').is(':checked')) {
+                balamt = $('#rbtnActivationWallet').parent().find('i').html();
+            }
+            else if ($('#rbtnWithdrawableWallet').is(':checked')) {
+                balamt = $('#rbtnWithdrawableWallet').parent().find('i').html();
+            }
+
+            balamt = balamt.replace('$', '');
+            document.getElementById('txtwamount').value = balamt;
         }
     </script>
 
-                
 
-<script type="text/javascript">
-//<![CDATA[
-Sys.Application.add_init(function() {
-    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ContentPlaceHolder1_ctl01"));
-});
-//]]>
-</script>
-</form>
+                </form>
             </div>
 
 
@@ -1185,7 +1343,7 @@ Sys.Application.add_init(function() {
     <script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js' %}"></script>
     <script src="{% static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
     <script src="{% static 'assets/plugins/datatable/js/responsive.bootstrap4.min.js' %}"></script>
-    <script src="{% static 'assets/js/table-data.js'%}"></script>
+    <script src="{% static 'assets/js/table-data.js' %}"></script>
     <script src="{% static 'assets/js/custom.js' %}"></script>
 
 

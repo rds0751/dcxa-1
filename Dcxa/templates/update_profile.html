@@ -3,10 +3,10 @@
 {% load static %}
 <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" /><meta http-equiv="Cache-Control" content="no-cache" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="Description" content="DCXa Coin Panel" /><meta name="Author" content="DCXa Coin" /><meta name="Keywords" content="cryptocurrency, dashboard, admin, crypto, ico, bootstrap admin template, admin template, bootstrap dashboard template, crypto dashboard, cryptocurrency dashboard, ico dashboard, crypto admin, dashboard cryptocurrency, cryptocurrency trading dashboard, crypto dashboard template " /><title>
 	Profile
-</title><link rel="icon" href="{ % static 'assets/img/brand/favicon.png' %}" type="image/x-icon" /><link href="{ % static 'assets/plugins/icons/icons.css' %}" rel="stylesheet" /><link href="{ % static 'assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet" /><link href="{ % static 'assets/css/animate.css' %}" rel="stylesheet" /><link href="{ % static 'assets/plugins/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet" /><link href="{ % static 'assets/css/sidemenu.css' %}" rel="stylesheet" /><link href="{ % static 'assets/plugins/morris.js/morris.css' %}" rel="stylesheet" /><link href="{ % static 'assets/plugins/jquery-nice-select/css/nice-select.css' %}" rel="stylesheet" /><link href="{ % static 'assets/plugins/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet" /><link href="{ % static 'assets/plugins/jquery-countdown/countdown.css' %}" rel="stylesheet" /><link href="{ % static 'assets/plugins/newsticker/jquery.jConveyorTicker.css' %}" rel="stylesheet" /><link href="{ % static 'assets/css/style.css?version=0912021.1" rel="stylesheet" /><link href="{ % static 'assets/css/skin-modes.css' %}" rel="stylesheet" /><link href="{ % static 'assets/css/style-dark.css' %}" rel="stylesheet" /><link href="{ % static 'assets/switcher/css/switcher.css' %}" rel="stylesheet" /><link rel="stylesheet" href="{ % static 'assets/switcher/demo.css' %}" /><link href="{ % static 'assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet" /><link href="{ % static 'assets/plugins/fileuploads/css/fileupload.css?version=23112021" rel="stylesheet" type="text/css' %}" /><link href="{ % static 'assets/plugins/fancyuploder/fancy_fileupload.css' %}" rel="stylesheet" /><link rel="stylesheet" href="{ % static 'assets/plugins/sumoselect/sumoselect.css' %}" /><link rel="stylesheet" href="{ % static 'assets/plugins/telephoneinput/telephoneinput.css' %}" /><link href="{ % static 'assets/css/alertify.core.css?version=23102021" rel="stylesheet" /><link href="{ % static 'assets/css/countercss.css' %}" rel="stylesheet" />
-    <script src="{ % static 'assets/plugins/jquery/jquery.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{ % static 'assets/js/alertify.min.js' %}"></script>
+</title><link rel="icon" href="{% static 'assets/img/brand/favicon.png' %}" type="image/x-icon" /><link href="{% static 'assets/plugins/icons/icons.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/sidemenu.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/morris.js/morris.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/jquery-nice-select/css/nice-select.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/jquery-countdown/countdown.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/style.css'%}" rel="stylesheet" /><link href="{% static 'assets/css/skin-modes.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/style-dark.css' %}" rel="stylesheet" /><link href="{% static 'assets/switcher/css/switcher.css' %}" rel="stylesheet" /><link rel="stylesheet" href="{% static 'assets/switcher/demo.css' %}" /><link href="{% static 'assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/fileuploads/css/fileupload.css'%}" rel="stylesheet" /><link href="{% static 'assets/css/countercss.css' %}" rel="stylesheet" />
+    <script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/alertify.min.js' %}"></script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -28,7 +28,7 @@
 
     <!-- Loader -->
     <div id="global-loader" class="light-loader">
-        <img src="{ % static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
+        <img src="{% static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
     </div>
 
     <div class="page">
@@ -38,13 +38,13 @@
         <aside class="app-sidebar sidebar-scroll ">
             <div class="main-sidebar-header">
                 <a class=" desktop-logo logo-light" href="user.aspx">
-                    <img src="{ % static 'assets/img/brand/logo.png' %}" class="main-logo" alt="logo"></a>
+                    <img src="{% static 'assets/img/brand/logo.png' %}" class="main-logo" alt="logo"></a>
                 <a class=" desktop-logo logo-dark" href="user.aspx">
-                    <img src="{ % static 'assets/img/brand/logo-white.png' %}" class="main-logo dark-theme" alt="logo"></a>
+                    <img src="{% static 'assets/img/brand/logo-white.png' %}" class="main-logo dark-theme" alt="logo"></a>
                 <a class="logo-icon mobile-logo icon-light" href="user.aspx">
-                    <img src="{ % static 'assets/img/brand/favicon.png' %}" class="logo-icon" alt="logo"></a>
+                    <img src="{% static 'assets/img/brand/favicon.png' %}" class="logo-icon" alt="logo"></a>
                 <a class="logo-icon mobile-logo icon-dark" href="user.aspx">
-                    <img src="{ % static 'assets/img/brand/favicon-white.png' %}" class="logo-icon dark-theme" alt="logo"></a>
+                    <img src="{% static 'assets/img/brand/favicon-white.png' %}" class="logo-icon dark-theme" alt="logo"></a>
             </div>
             <div class="main-sidebar-body circle-animation ">
 
@@ -76,7 +76,7 @@
                     </li>
 
                     <li class="slide">
-                        <a class="side-menu__item" href="{ % static 'Userpages/UserRegOpen.Aspx?refid=DCXa-232173" target="_blank"><i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Add New Person</span></a>
+                        <a class="side-menu__item" href="{% static 'Userpages/UserRegOpen.Aspx?refid=DCXa-232173 '%}" target="_blank"><i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Add New Person</span></a>
                     </li>
 
                     <li class="slide">
@@ -164,8 +164,8 @@
                         </div>
                         <div class="responsive-logo">
                             <a href="user.aspx">
-                                <img src="{ % static 'assets/img/brand/logo.png' %}" class="mobile-logo" alt="logo">
-                                <img src="{ % static 'assets/img/brand/logo-theme-dark.png' %}" class="dark-mobile-logo" alt="logo">
+                                <img src="{% static 'assets/img/brand/logo.png' %}" class="mobile-logo" alt="logo">
+                                <img src="{% static 'assets/img/brand/logo-theme-dark.png' %}" class="dark-mobile-logo" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -211,7 +211,7 @@
                                     </div>
                                     <div class="main-message-list chat-scroll">
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="  drop-img  cover-image  " data-image-src="{ % static 'assets/img/faces/3.jpg' %}">
+                                            <div class="  drop-img  cover-image  " data-image-src="{% static 'assets/img/faces/3.jpg' %}">
                                                 <span class="avatar-status bg-teal"></span>
                                             </div>
 
@@ -224,7 +224,7 @@
                                             </div>
                                         </a>
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{ % static 'assets/img/faces/2.jpg' %}">
+                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/2.jpg' %}">
                                                 <span class="avatar-status bg-teal"></span>
                                             </div>
                                             <div class="wd-90p">
@@ -236,7 +236,7 @@
                                             </div>
                                         </a>
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{ % static 'assets/img/faces/9.jpg' %}">
+                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/9.jpg' %}">
                                                 <span class="avatar-status bg-teal"></span>
                                             </div>
                                             <div class="wd-90p">
@@ -248,7 +248,7 @@
                                             </div>
                                         </a>
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{ % static 'assets/img/faces/12.jpg' %}">
+                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/12.jpg' %}">
                                                 <span class="avatar-status bg-danger"></span>
                                             </div>
                                             <div class="wd-90p">
@@ -260,7 +260,7 @@
                                             </div>
                                         </a>
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{ % static 'assets/img/faces/5.jpg' %}">
+                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/5.jpg' %}">
                                                 <span class="avatar-status bg-teal"></span>
                                             </div>
                                             <div class="wd-90p">
@@ -373,11 +373,11 @@
                             </button>
                             <div class="dropdown main-profile-menu nav nav-item nav-link">
                                 <a class="profile-user" href="#">
-                                    <img alt="" src="{ % static 'assets/img/faces/5.jpg' %}"></a>
+                                    <img alt="" src="{% static 'assets/img/faces/5.jpg' %}"></a>
                                 <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
                                     <div class="main-header-profile header-img">
                                         <div class="main-img-user">
-                                            <img alt="" src="{ % static 'assets/img/faces/5.jpg' %}">
+                                            <img alt="" src="{% static 'assets/img/faces/5.jpg' %}">
                                         </div>
                                         <h6>Elizabeth Jane</h6>
                                         <span>Premium Member</span>
@@ -437,7 +437,7 @@
                                     </div>
                                     <div class="main-message-list text-scroll">
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="  drop-img  cover-image  " data-image-src="{ % static 'assets/img/faces/3.jpg' %}">
+                                            <div class="  drop-img  cover-image  " data-image-src="{% static 'assets/img/faces/3.jpg' %}">
                                                 <span class="avatar-status bg-teal"></span>
                                             </div>
 
@@ -450,7 +450,7 @@
                                             </div>
                                         </a>
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{ % static 'assets/img/faces/2.jpg' %}">
+                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/2.jpg' %}">
                                                 <span class="avatar-status bg-teal"></span>
                                             </div>
                                             <div class="wd-90p">
@@ -462,7 +462,7 @@
                                             </div>
                                         </a>
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{ % static 'assets/img/faces/9.jpg' %}">
+                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/9.jpg' %}">
                                                 <span class="avatar-status bg-teal"></span>
                                             </div>
                                             <div class="wd-90p">
@@ -474,7 +474,7 @@
                                             </div>
                                         </a>
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{ % static 'assets/img/faces/12.jpg' %}">
+                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/12.jpg' %}">
                                                 <span class="avatar-status bg-danger"></span>
                                             </div>
                                             <div class="wd-90p">
@@ -486,7 +486,7 @@
                                             </div>
                                         </a>
                                         <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{ % static 'assets/img/faces/5.jpg' %}">
+                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/5.jpg' %}">
                                                 <span class="avatar-status bg-teal"></span>
                                             </div>
                                             <div class="wd-90p">
@@ -595,11 +595,11 @@
                             </div>
                             <div class="dropdown main-profile-menu nav nav-item nav-link">
                                 <a class="profile-user" href="#">
-                                    <img alt="" src="{ % static 'assets/img/faces/5.jpg' %}"></a>
+                                    <img alt="" src="{% static 'assets/img/faces/5.jpg' %}"></a>
                                 <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
                                     <div class="main-header-profile header-img">
                                         <div class="main-img-user">
-                                            <img alt="" src="{ % static 'assets/img/faces/5.jpg' %}">
+                                            <img alt="" src="{% static 'assets/img/faces/5.jpg' %}">
                                         </div>
                                         <h6>Elizabeth Jane</h6>
                                         <span>Premium Member</span>
@@ -680,7 +680,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptMan
             <div id="ctl00_ContentPlaceHolder1_ctl01" style="display:none;">
 		
                     <div class="global-loader light-loader">
-                        <img src="{ % static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
+                        <img src="{% static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
                     </div>
                 
 	</div>
@@ -1124,7 +1124,7 @@ Sys.Application.add_init(function() {
                         <div class="card-body p-0">
                             <div class="header-user text-center mt-4">
                                 <span class="avatar avatar-xxl brround mx-auto">
-                                    <img src="{ % static 'assets/img/faces/5.jpg' %}" alt="Profile-img" class="avatar avatar-xxl brround"></span>
+                                    <img src="{% static 'assets/img/faces/5.jpg' %}" alt="Profile-img" class="avatar avatar-xxl brround"></span>
                                 <div class=" text-center font-weight-semibold user mt-3 h6 mb-0">Elizabeth Jane</div>
                                 <span class="text-muted">App Developer</span>
                                 <br />
@@ -1193,7 +1193,7 @@ Sys.Application.add_init(function() {
                                     <!--	<li class="active">
 											<div class="d-flex bd-highlight w-100">
 												<div class="img_cont">
-													<img src="{ % static 'assets/img/faces/12.jpg' %}" class="rounded-circle user_img" alt="img">
+													<img src="{% static 'assets/img/faces/12.jpg' %}" class="rounded-circle user_img" alt="img">
 													<span class="online_icon"></span>
 												</div>
 												<div class="user_info">
@@ -1206,7 +1206,7 @@ Sys.Application.add_init(function() {
 										<li>
 											<div class="d-flex bd-highlight w-100">
 												<div class="img_cont">
-													<img src="{ % static 'assets/img/faces/2.jpg' %}" class="rounded-circle user_img" alt="img">
+													<img src="{% static 'assets/img/faces/2.jpg' %}" class="rounded-circle user_img" alt="img">
 													<span class=" online_icon"></span>
 												</div>
 												<div class="user_info">
@@ -1219,7 +1219,7 @@ Sys.Application.add_init(function() {
 										<li>
 											<div class="d-flex bd-highlight w-100">
 												<div class="img_cont">
-													<img src="{ % static 'assets/img/faces/5.jpg' %}" class="rounded-circle user_img" alt="img">
+													<img src="{% static 'assets/img/faces/5.jpg' %}" class="rounded-circle user_img" alt="img">
 													<span class="online_icon"></span>
 												</div>
 												<div class="user_info">
@@ -1232,7 +1232,7 @@ Sys.Application.add_init(function() {
 										<li>
 											<div class="d-flex bd-highlight w-100">
 												<div class="img_cont">
-													<img src="{ % static 'assets/img/faces/7.jpg' %}" class="rounded-circle user_img" alt="img">
+													<img src="{% static 'assets/img/faces/7.jpg' %}" class="rounded-circle user_img" alt="img">
 													<span class="online_icon"></span>
 												</div>
 												<div class="user_info">
@@ -1245,7 +1245,7 @@ Sys.Application.add_init(function() {
 										<li>
 											<div class="d-flex bd-highlight w-100">
 												<div class="img_cont">
-													<img src="{ % static 'assets/img/faces/8.jpg' %}" class="rounded-circle user_img" alt="img">
+													<img src="{% static 'assets/img/faces/8.jpg' %}" class="rounded-circle user_img" alt="img">
 													<span class="online_icon"></span>
 												</div>
 												<div class="user_info">
@@ -1258,7 +1258,7 @@ Sys.Application.add_init(function() {
 										<li>
 											<div class="d-flex bd-highlight w-100">
 												<div class="img_cont">
-													<img src="{ % static 'assets/img/faces/3.jpg' %}" class="rounded-circle user_img" alt="img">
+													<img src="{% static 'assets/img/faces/3.jpg' %}" class="rounded-circle user_img" alt="img">
 													<span class="online_icon"></span>
 												</div>
 												<div class="user_info">
@@ -1271,7 +1271,7 @@ Sys.Application.add_init(function() {
 										<li>
 											<div class="d-flex bd-highlight w-100">
 												<div class="img_cont">
-													<img src="{ % static 'assets/img/faces/14.jpg' %}" class="rounded-circle user_img" alt="img">
+													<img src="{% static 'assets/img/faces/14.jpg' %}" class="rounded-circle user_img" alt="img">
 													<span class="online_icon"></span>
 												</div>
 												<div class="user_info">
@@ -1284,7 +1284,7 @@ Sys.Application.add_init(function() {
 										<li>
 											<div class="d-flex bd-highlight w-100">
 												<div class="img_cont">
-													<img src="{ % static 'assets/img/faces/11.jpg' %}" class="rounded-circle user_img" alt="img">
+													<img src="{% static 'assets/img/faces/11.jpg' %}" class="rounded-circle user_img" alt="img">
 												</div>
 												<div class="user_info">
 													<h5 class="mt-1 mb-1">Khadija Mehr</h5>
@@ -1456,74 +1456,74 @@ Sys.Application.add_init(function() {
 
     <a href="#top" id="back-to-top"><i class="la la-chevron-up"></i></a>
 
-    <script src="{ % static 'assets/plugins/ionicons/ionicons.js' %}"></script>
-    <script src="{ % static 'assets/plugins/moment/moment.js' %}"></script>
-    <script src="{ % static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
-    <script src="{ % static 'assets/plugins/rating/jquery.rating-stars.js' %}"></script>
-    <script src="{ % static 'assets/plugins/rating/jquery.barrating.js' %}"></script>
-    <script src="{ % static 'assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
-    <script src="{ % static 'assets/js/eva-icons.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/side-menu/sidemenu.js' %}"></script>
-    <script src="{ % static 'assets/plugins/sidebar/sidebar.js' %}"></script>
-    <script src="{ % static 'assets/plugins/sidebar/sidebar-custom.js' %}"></script>
-    <script src="{ % static 'assets/js/sticky.js' %}"></script>
-    <script src="{ % static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js' %}"></script>
-    <script src="{ % static 'assets/plugins/chart.js/Chart.bundle.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/raphael/raphael.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/peity/jquery.peity.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/ionicons/ionicons.js' %}"></script>
+    <script src="{% static 'assets/plugins/moment/moment.js' %}"></script>
+    <script src="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
+    <script src="{% static 'assets/plugins/rating/jquery.rating-stars.js' %}"></script>
+    <script src="{% static 'assets/plugins/rating/jquery.barrating.js' %}"></script>
+    <script src="{% static 'assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script src="{% static 'assets/js/eva-icons.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/side-menu/sidemenu.js' %}"></script>
+    <script src="{% static 'assets/plugins/sidebar/sidebar.js' %}"></script>
+    <script src="{% static 'assets/plugins/sidebar/sidebar-custom.js' %}"></script>
+    <script src="{% static 'assets/js/sticky.js' %}"></script>
+    <script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js' %}"></script>
+    <script src="{% static 'assets/plugins/chart.js/Chart.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/raphael/raphael.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/peity/jquery.peity.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
 
-    <script src="{ % static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
-    <script src="{ % static 'assets/plugins/jquery.flot/jquery.flot.js' %}"></script>
-    <script src="{ % static 'assets/plugins/jquery.flot/jquery.flot.pie.js' %}"></script>
-    <script src="{ % static 'assets/plugins/jquery.flot/jquery.flot.categories.js' %}"></script>
-    <script src="{ % static 'assets/js/dashboard.sampledata.js' %}"></script>
+    <script src="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
+    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.js' %}"></script>
+    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.pie.js' %}"></script>
+    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.categories.js' %}"></script>
+    <script src="{% static 'assets/js/dashboard.sampledata.js' %}"></script>
 
-    <script src="{ % static 'assets/plugins/newsticker/jquery.jConveyorTicker.js' %}"></script>
-    <script src="{ % static 'assets/js/newsticker.js' %}"></script>
-    <script src="{ % static 'assets/plugins/jquery-nice-select/js/jquery.nice-select.js' %}"></script>
-    <script src="{ % static 'assets/plugins/jquery-nice-select/js/nice-select.js' %}"></script>
-    <script src="{ % static 'assets/js/dashboard.js' %}"></script>
-    <script src="{ % static 'assets/js/custom.js' %}"></script>
-    <script src="{ % static 'assets/switcher/js/switcher.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/jquery.dataTables.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/dataTables.dataTables.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/responsive.dataTables.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/jquery.dataTables.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/dataTables.bootstrap4.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/dataTables.buttons.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/buttons.bootstrap4.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/jszip.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/pdfmake.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/vfs_fonts.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/buttons.html5.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/buttons.print.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/buttons.colVis.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/datatable/js/responsive.bootstrap4.min.js' %}"></script>
-    <script src="{ % static 'assets/js/table-data.js?version=21112021"></script>
-    <script src="{ % static 'assets/js/custom.js' %}"></script>
-
-
+    <script src="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.js' %}"></script>
+    <script src="{% static 'assets/js/newsticker.js' %}"></script>
+    <script src="{% static 'assets/plugins/jquery-nice-select/js/jquery.nice-select.js' %}"></script>
+    <script src="{% static 'assets/plugins/jquery-nice-select/js/nice-select.js' %}"></script>
+    <script src="{% static 'assets/js/dashboard.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/switcher/js/switcher.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/dataTables.dataTables.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/responsive.dataTables.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap4.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/jszip.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/pdfmake.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/vfs_fonts.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatable/js/responsive.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'assets/js/table-data.js"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
 
 
 
-    <script src="{ % static 'assets/plugins/select2/js/select2.min.js' %}"></script>
-    <script src="{ % static 'assets/plugins/fileuploads/js/fileupload.js' %}"></script>
-    <script src="{ % static 'assets/plugins/fileuploads/js/file-upload.js' %}"></script>
-    <script src="{ % static 'assets/plugins/fancyuploder/jquery.ui.widget.js' %}"></script>
-    <script src="{ % static 'assets/plugins/fancyuploder/jquery.fileupload.js' %}"></script>
-    <script src="{ % static 'assets/plugins/fancyuploder/jquery.iframe-transport.js' %}"></script>
-    <script src="{ % static 'assets/plugins/fancyuploder/jquery.fancy-fileupload.js' %}"></script>
-    <script src="{ % static 'assets/plugins/fancyuploder/fancy-uploader.js' %}"></script>
-    <script src="{ % static 'assets/js/advanced-form-elements.js' %}"></script>
-    <script src="{ % static 'assets/js/select2.js' %}"></script>
-    <script src="{ % static 'assets/plugins/sumoselect/jquery.sumoselect.js' %}"></script>
-    <script src="{ % static 'assets/plugins/telephoneinput/telephoneinput.js' %}"></script>
-    <script src="{ % static 'assets/plugins/telephoneinput/inttelephoneinput.js' %}"></script>
+
+
+    <script src="{% static 'assets/plugins/select2/js/select2.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/fileuploads/js/fileupload.js' %}"></script>
+    <script src="{% static 'assets/plugins/fileuploads/js/file-upload.js' %}"></script>
+    <script src="{% static 'assets/plugins/fancyuploder/jquery.ui.widget.js' %}"></script>
+    <script src="{% static 'assets/plugins/fancyuploder/jquery.fileupload.js' %}"></script>
+    <script src="{% static 'assets/plugins/fancyuploder/jquery.iframe-transport.js' %}"></script>
+    <script src="{% static 'assets/plugins/fancyuploder/jquery.fancy-fileupload.js' %}"></script>
+    <script src="{% static 'assets/plugins/fancyuploder/fancy-uploader.js' %}"></script>
+    <script src="{% static 'assets/js/advanced-form-elements.js' %}"></script>
+    <script src="{% static 'assets/js/select2.js' %}"></script>
+    <script src="{% static 'assets/plugins/sumoselect/jquery.sumoselect.js' %}"></script>
+    <script src="{% static 'assets/plugins/telephoneinput/telephoneinput.js' %}"></script>
+    <script src="{% static 'assets/plugins/telephoneinput/inttelephoneinput.js' %}"></script>
 
 
 </body>

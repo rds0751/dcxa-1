@@ -16,4 +16,12 @@ urlpatterns = [
     path('income_details/',views.income_details),
     path('investment_details/',views.investment_details),
     path('admin/',admin.site.urls)
+    path('buy_tokens/',views.buy_tokens),
+    path('admin/',admin.site.urls),
+    path('directteam/',views.directteam),
+    path('levelview/', views.levelview),
+    path('roiview/', views.roiview),
+     path('wallet_transfer/', views.wallet_transfer),
+    path('allteammember/', views.allteammember),
+    path('treeview/', views.treeview)
 ]
