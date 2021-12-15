@@ -18,5 +18,8 @@ urlpatterns = [
     path('levelview/', views.levelview),
     path('roiview/', views.roiview),
     path('allteammember/', views.allteammember),
-    path('treeview/', views.treeview)
+    path('treeview/', views.treeview),
+    path('buysip/',views.buysip),
+    path('buyproperty',views.buyproperty),
+    path('forex',views.forex)
 ]

@@ -31,13 +31,27 @@ def add_new_person(request):
 
 def buy_wallet(request):
     return render(request,"buy_wallet.html")
+
 def directteam(request):
     return render (request, "Directteam.html")
+
 def levelview(request):
     return render(request,"levelteam.html")
+
 def roiview(request):
     return render(request,'roiview.html')
+
 def allteammember(request):
     return render(request,'allteam.html')
+
 def treeview(request):
     return render(request,"teamview.html")
+
+def buyproperty(request):
+    return render(request,"buyproperty.html")
+
+def buysip(request):
+    return render(request,"buysip.html")
+
+def forex(request):
+    return render(request, "forex.html")
