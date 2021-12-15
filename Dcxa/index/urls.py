@@ -23,5 +23,8 @@ urlpatterns = [
     path('roiview/', views.roiview),
      path('wallet_transfer/', views.wallet_transfer),
     path('allteammember/', views.allteammember),
-    path('treeview/', views.treeview)
+    path('treeview/', views.treeview),
+    path('buysip/',views.buysip),
+    path('buyproperty',views.buyproperty),
+    path('forex',views.forex)
 ]
