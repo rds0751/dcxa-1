@@ -1,33 +1,42 @@
-{% extends 'sidebar.html' %} 
-{% block title %}Dashboard {% endblock title %}
-{%block body %}
-{%load static%}
+{% load static %}
+{% include 'includes/head_css_js.html' %}
 
-    <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
-	
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="main-content-label mg-b-5">
-                                My Sponser Persons
-                            </div>
+<body class="main-body app sidebar-mini Light-mode">
+    <div class="page">
 
-                            <div class="row row-sm">
-                                <div class="col-xl-12">
-                                    <div class="card mg-b-20">
-                                        <div class="card-header pb-0">
-                                            <div class="d-flex justify-content-between">
-                                                <h2 class="card-title mg-b-0">My Direct Team</h2>
-                                                <i class="mdi mdi-dots-horizontal text-gray"></i>
+        {% include 'includes/loader.html' %}
+        <div class="main-content app-content">
+            {% include 'includes/dashboard_header.html' %}
+            {% include 'includes/sidebar.html' %}
+            <div class="container-fluid">
+                <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="main-content-label mg-b-5">
+                                        My Sponser Persons
+                                    </div>
+
+                                    <div class="row row-sm">
+                                        <div class="col-xl-12">
+                                            <div class="card mg-b-20">
+                                                <div class="card-header pb-0">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h2 class="card-title mg-b-0">My Direct Team</h2>
+                                                        <i class="mdi mdi-dots-horizontal text-gray"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="table-responsive">
+
+                                                        <span id="ctl00_ContentPlaceHolder1_lblresult">No Data
+                                                            Found....</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-
-                                                <span id="ctl00_ContentPlaceHolder1_lblresult">No Data Found....</span>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -35,446 +44,8 @@
                     </div>
                 </div>
             </div>
-
-        
-</div>
-
-
-
-                </form>
-            </div>
-
-
         </div>
-
-        <div class="sidebar sidebar-right sidebar-animate">
-            <div class="p-3">
-                <a href="#" class="text-right float-right" data-toggle="sidebar-right" data-target=".sidebar-right"><i class="fe fe-x"></i></a>
-            </div>
-            <div class="tab-menu-heading border-0 card-header">
-                <div class="card-title mb-0">Notifications</div>
-                <div class="card-options ml-auto">
-                    <a href="#" class="sidebar-remove"><i class="fe fe-x"></i></a>
-                </div>
-            </div>
-            <div class="tabs-menu ">
-                <!-- Tabs -->
-                <ul class="nav panel-tabs">
-                    <li class=""><a href="#tab" class="active show" data-toggle="tab">Profile</a></li>
-                    <li class=""><a href="#tab1" data-toggle="tab" class="">Directs</a></li>
-                    <li><a href="#tab2" data-toggle="tab" class="">History</a></li>
-
-                </ul>
-            </div>
-            <div class="panel-body tabs-menu-body side-tab-body p-0 border-0 ">
-                <div class="tab-content">
-                    <div class="tab-pane active" id="tab">
-                        <div class="card-body p-0">
-                            <div class="header-user text-center mt-4">
-                                <span class="avatar avatar-xxl brround mx-auto">
-                                    <img src="{% static 'assets/img/faces/5.jpg' %}" alt="Profile-img" class="avatar avatar-xxl brround"></span>
-                                <div class=" text-center font-weight-semibold user mt-3 h6 mb-0">Elizabeth Jane</div>
-                                <span class="text-muted">App Developer</span>
-                                <br />
-                                <br />
-                                <!--	<div class="card-body">
-										<div class="form-group ">
-											<label class="form-label  text-left">Offline/Online</label>
-											<select class="form-control mb-4 nice-select " data-placeholder="Choose one">
-												<option value="1">Online</option>
-												<option value="2">Offline</option>
-											</select>
-										</div>
-										<div class="form-group mt-3">
-											<label class="form-label text-left">Website</label>
-											<select class="form-control nice-select " data-placeholder="Choose one">
-												<option value="1">DCXA.io</option>
-												<option value="2">riwebsoftindia.com</option>
-												<option value="3">dakshweb.com</option>
-												<option value="4">lelomoz.com</option>
-												<option value="5">tag11infotech.com</option>
-											</select>
-										</div>   
-									</div>-->
-                            </div>
-                            <a class="dropdown-item  border-top" href="#">
-                                <i class="dropdown-icon fe fe-edit mr-2"></i>Edit Profile
-                            </a>
-                            <a class="dropdown-item  border-top" href="#">
-                                <i class="dropdown-icon fe fe-help-circle mr-2"></i>Support
-                            </a>
-
-                            <a class="dropdown-item  border-top" href="#">
-                                <i class="dropdown-icon fe fe-mail mr-2"></i>Message
-                            </a>
-
-                            <div class="card-body border-top border-bottom">
-                                <div class="row">
-                                    <div class="col-4 text-center">
-                                        <a class="" href="#"><i class="dropdown-icon mdi  mdi-message-outline fs-20 m-0 leading-tight"></i></a>
-                                        <div>Inbox</div>
-                                    </div>
-                                    <div class="col-4 text-center">
-                                        <a class="" href="#"><i class="dropdown-icon mdi mdi-tune fs-20 m-0 leading-tight"></i></a>
-                                        <div>Settings</div>
-                                    </div>
-                                    <div class="col-4 text-center">
-                                        <a class="" href="Userlogout.aspx"><i class="dropdown-icon mdi mdi-logout-variant fs-20 m-0 leading-tight"></i></a>
-                                        <div>Sign out</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab1">
-                        <div class="chat">
-                            <div class="contacts_card">
-                                <div class="input-group mb-0 p-3">
-                                    <input type="text" placeholder="Search..." class="form-control search">
-                                    <div class="input-group-prepend mr-0">
-                                        <span class="input-group-text  search_btn  btn-primary"><i class="fa fa-search text-white"></i></span>
-                                    </div>
-                                </div>
-                                <ul class="contacts mb-0">
-                                    <li class="active">Direct Members
-                                    </li>
-                                    <!--	<li class="active">
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/12.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Maryam Naz</h5>
-													<small class="text-muted">is online</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>01-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/2.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class=" online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Sahar Darya</h5>
-													<small class="text-muted">left 7 mins ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>01-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/5.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Maryam Naz</h5>
-													<small class="text-muted">online</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>01-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/7.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Yolduz Rafi</h5>
-													<small class="text-muted">online</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>02-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/8.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Nargis Hawa</h5>
-													<small class="text-muted">30 mins ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>02-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/3.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Khadija Mehr</h5>
-													<small class="text-muted">50 mins ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>03-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/14.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Petey Cruiser</h5>
-													<small class="text-muted">1hr ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>03-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/11.jpg' %}" class="rounded-circle user_img" alt="img">
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Khadija Mehr</h5>
-													<small class="text-muted">2hr ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>03-02-2019</small></div>
-											</div>
-										</li> -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab2">
-
-                        <div class="list d-flex align-items-center border-bottom p-3">
-                            <div class="">
-                                <span class="avatar bg-primary brround avatar-md">D</span>
-                            </div>
-                            <div class="wrapper w-100 ml-3">
-                                <p class="mb-0 d-flex">
-                                    <b>Joing Fund 100$</b>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="mdi mdi-clock text-muted mr-1"></i>
-                                        <small class="text-muted ml-auto">11 Nov,2021</small>
-                                        <p class="mb-0"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list d-flex align-items-center p-3">
-                            <div class="">
-                                <span class="avatar bg-blue brround avatar-md">U</span>
-                            </div>
-                            <div class="wrapper w-100 ml-3">
-                                <p class="mb-0 d-flex">
-                                    <b>Upgrade 500$</b>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="mdi mdi-clock text-muted mr-1"></i>
-                                        <small class="text-muted ml-auto">11 Nov,2021</small>
-                                        <p class="mb-0"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab3">
-                        <div class="mt-3">
-                            <div class="d-flex p-3">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked="">
-                                    <span class="custom-control-label">Do Even More..</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2" checked="">
-                                    <span class="custom-control-label">Find an idea.</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox3" value="option3" checked="">
-                                    <span class="custom-control-label">Hangout with friends</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox4" value="option4">
-                                    <span class="custom-control-label">Do Something else</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox5" value="option5">
-                                    <span class="custom-control-label">Eat healthy, Eat Fresh..</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox6" value="option6" checked="">
-                                    <span class="custom-control-label">Finsh something more..</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox7" value="option7" checked="">
-                                    <span class="custom-control-label">Do something more</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox8" value="option8">
-                                    <span class="custom-control-label">Updated more files</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox9" value="option9">
-                                    <span class="custom-control-label">System updated</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top border-bottom">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox10" value="option10">
-                                    <span class="custom-control-label">Settings Changings...</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="text-center pt-5">
-                                <a href="#" class="btn btn-primary">Add more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="main-footer ht-40">
-            <div class="container-fluid pd-t-0-f ht-100p">
-                <span>Copyright &copy; 2021 <a href="#">DCXA</a>. Designed by <a href="https://www.dcxa.io/">DCXA</a> All rights reserved.</span>
-            </div>
-        </div>
-
+        {% include 'includes/dashboard_footer.html' %}
     </div>
-    <!--End Page -->
-
-    <a href="#top" id="back-to-top"><i class="la la-chevron-up"></i></a>
-
-    <script src="{% static 'assets/plugins/ionicons/ionicons.js' %}"></script>
-    <script src="{% static 'assets/plugins/moment/moment.js' %}"></script>
-    <script src="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
-    <script src="{% static 'assets/plugins/rating/jquery.rating-stars.js' %}"></script>
-    <script src="{% static 'assets/plugins/rating/jquery.barrating.js' %}"></script>
-    <script src="{% static 'assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
-    <script src="{% static 'assets/js/eva-icons.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/side-menu/sidemenu.js' %}"></script>
-    <script src="{% static 'assets/plugins/sidebar/sidebar.js' %}"></script>
-    <script src="{% static 'assets/plugins/sidebar/sidebar-custom.js' %}"></script>
-    <script src="{% static 'assets/js/sticky.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js' %}"></script>
-    <script src="{% static 'assets/plugins/chart.js' %}/Chart.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/raphael/raphael.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/peity/jquery.peity.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
-
-    <script src="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.pie.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.categories.js' %}"></script>
-    <script src="{% static 'assets/js/dashboard.sampledata.js' %}"></script>
-
-    <script src="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.js' %}"></script>
-    <script src="{% static 'assets/js/newsticker.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-nice-select/js/jquery.nice-select.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-nice-select/js/nice-select.js' %}"></script>
-    <script src="{% static 'assets/js/dashboard.js' %}"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
-    <script src="{% static 'assets/switcher/js/switcher.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/responsive.dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap4.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap4.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/jszip.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/pdfmake.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/vfs_fonts.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/responsive.bootstrap4.min.js' %}"></script>
-    <script src="{% static 'assets/js/table-data.js' %}"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
-
-
-
-
-
-    <script src="{% static 'assets/plugins/select2/js/select2.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/fileuploads/js/fileupload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fileuploads/js/file-upload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.ui.widget.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.fileupload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.iframe-transport.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.fancy-fileupload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/fancy-uploader.js' %}"></script>
-    <script src="{% static 'assets/js/advanced-form-elements.js' %}"></script>
-    <script src="{% static 'assets/js/select2.js' %}"></script>
-    <script src="{% static 'assets/plugins/sumoselect/jquery.sumoselect.js' %}"></script>
-    <script src="{% static 'assets/plugins/telephoneinput/telephoneinput.js' %}"></script>
-    <script src="{% static 'assets/plugins/telephoneinput/inttelephoneinput.js' %}"></script>
-
-
+    {% include 'includes/dashboard_js.html' %}
 </body>
-
-</html>
-{% endblock body %}
