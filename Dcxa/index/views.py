@@ -11,6 +11,7 @@ def signup(request):
 def forgotpassword(request):
     return render(request, 'forgotpassword.html')
 
+
 def loginwithotp(request):
     return render(request,"loginwithotp.html")
 
