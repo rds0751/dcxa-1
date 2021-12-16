@@ -1,1531 +1,425 @@
-<!DOCTYPE html>
-<html lang="en">
 {% load static %}
-<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" /><meta http-equiv="Cache-Control" content="no-cache" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="Description" content="DCXa Coin Panel" /><meta name="Author" content="DCXa Coin" /><meta name="Keywords" content="cryptocurrency, dashboard, admin, crypto, ico, bootstrap admin template, admin template, bootstrap dashboard template, crypto dashboard, cryptocurrency dashboard, ico dashboard, crypto admin, dashboard cryptocurrency, cryptocurrency trading dashboard, crypto dashboard template " /><title>
-	Profile
-</title><link rel="icon" href="{% static 'assets/img/brand/favicon.png' %}" type="image/x-icon" /><link href="{% static 'assets/plugins/icons/icons.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/sidemenu.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/morris.js/morris.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/jquery-nice-select/css/nice-select.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/jquery-countdown/countdown.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/style.css'%}" rel="stylesheet" /><link href="{% static 'assets/css/skin-modes.css' %}" rel="stylesheet" /><link href="{% static 'assets/css/style-dark.css' %}" rel="stylesheet" /><link href="{% static 'assets/switcher/css/switcher.css' %}" rel="stylesheet" /><link rel="stylesheet" href="{% static 'assets/switcher/demo.css' %}" /><link href="{% static 'assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet" /><link href="{% static 'assets/plugins/fileuploads/css/fileupload.css'%}" rel="stylesheet" /><link href="{% static 'assets/css/countercss.css' %}" rel="stylesheet" />
-    <script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/js/alertify.min.js' %}"></script>
-
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/616d66acf7c0440a591ec674/1fi9li57j';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <script type="text/javascript" async src="https://l.getsitecontrol.com/p4r8zqd7.js' %}"></script>
-    <!--End of Tawk.to Script-->
-</head>
-
+{% include 'includes/head_css_js.html' %}
 <body class="main-body app sidebar-mini Light-mode">
+    < class="page">
 
-    <!-- Loader -->
-    <div id="global-loader" class="light-loader">
-        <img src="{% static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
-    </div>
-
-    <div class="page">
-
-
-        <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-        <aside class="app-sidebar sidebar-scroll ">
-            <div class="main-sidebar-header">
-                <a class=" desktop-logo logo-light" href="user.aspx">
-                    <img src="{% static 'assets/img/brand/logo.png' %}" class="main-logo" alt="logo"></a>
-                <a class=" desktop-logo logo-dark" href="user.aspx">
-                    <img src="{% static 'assets/img/brand/logo-white.png' %}" class="main-logo dark-theme" alt="logo"></a>
-                <a class="logo-icon mobile-logo icon-light" href="user.aspx">
-                    <img src="{% static 'assets/img/brand/favicon.png' %}" class="logo-icon" alt="logo"></a>
-                <a class="logo-icon mobile-logo icon-dark" href="user.aspx">
-                    <img src="{% static 'assets/img/brand/favicon-white.png' %}" class="logo-icon dark-theme" alt="logo"></a>
-            </div>
-            <div class="main-sidebar-body circle-animation ">
-
-                <ul class="side-menu circle">
-                    <li>
-                        <h3 class="">Dashboard</h3>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="User.aspx"><i class="side-menu__icon ti-desktop"></i><span class="side-menu__label">Dashboard</span></a>
-                    </li>
-
-
-
-
-                    <li>
-                        <h3>Statistics</h3>
-                    </li>
-
-
-                    <li class="slide">
-                        <a class="side-menu__item" data-toggle="slide" href="#">
-                            <i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">My Profile</span><i class="angle fe fe-chevron-down"></i></a>
-                        <ul class="slide-menu">
-                            <li><a class="slide-item" href="UserProfile.aspx">Update Profile</a></li>
-                            <li><a class="slide-item" href="UserKycUpload.aspx">KYC</a></li>
-                            <li><a class="slide-item" href="#">Bank Information</a></li>
-                            <li><a class="slide-item" href="ChangePassword.aspx">Change Password</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="slide">
-                        <a class="side-menu__item" href="{% static 'Userpages/UserRegOpen.Aspx?refid=DCXa-232173 '%}" target="_blank"><i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Add New Person</span></a>
-                    </li>
-
-                    <li class="slide">
-                        <a class="side-menu__item" data-toggle="slide" href="#">
-                            <i class="side-menu__icon ti-briefcase"></i><span class="side-menu__label">Level Associates</span><i class="angle fe fe-chevron-down"></i></a>
-                        <ul class="slide-menu">
-                            <li><a class="slide-item" href="UserdownlineDirect.aspx">Direct Team</a></li>
-                            <li><a class="slide-item" href="Userdownline.aspx">Level Team View</a></li>
-                            <li><a class="slide-item" href="Userroidownline.aspx">ROI Team View</a></li>
-                            <li><a class="slide-item" href="UserDownlineN.aspx">All Team Members</a></li>
-                            <li><a class="slide-item" href="treeview.aspx">My Tree View</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <h3>Wallets</h3>
-                    </li>
-
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userbuywallet.aspx"><i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Buy Wallet</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="UserMemberTopUp.aspx"><i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Buy Tokens</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="UserWalletTransfer.aspx"><i class="side-menu__icon ti-wallet"></i><span class="side-menu__label">Wallet Transfer</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="WalletStatementReport.aspx"><i class="side-menu__icon ti-wallet"></i><span class="side-menu__label">Wallet Statement</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="UserWalletPayment.aspx"><i class="side-menu__icon ti-wallet"></i><span class="side-menu__label">Withdrawal Request</span></a>
-                    </li>
-                    
-
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userbuyrealestate.aspx"><i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Buy Property</span></a>
-                    </li>
-
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userbuysip.aspx"><i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Buy SIP</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userbuyforex.aspx"><i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Forex Investment</span></a>
-                    </li>
-
-                    <li>
-                        <h3>Reports</h3>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon ti-pencil-alt"></i><span class="side-menu__label">Income Reports</span><span class="badge badge-info side-badge">6</span><i class="angle fe fe-chevron-down"></i></a>
-                        <ul class="slide-menu">
-                            <li><a class="slide-item" href="UserpaidPayout.aspx">Income Details</a></li>
-                            <li><a class="slide-item" href="UserPoolStatus.aspx">Investment Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" data-toggle="slide" href="#">
-                            <i class="side-menu__icon ti-briefcase"></i><span class="side-menu__label">Support</span><i class="angle fe fe-chevron-down"></i></a>
-                        <ul class="slide-menu">
-                            <li><a class="slide-item" target="_blank" href="https://support.dcxa.io/get_userdata/name/Nishant Rajput/email/rajputnishantyou@gmail.com/did/DCXa-232173">Complain Ticket</a></li>
-                            <li><a class="slide-item" href="UserComplainStatus.aspx">Complain Ticket Status</a></li>
-                        </ul>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userlogout.aspx"><i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Sign Out</span></a>
-                    </li>
-
-
-
-
-
-                </ul>
-            </div>
-        </aside>
-
-        <div class="main-content app-content">
-
-            <div class="main-header sticky side-header nav nav-item">
-                <div class="container-fluid">
-                    <div class="main-header-left ">
-                        <div class="app-sidebar__toggle mobile-toggle" data-toggle="sidebar">
-                            <a class="open-toggle" href="#"><i class="header-icons" data-eva="menu-outline"></i></a>
-                            <a class="close-toggle" href="#"><i class="header-icons" data-eva="close-outline"></i></a>
-                        </div>
-                        <div class="responsive-logo">
-                            <a href="user.aspx">
-                                <img src="{% static 'assets/img/brand/logo.png' %}" class="mobile-logo" alt="logo">
-                                <img src="{% static 'assets/img/brand/logo-theme-dark.png' %}" class="dark-mobile-logo" alt="logo">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="main-header-center">
-                        <div class="main-header-center ml-3 d-sm-none d-md-none d-lg-block" style="font-size: 10px;">
-                            DCXa Rate $0.50
-                            <i class="mdi mdi-upload " style="color: green; font-size: 1.0em;"></i><span style="color: green;">100%  </span>
-
-                        </div>
-
-                    </div>
-                    <div class="main-header-right" style="display: none;">
-                        <div class="nav nav-item  navbar-nav-right ml-auto">
-                            <form class="navbar-form nav-item my-auto d-lg-none" role="search">
-                                <div class="input-group nav-item my-auto">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button type="reset" class="btn btn-default">
-                                            <i class="ti-close"></i>
-                                        </button>
-                                        <button type="submit" class="btn btn-default nav-link">
-                                            <i class="ti-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>
-                            <div class="nav-item full-screen fullscreen-button">
-                                <a class="new nav-link full-screen-link" href="#"><i class="ti-fullscreen"></i></span></a>
-                            </div>
-                            <div class="dropdown  nav-item main-header-message ">
-                                <a class="new nav-link" href="#"><i class="ti-email"></i><span class="pulse-danger"></span></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp ">
-                                    <div class="main-dropdown-header  d-sm-none">
-                                        <a class="main-header-arrow" href="#"><i class="icon ion-md-arrow-back"></i></a>
-                                    </div>
-                                    <div class="menu-header-content text-left d-flex">
-                                        <div class="">
-                                            <h6 class="menu-header-title text-white mb-0">5 new Messages</h6>
-                                        </div>
-                                        <div class="my-auto ml-auto">
-                                            <span class="badge badge-pill badge-warning float-right">Mark All Read</span>
-                                        </div>
-                                    </div>
-                                    <div class="main-message-list chat-scroll">
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="  drop-img  cover-image  " data-image-src="{% static 'assets/img/faces/3.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Paul Molive</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">10 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/2.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Sahar Dary</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">13 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">All set ! Now, time to get to you now......</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/9.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Khadija Mehr</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">20 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">Are you ready to pickup your Delivery...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/12.jpg' %}">
-                                                <span class="avatar-status bg-danger"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Barney Cull</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">30 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">Here are some products ...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/5.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Petey Cruiser</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">35 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="text-center dropdown-footer">
-                                        <a href="text-center.html">VIEW ALL</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown nav-item main-header-notification">
-                                <a class="new nav-link " href="#"><i class="ti-bell animated bell-animations"></i><span class=" pulse"></span></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="menu-header-content text-left d-flex">
-                                        <div class="">
-                                            <h6 class="menu-header-title text-white mb-0">7 new Notifications</h6>
-                                        </div>
-                                        <div class="my-auto ml-auto">
-                                            <span class="badge badge-pill badge-warning float-right">Mark All Read</span>
-                                        </div>
-                                    </div>
-                                    <div class="main-notification-list Notification-scroll">
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-success-transparent">
-                                                <i class="la la-shopping-basket text-success"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New Order Received</h5>
-                                                <div class="notification-subtext">1 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-danger-transparent">
-                                                <i class="la la-user-check text-danger"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">22 verified registrations</h5>
-                                                <div class="notification-subtext">2 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-primary-transparent">
-                                                <i class="la la-check-circle text-primary"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">Project has been approved</h5>
-                                                <div class="notification-subtext">4 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-pink-transparent">
-                                                <i class="la la-file-alt text-pink"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New files available</h5>
-                                                <div class="notification-subtext">10 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-warning-transparent">
-                                                <i class="la la-envelope-open text-warning"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New review received</h5>
-                                                <div class="notification-subtext">1 day ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3" href="#">
-                                            <div class="notifyimg bg-purple-transparent">
-                                                <i class="la la-gem text-purple"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">Updates Available</h5>
-                                                <div class="notification-subtext">2 days ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="dropdown-footer">
-                                        <a href="#">VIEW ALL</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="navbar-toggler navresponsive-toggler d-sm-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
-                                aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon fe fe-more-vertical "></span>
-                            </button>
-                            <div class="dropdown main-profile-menu nav nav-item nav-link">
-                                <a class="profile-user" href="#">
-                                    <img alt="" src="{% static 'assets/img/faces/5.jpg' %}"></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="main-header-profile header-img">
-                                        <div class="main-img-user">
-                                            <img alt="" src="{% static 'assets/img/faces/5.jpg' %}">
-                                        </div>
-                                        <h6>Elizabeth Jane</h6>
-                                        <span>Premium Member</span>
-                                    </div>
-                                    <a class="dropdown-item" href="#"><i class="far fa-user"></i>My Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="far fa-edit"></i>Edit Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="far fa-clock"></i>Activity Logs</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-sliders-h"></i>Account Settings</a>
-                                    <a class="dropdown-item" href="page-signin.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-                                </div>
-                            </div>
-                            <div class="dropdown main-header-message right-toggle">
-                                <a class="nav-link " data-toggle="sidebar-right" data-target=".sidebar-right">
-                                    <i class="ti-menu tx-20 bg-transparent"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="responsive main-header collapse" id="navbarSupportedContent-4">
-                <div class="mb-1 navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark d-sm-none ">
-                    <div class="navbar-collapse">
-                        <div class="d-flex order-lg-2 ml-auto">
-                            <form class="navbar-form nav-item my-auto d-lg-none" role="search">
-                                <div class="input-group nav-item my-auto">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button type="reset" class="btn btn-default">
-                                            <i class="ti-close"></i>
-                                        </button>
-                                        <button type="submit" class="btn btn-default nav-link">
-                                            <i class="ti-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>
-                            <div class="d-md-flex">
-                                <div class="nav-item full-screen fullscreen-button">
-                                    <a class="new nav-link full-screen-link" href="#"><i class="ti-fullscreen"></i></span></a>
-                                </div>
-                            </div>
-                            <div class="dropdown  nav-item main-header-message header-contact">
-                                <a class="new nav-link" href="#"><i class="ti-email"></i><span class=" pulse-danger"></span></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="main-dropdown-header d-sm-none">
-                                        <a class="main-header-arrow" href="#"><i class="icon ion-md-arrow-back"></i></a>
-                                    </div>
-                                    <div class="menu-header-content text-left d-flex">
-                                        <div class="">
-                                            <h6 class="menu-header-title text-white mb-0">5 new Messages</h6>
-                                        </div>
-                                        <div class="my-auto ml-auto">
-                                            <span class="badge badge-pill badge-warning float-right">Mark All Read</span>
-                                        </div>
-                                    </div>
-                                    <div class="main-message-list text-scroll">
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="  drop-img  cover-image  " data-image-src="{% static 'assets/img/faces/3.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Paul Molive</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">10 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/2.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Sahar Dary</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">13 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">All set ! Now, time to get to you now......</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/9.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Khadija Mehr</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">20 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">Are you ready to pickup your Delivery...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/12.jpg' %}">
-                                                <span class="avatar-status bg-danger"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Barney Cull</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">30 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">Here are some products ...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image" data-image-src="{% static 'assets/img/faces/5.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Petey Cruiser</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">35 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="text-center dropdown-footer">
-                                        <a href="text-center.html">VIEW ALL</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown nav-item main-header-notification">
-                                <a class="new nav-link" href="#"><i class="ti-bell "></i><span class=" pulse"></span></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="menu-header-content text-left d-flex">
-                                        <div class="">
-                                            <h6 class="menu-header-title text-white mb-0">7 new Notifications</h6>
-                                        </div>
-                                        <div class="my-auto ml-auto">
-                                            <span class="badge badge-pill badge-warning float-right">Mark All Read</span>
-                                        </div>
-                                    </div>
-                                    <div class="main-notification-list notify-scroll">
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-success-transparent">
-                                                <i class="la la-shopping-basket text-success"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New Order Received</h5>
-                                                <div class="notification-subtext">1 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-danger-transparent">
-                                                <i class="la la-user-check text-danger"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">22 verified registrations</h5>
-                                                <div class="notification-subtext">2 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-primary-transparent">
-                                                <i class="la la-check-circle text-primary"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">Project has been approved</h5>
-                                                <div class="notification-subtext">4 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-pink-transparent">
-                                                <i class="la la-file-alt text-pink"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New files available</h5>
-                                                <div class="notification-subtext">10 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-warning-transparent">
-                                                <i class="la la-envelope-open text-warning"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New review received</h5>
-                                                <div class="notification-subtext">1 day ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3" href="#">
-                                            <div class="notifyimg bg-purple-transparent">
-                                                <i class="la la-gem text-purple"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">Updates Available</h5>
-                                                <div class="notification-subtext">2 days ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="dropdown-footer">
-                                        <a href="#">VIEW ALL</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown main-profile-menu nav nav-item nav-link">
-                                <a class="profile-user" href="#">
-                                    <img alt="" src="{% static 'assets/img/faces/5.jpg' %}"></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="main-header-profile header-img">
-                                        <div class="main-img-user">
-                                            <img alt="" src="{% static 'assets/img/faces/5.jpg' %}">
-                                        </div>
-                                        <h6>Elizabeth Jane</h6>
-                                        <span>Premium Member</span>
-                                    </div>
-                                    <a class="dropdown-item" href="#"><i class="far fa-user"></i>My Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="far fa-edit"></i>Edit Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="far fa-clock"></i>Activity Logs</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-sliders-h"></i>Account Settings</a>
-                                    <a class="dropdown-item" href="page-signin.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-                                </div>
-                            </div>
-                            <div class="dropdown main-header-message right-toggle">
-                                <a class="nav-link " data-toggle="sidebar-right" data-target=".sidebar-right">
-                                    <i class="ti-menu tx-20 bg-transparent"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+        {% include 'includes/loader.html' %}
+        <class class="main-content app-content">
+            {% include 'includes/dashboard_header.html' %}
+            {% include 'includes/sidebar.html' %}
             <div class="container-fluid">
-                <form name="aspnetForm" method="post" action="./UserProfile.aspx" id="aspnetForm">
-<div>
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzExMzE1MDg0DxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWAmYPZBYEAgEPFgIeBFRleHQFBDAuNTBkAgIPZBYCAgEPZBYCAgMPZBYCZg9kFgICAw9kFgoCAQ8PFgIfAQULRENYYS05OTk5OTlkZAIDDw8WBB8BBQRLdW5qHgdFbmFibGVkaGRkAhcPDxYEHwEFGnJhanB1dG5pc2hhbnR5b3VAZ21haWwuY29tHwJoZGQCHQ8PFgQfAWUfAmhkZAIfDw8WAh8BBQQwLjAwZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFMGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2hrRW5hYmxlVHdvRmFjdG9yQXV0aCWpb40vQsw8FAm7avlgrwKBaufoWfflUSqNHV/kb2cz" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['aspnetForm'];
-if (!theForm) {
-    theForm = document.aspnetForm;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
-
-
-<script src="/WebResource.axd?d=f3B_zO2ET5BZu0NWd-VGKvhWRqxL8B-DDJwXVcSXVSoS_YMZb3ONJzLPMKGnxRcKjl8q1bAiXAAkSYfq1vMS_GnG-3PXDDo0Mzdbjb3OlSQ1&amp;t=637454068754849868" type="text/javascript"></script>
-
-
-<script src="/ScriptResource.axd?d=zmiABBZHH6k-tBVvpkr0cIPuCp0gBJ7szRGvz7aYb2NipCiln2D5ZnlWKMknCn7_ebl3hUdDqPjbumT_A3PmLapdJtWF-qucPKpU3paRbgnYcVPi05UV8V3Vd6NCZu9gYWrMVy93A5MtRHI2sbgruouj6SwuER1OyX0T3zubex9H7KJUiMn4OaKo3F9ENyM80&amp;t=363be08" type="text/javascript"></script>
-<script type="text/javascript">
-//<![CDATA[
-if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
-//]]>
-</script>
-
-<script src="/ScriptResource.axd?d=IQfcZPVQ7g_cFzXNdQETqBRWOM0zcL7RfV-2vfJFJUsaX7cqLTc1GU0L2sxZiq3jAWDuvROq0Ulxwz7kYyzrBLqw5ROPpN1sESRNyXzF89nQXt74R0rsd9K3aF5A4I522NLtro3IFWg844vzAHFN6s59Pgy3jnm5M4rBhHhoyVrrffpSuD-XaGhVulgJVfMU0&amp;t=363be08" type="text/javascript"></script>
-<div>
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CD0E25F0" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAP0BVuwoS2SkQFd7qONHUBILVzoXxVlovom6HfygrGFIisEsf72vk6EAbmgtZqrRL45lITAC/yfRjqZIixmnZPRfi+tlxXzQ3VlnRFmJgj+oBNDFnIUI3YjUSbViT/TnVCF7rUnLfvgl2Qqi96gA0F8IeVI1lCBcv0MGGFEA6bey71wnzVZcnUawNApfKFpPIvb6SMAjTULbEX2d2052BjbyF49aOuNzqsawRK355sDzMb1VXEqjUaoc/Hw4guZGqdtS83jtYHU19cluXXT7fVdAMg+RQ9e5543eUEOUsotBcEMuLSm/HzuL+qRG5N3/bBiZEGHTqPv3jw9yanFxuzA1tPhQJFhGowxvCkeIF9AUQi3xNqkB91Gkyt8stKUaxufH5CF5zU8QJW8v4wqHbW8n30e6Id8RC6f5j87a3CtzmUROFbb2HYnDxA/wErQMu5SJync7SaryIxHx8Cmw3658O1WgyPVE7q4RcLoxFCyQOt3Je8Iks+SD+CpvJqQMeINFwl9JAry0fnuIMJ/08SmoD4SDIwe9izxixLg1IyBSZvAqIlL2LroUNz/sW5ej+L6k+Q7komk1h7zd/XnFTMK5W58Np+CBIyYc+NfkA9A/GIurmdHL3OT+ReFzhdJbu84mRUs9ejEeLOBj2S5XBDt2w60VIXJTaSVN2KTuekGNd7ABK0VBwJdLJMkvN20Ylon693grLMwPKgB/oO/QnHsgwVRUKM24AWaISV909Cmp3UXiAMv9QuLlZDaTFx8frUDII2P3b8lVIsrhT9/tl5xGHkYuJAWv2wgGrZaYZNfe9Uu7lfxwEsz9PTYSyjHk8Bzb+isklxC300+T1oRSZQEVhaqbNAUd9m2MsYvE/+RlictebRyoe6yGz6318hOzBOtSCuTshSadql3vjLYo30FRqMbvBltnRKZQod+XY4ZjfPeSflWlU4qMDvaugZA4eoBvJAXZLF/nEveru2cChdSl5B5nySR8BkdMIN/XQZbbasR4RyLQWBes1yCHrWZJJz2W8SAD89VXemKBzN34LcMuRv5KNo3s34XAKhUEdVChWYy+27XQaZcNYjCru6fbo4Un9qCIYSvWRaJi/Ful0FazA2b1KwFuHkbxetHjpthfitW2G+AB97owDX1X9PuMQCBt6AN/QfUnFmVV4QWGqM8M6rWgS8y+Nq95Wq5SgymkG1nSWg5Pjlgjki+8KwwvRikSmaGpEr+113/Dv2HgdYONOxo9OU2Rb7hZxKOm1of9jTz5U1QAcAOstB0gnBH2GadxN2y/bfJDX1MouVF+qz2TYGHHoY60yaE3Y6hMUUm6WdLL6j7mOxNTIscdYvPn2CXif4KdWqdCPSqplyAJ1sDgDophgV6DZwCL4O+WIr1glsKTKWtt4ADKm2NfyhkyqkxDAGCvp9Rr2nzeqJ1dZYqc+jwx3SKLXiyqM9OZZdvEleahfGyD6p/bvInw8Ar4FFjuYN6xp1daISJcJbJuQP98kjeGawPWa6BBfVJhdcXYOYIe5jHmSO9oi4DFJXBpoNmbXuwpKKNpWS8ZGRl/WFra4lSCPlL/2m8nuKDPBxLQqB2GvvctrP6kLiPs6ZRSjZxESxouC1sZs+B3Ugl7j4S707Rz1at+m8XvHPACnaBI9lwsL4SPo5Fm6d3nQaHBItgQpkWcg5gxwjxhxKoMNSlGezGZGxoVlvqrFCut5A0Nn7KsJw6ds5qr2SkaLz/OGxqPajztXxnFb237rsFWV328tCXSze8RfeskQqK+gPpcSv89mWKyvOAJfZsADJoyeC+LE/lgzgOjiJR6IQ/KF62rxFHBqkpgxDzezkVqAw07Ii7U4uCsnASK1hHMaQ6z1K1O9+ATLgP1o/ydgEUbKVENzJsqBeZLpDpH6NYWZELSUbd+wnRL2aFXP6GQ4qXjGSyavp+CshljQ9n8Z/SLF/uZGetWS1c+CalqVYuRunm7hxl3AMa+Aoj5aLDFbMjBEQtxCnHMzgqhLQvXZzWthmsASxfFeURyEEhnyg89q+iqIRVPXRQmV8l2zJexHFTZP8nDYnxOIzCHIdiPGZIJ258QuXFOfSWXGGrPLfOz0WqVFxT+l3wRS0KDGhTIpLlVTroTBoqxIcAr0E2RPvnfN9BjB4E59DxkdGgfViUvJnDB2LmnOQPwYjZL1lyUghX1LjLlYNVept+xeUhvBi9CT8dOEGQL1/YHIogGGy+Mw1HJYlSRKyC3A7bUYViTjDv4pEH1FD7b8SuZ3Yn6lb2FCETp01bJlVqyY8bX3T79BoOvTAy2Hc2w2ikX2orml6UNQ335PTp4Lc+6eASp/jQ9xbIXT+kVoLIFBGwezBwRUOnhQtw8FrBX6mMN+16MKNGkPsLatTuA7NewAtYikwAc95QM3AxwPg5tN3h79tdWa2plqMkoo3N8YGqEYM9ARiTG266hoJElPyt9lvtT2uDjMt8Xf+Aa2IzX0BSmADTjKCPdndd4IVenMq/FTAzFqTHLP51PGMJL6Hs418zHhH9DLhaEDLH0Ecm7IPJRwGiqu/taGl+UCIby7Z1xp+tFVFgROXh7sohDYI9jTWzN7pz/V2rNfhw3XgsKNrdV7pL2fTVr/xx0OGaDJ4b8dCihkCoi4SqhB4yI4sU8E1C+hUQXcls4ngnedWPJQDcJ6fyYjIKKp9+pawwiY42FWJdDcjjhXVfoQIlwYqRDk8U3FV34kV4sFD8QCgYcM5eU3HYw9iQF3kAKXVO/lShcv5Rmrtd1bBzCNiy9XGG82MmTjejY4TPndlb3Jat1QJTw8BLnQ0EtgHX0FDhNabRQVSCYDtdKafSPwMCaTAYOKM0QLIZmzdgxeKmKLMju3Vgi47gY25VkG/c/iG7N91T0VkFmUzR+CvQA0jZvy4Rpd59wgAvMtTCGuZ/tnIs3uvWh1BTSAnDivfxraBIEbpnQ/fcSs/+lPr6Ei8c2YbjC5DRD6kLi2mq4Em9e4dHBxKHmI+nhwLbVDHHuGfaNR1ar/5vDMXF1x1CEdgdknZAlPHOBnw3njF39Ks3hpc5CZw7ciedf2V/JqO8K4k4thOaIyy7KGHz+NWLNy0DlTow1n91GLdXT7/EJKe5PtSSH1EB6O77ysc56yt5EtM3lVIA1XRVg+n2hkTBM2I6UpDoQByJ0wI7eRIAYOpaZPgMJboilkpWVNVXb0oUM+KKU7SZVh2eiCeiWII22zPXT57oZlJsT9Gtkcmkuce1m9iu0W92GpaiV1jLjYyU88JY8L8ys6+pf1Ile2v/dmgTeJ9NB4NAaK4BV3FWAr8o+q2ZjTc2FODhEe/0jJnS1tWf82mJ8xtkj2hT8uGlITNEpsOyMRSszKutz/DCwM0IZQ7VlkApxRLAhG6Z0qETua5S/znRAc5Ex7U8U2FfxC7l9rDSEP8hhjvbom1Z2AmYRdqQ1Fa78zgUH7u/84Isjznw9j3CdQ4sGdFBDP4SrOO2cIPOdmAcG2A4lPX7y8ru4GzPSJiwTNixRNH46eSyt0NfyAOVttvzGg0wPucLuhVo3CTScqYKpwXCeyUuHlg6DNkprYbiibK9bPH/V7mF7WcDPPlO8WxE+zUUfQMfI6cBFrbBB11sR2vrkuZd9OtZrDGgXUJXzNHkcObQ1smFS1G5L7ABuVD/CZLQSyofyOKR7kiJXC02nYLx1tBr8niP4vv2qQwkn20dJd4JjauVTekQ71zGrXsbfiWOI3J64U8fAUhX7cxyJRp1FDl4USfb+9/07M9oqYH3cLQdBVfGpoth6s7fgB7iKyxPslAVTmewKl2xZVikOm+UY/mFbL/xBnTLSDxV68OxRcxFPwKj7MIZk/7fcirzHtD9TTc9e0HQTl28FDDT8sy7UArGdI5r0Le0HaQi6CmZQ2DIClbf+t4onEUaSk8DxcCny64MtJxuOE9sycps7ZAjdorPh5o/uYfX6tC6jcqVwz7JsEGW6yVq6Iv4XV+nXvFvBFgzGNHlYv9pqoQan0REdPBqt9ULX+uEZCuUZeVip3uhDRGdidLIZiXHxF+gOIkwcJeHt7UfjdIUr6qzyxnvonpZHaySFHXH7zd8ATFYeURjDnM2FO/d1jOHMb9TnnfhKQ23FKKLh6PF/bBJwCtMMEGHYuAAZqFK5zpl77nR8RylY1wqPILcivKWwVDpEERs+zJ/2gD+/pn5YeNQsYLaOtnUsKWOvrRYyFQCiL+X/UyHIqo7urpHyLpnpOwixgiO8YYNjphdHHWHhV4U1j1X4dbcgviLLYi7IwrEa+TcF9ETWQg2FAEHhxJgxCyceQd+umCgFhkvGJd0QJz5cLmF3jqI+9h0gRWfpjmuLN73QqQpg+PQQsmcxkGKKCzW7AVWh3qYNIWkCl3etvlHqOO0nbzfIbsOaNC6at4Qm6rYila2m7XgTtHx6zG8DFRtfxEuVmn1NLSzMYpT1ZnS2YaLbOxnsAGdOfqxHeD5dXN+6FzlgkTn5PdgNNzySNJ8w7xiPqVuAinpD6PUuRoUugjumgIXULe0CHguAThTjNmIeeBUU7gbA1W3T5nD5Y+bLMZ7+TWTvfQ5eWt9WymDFSQ1/c4zQ+irDTX7kvE02U/9ghtDTXXdrbqwcQPJbqcSNKq0IGMvgOIwTYFRBFxMUVXp5O1LB0vwnd2i2/v4ddFYkLDl3SYwLk4yRtuAXTptX4FZiotam24HJIWRdgq7PPMhPOun1doAgWy2E8nxtBT4+ersJLcdl/PMETkP2P95YX1pmE5/LgIQfOJ0dJ82lGB1AjCmKiPpZeScfCBhobARZt/c93HcPFGQBmsrwrOvxTbVBzDqJadH7Jhezj+SiUmyU6PnDD7JpRr1gSAODXrSXJGhNqLS9Aq0PPl4RG4/gnHw7ZylkKBqODgVF64BZXPX8MICNHgQeWoHsLrV54lDpM6XKoURC6399FjZUGR4CKIBkeEDJdBS0NlzeuGbHDX1lzjfzalNusplx4cHvYwcfy+AvdS/5S2LFjvDmx3FOSh56C4zddmLJgwJqyjKr26ZIjamptNqlHHwbLFKFsrVnjBenFN65UWK8jes6wi4BL5fk1/09QVfb2twRQ8TzY4AUW1c/KRkvyIqpc7VbkT6YZhn8ailNT/wEauUaMealY6046Uw6Wo9c98692SKqA6N1aCWJe0QRpnXFK8QH4eHCk/JK2y7BJNd/+qYndfHRPxWL+yW8OquEW2DzWIMGs5ruw/j7aU5kTDFHFdFsccP5OMDpUuBzIVQpHr+vfMRA7dAqCS7wRkbCyxnrj+tTrGJhB//nx1f1tIAwDpA/p3iQAE0sdDuXd2w03C9og5wz07zmmZ2v94u1WIsjG/TBZghyg2f9rXiAIdRbTe/NkPbWBOhOwNYbka3+Nfei0VAij6x5sBMaq1c4+VWaxQieYN0UgPTjsi3AX33Elo4hlUrb3KaaoBqxUtv+jZDBGpk81rH0L2F1" />
-</div>
-                    
-
-
-
-
-
-    <script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptManager1', 'aspnetForm', ['tctl00$ContentPlaceHolder1$UpdatePanel1',''], [], [], 90, 'ctl00');
-//]]>
-</script>
-
-    <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+                <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
 	
-            <div id="ctl00_ContentPlaceHolder1_ctl01" style="display:none;">
-		
-                    <div class="global-loader light-loader">
-                        <img src="{% static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
-                    </div>
+                    <div id="ctl00_ContentPlaceHolder1_ctl01" style="display:none;">
                 
-	</div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="main-content-label mg-b-5">
-                                Personal Details
+                            <div class="global-loader light-loader">
+                                <img src="{% static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
                             </div>
-                            <p class="mg-b-20">It is very easy to customize and it uses in your website applications.</p>
-                            <div id="ctl00_ContentPlaceHolder1_div1" class="row">
-                                <div class="col-md-12 col-lg-12 col-xl-6 mx-auto d-block">
-                                    <div class="card card-body pd-10 pd-md-20 border shadow-none">
-                                        <h5 class="card-title mg-b-20">Profile Details</h5>
-                                        <div class="form-group">
-                                            <div class="row row-sm">
-                                                <div class="col-sm-12">
-                                                    <div class="row row-sm">
-                                                        <div class="col-sm-6">
-                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Sponser ID </label>
-                                                            <input name="ctl00$ContentPlaceHolder1$txtspid" type="text" value="DCXa-999999" id="ctl00_ContentPlaceHolder1_txtspid" disabled="disabled" class="form-control" placeholder="your Sponser name" />
-                                                        </div>
-                                                        <div class="col-sm-6 mg-t-10 mg-sm-t-0">
-                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Sponsor Name</label>
-                                                            <input name="ctl00$ContentPlaceHolder1$txtspname" type="text" value="Kunj" id="ctl00_ContentPlaceHolder1_txtspname" disabled="disabled" class="form-control" placeholder="DD/MM/YYYY" />
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">First Name *</label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtname" type="text" value="Nishant Rajput" id="ctl00_ContentPlaceHolder1_txtname" class="form-control" required="" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-xs-6 col-sm-6">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Middle Name </label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtMName" type="text" id="ctl00_ContentPlaceHolder1_txtMName" class="form-control" />
-                                                </div>
-                                                <div class="col-xs-6 col-sm-6">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Last Name *</label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtLName" type="text" id="ctl00_ContentPlaceHolder1_txtLName" class="form-control" required="" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Date of Birth *</label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtdob" type="text" id="ctl00_ContentPlaceHolder1_txtdob" class="form-control" placeholder="DD/MM/YYYY" required="" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Country *</label>
-                                                    <select name="ctl00$ContentPlaceHolder1$dropCountry" id="ctl00_ContentPlaceHolder1_dropCountry" class="form-control" required="">
-		<option selected="selected" value="">Select Country</option>
-		<option value="United States">United States</option>
-		<option value="Afghanistan">Afghanistan</option>
-		<option value="Albania">Albania</option>
-		<option value="Algeria">Algeria</option>
-		<option value="American Samoa">American Samoa</option>
-		<option value="Andorra">Andorra</option>
-		<option value="Angola">Angola</option>
-		<option value="Anguilla">Anguilla</option>
-		<option value="Antarctica">Antarctica</option>
-		<option value="Antigua And Barbuda">Antigua And Barbuda</option>
-		<option value="Argentina">Argentina</option>
-		<option value="Armenia">Armenia</option>
-		<option value="Aruba">Aruba</option>
-		<option value="Australia">Australia</option>
-		<option value="Austria">Austria</option>
-		<option value="Azerbaijan">Azerbaijan</option>
-		<option value="Bahamas">Bahamas</option>
-		<option value="Bahrain">Bahrain</option>
-		<option value="Bangladesh">Bangladesh</option>
-		<option value="Barbados">Barbados</option>
-		<option value="Belarus">Belarus</option>
-		<option value="Belgium">Belgium</option>
-		<option value="Belize">Belize</option>
-		<option value="Benin">Benin</option>
-		<option value="Bermuda">Bermuda</option>
-		<option value="Bhutan">Bhutan</option>
-		<option value="Bolivia">Bolivia</option>
-		<option value="Bosnia And Herzegowina">Bosnia And Herzegowina</option>
-		<option value="Botswana">Botswana</option>
-		<option value="Bouvet Island">Bouvet Island</option>
-		<option value="Brazil">Brazil</option>
-		<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
-		<option value="Brunei Darussalam">Brunei Darussalam</option>
-		<option value="Bulgaria">Bulgaria</option>
-		<option value="Burkina Faso">Burkina Faso</option>
-		<option value="Burundi">Burundi</option>
-		<option value="Cambodia">Cambodia</option>
-		<option value="Cameroon">Cameroon</option>
-		<option value="Canada">Canada</option>
-		<option value="Cape Verde">Cape Verde</option>
-		<option value="Cayman Islands">Cayman Islands</option>
-		<option value="Central African Republic">Central African Republic</option>
-		<option value="Chad">Chad</option>
-		<option value="Chile">Chile</option>
-		<option value="China">China</option>
-		<option value="Christmas Island">Christmas Island</option>
-		<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-		<option value="Colombia">Colombia</option>
-		<option value="Comoros">Comoros</option>
-		<option value="Congo">Congo</option>
-		<option value="Cook Islands">Cook Islands</option>
-		<option value="Costa Rica">Costa Rica</option>
-		<option value="Cote D&#39;Ivoire">Cote D&#39;Ivoire</option>
-		<option value="Croatia (Local Name: Hrvatska)">Croatia (Local Name: Hrvatska)</option>
-		<option value="Cuba">Cuba</option>
-		<option value="Cyprus">Cyprus</option>
-		<option value="Czech Republic">Czech Republic</option>
-		<option value="Denmark">Denmark</option>
-		<option value="Djibouti">Djibouti</option>
-		<option value="Dominica">Dominica</option>
-		<option value="Dominican Republic">Dominican Republic</option>
-		<option value="East Timor">East Timor</option>
-		<option value="Ecuador">Ecuador</option>
-		<option value="Egypt">Egypt</option>
-		<option value="El Salvador">El Salvador</option>
-		<option value="Equatorial Guinea">Equatorial Guinea</option>
-		<option value="Eritrea">Eritrea</option>
-		<option value="Estonia">Estonia</option>
-		<option value="Ethiopia">Ethiopia</option>
-		<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
-		<option value="Faroe Islands">Faroe Islands</option>
-		<option value="Fiji">Fiji</option>
-		<option value="Finland">Finland</option>
-		<option value="France">France</option>
-		<option value="French Guiana">French Guiana</option>
-		<option value="French Polynesia">French Polynesia</option>
-		<option value="French Southern Territories">French Southern Territories</option>
-		<option value="Gabon">Gabon</option>
-		<option value="Gambia">Gambia</option>
-		<option value="Georgia">Georgia</option>
-		<option value="Germany">Germany</option>
-		<option value="Ghana">Ghana</option>
-		<option value="Gibraltar">Gibraltar</option>
-		<option value="Greece">Greece</option>
-		<option value="Greenland">Greenland</option>
-		<option value="Grenada">Grenada</option>
-		<option value="Guadeloupe">Guadeloupe</option>
-		<option value="Guam">Guam</option>
-		<option value="Guatemala">Guatemala</option>
-		<option value="Guinea">Guinea</option>
-		<option value="Guinea-Bissau">Guinea-Bissau</option>
-		<option value="Guyana">Guyana</option>
-		<option value="Haiti">Haiti</option>
-		<option value="Honduras">Honduras</option>
-		<option value="Hong Kong">Hong Kong</option>
-		<option value="Hungary">Hungary</option>
-		<option value="Icel And">Icel And</option>
-		<option value="India">India</option>
-		<option value="Indonesia">Indonesia</option>
-		<option value="Iran (Islamic Republic Of)">Iran (Islamic Republic Of)</option>
-		<option value="Iraq">Iraq</option>
-		<option value="Ireland">Ireland</option>
-		<option value="Israel">Israel</option>
-		<option value="Italy">Italy</option>
-		<option value="Jamaica">Jamaica</option>
-		<option value="Japan">Japan</option>
-		<option value="Jordan">Jordan</option>
-		<option value="Kazakhstan">Kazakhstan</option>
-		<option value="Kenya">Kenya</option>
-		<option value="Kiribati">Kiribati</option>
-		<option value="Korea">Korea</option>
-		<option value="Kuwait">Kuwait</option>
-		<option value="Kyrgyzstan">Kyrgyzstan</option>
-		<option value="Lao People&#39;S Dem Republic">Lao People&#39;S Dem Republic</option>
-		<option value="Latvia">Latvia</option>
-		<option value="Lebanon">Lebanon</option>
-		<option value="Lesotho">Lesotho</option>
-		<option value="Liberia">Liberia</option>
-		<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
-		<option value="Liechtenstein">Liechtenstein</option>
-		<option value="Lithuania">Lithuania</option>
-		<option value="Luxembourg">Luxembourg</option>
-		<option value="Macau">Macau</option>
-		<option value="Macedonia">Macedonia</option>
-		<option value="Madagascar">Madagascar</option>
-		<option value="Malawi">Malawi</option>
-		<option value="Malaysia">Malaysia</option>
-		<option value="Maldives">Maldives</option>
-		<option value="Mali">Mali</option>
-		<option value="Malta">Malta</option>
-		<option value="Marshall Islands">Marshall Islands</option>
-		<option value="Martinique">Martinique</option>
-		<option value="Mauritania">Mauritania</option>
-		<option value="Mauritius">Mauritius</option>
-		<option value="Mayotte">Mayotte</option>
-		<option value="Mexico">Mexico</option>
-		<option value="Micronesia, Federated States">Micronesia, Federated States</option>
-		<option value="Moldova, Republic Of">Moldova, Republic Of</option>
-		<option value="Monaco">Monaco</option>
-		<option value="Mongolia">Mongolia</option>
-		<option value="Montserrat">Montserrat</option>
-		<option value="Morocco">Morocco</option>
-		<option value="Mozambique">Mozambique</option>
-		<option value="Myanmar">Myanmar</option>
-		<option value="Namibia">Namibia</option>
-		<option value="Nauru">Nauru</option>
-		<option value="Nepal">Nepal</option>
-		<option value="Netherlands">Netherlands</option>
-		<option value="Netherlands Ant Illes">Netherlands Ant Illes</option>
-		<option value="New Caledonia">New Caledonia</option>
-		<option value="New Zealand">New Zealand</option>
-		<option value="Nicaragua">Nicaragua</option>
-		<option value="Niger">Niger</option>
-		<option value="Nigeria">Nigeria</option>
-		<option value="Niue">Niue</option>
-		<option value="Norfolk Island">Norfolk Island</option>
-		<option value="Northern Mariana Islands">Northern Mariana Islands</option>
-		<option value="Norway">Norway</option>
-		<option value="Oman">Oman</option>
-		<option value="Pakistan">Pakistan</option>
-		<option value="Palau">Palau</option>
-		<option value="Panama">Panama</option>
-		<option value="Papua New Guinea">Papua New Guinea</option>
-		<option value="Paraguay">Paraguay</option>
-		<option value="Peru">Peru</option>
-		<option value="Philippines">Philippines</option>
-		<option value="Pitcairn">Pitcairn</option>
-		<option value="Poland">Poland</option>
-		<option value="Portugal">Portugal</option>
-		<option value="Puerto Rico">Puerto Rico</option>
-		<option value="Qatar">Qatar</option>
-		<option value="Reunion">Reunion</option>
-		<option value="Romania">Romania</option>
-		<option value="Russian Federation">Russian Federation</option>
-		<option value="Rwanda">Rwanda</option>
-		<option value="Saint K Itts And Nevis">Saint K Itts And Nevis</option>
-		<option value="Saint Lucia">Saint Lucia</option>
-		<option value="Saint Vincent, The Grenadines">Saint Vincent, The Grenadines</option>
-		<option value="Samoa">Samoa</option>
-		<option value="San Marino">San Marino</option>
-		<option value="Sao Tome And Principe">Sao Tome And Principe</option>
-		<option value="Saudi Arabia">Saudi Arabia</option>
-		<option value="Senegal">Senegal</option>
-		<option value="Seychelles">Seychelles</option>
-		<option value="Sierra Leone">Sierra Leone</option>
-		<option value="Singapore">Singapore</option>
-		<option value="Slovakia (Slovak Republic)">Slovakia (Slovak Republic)</option>
-		<option value="Slovenia">Slovenia</option>
-		<option value="Solomon Islands">Solomon Islands</option>
-		<option value="Somalia">Somalia</option>
-		<option value="South Africa">South Africa</option>
-		<option value="South Georgia , S Sandwich Is.">South Georgia , S Sandwich Is.</option>
-		<option value="Spain">Spain</option>
-		<option value="Sri Lanka">Sri Lanka</option>
-		<option value="St. Helena">St. Helena</option>
-		<option value="St. Pierre And Miquelon">St. Pierre And Miquelon</option>
-		<option value="Sudan">Sudan</option>
-		<option value="Suriname">Suriname</option>
-		<option value="Svalbard, Jan Mayen Islands">Svalbard, Jan Mayen Islands</option>
-		<option value="Sw Aziland">Sw Aziland</option>
-		<option value="Sweden">Sweden</option>
-		<option value="Switzerland">Switzerland</option>
-		<option value="Syrian Arab Republic">Syrian Arab Republic</option>
-		<option value="Taiwan">Taiwan</option>
-		<option value="Tajikistan">Tajikistan</option>
-		<option value="Tanzania, United Republic Of">Tanzania, United Republic Of</option>
-		<option value="Thailand">Thailand</option>
-		<option value="Togo">Togo</option>
-		<option value="Tokelau">Tokelau</option>
-		<option value="Tonga">Tonga</option>
-		<option value="Trinidad And Tobago">Trinidad And Tobago</option>
-		<option value="Tunisia">Tunisia</option>
-		<option value="Turkey">Turkey</option>
-		<option value="Turkmenistan">Turkmenistan</option>
-		<option value="Turks And Caicos Islands">Turks And Caicos Islands</option>
-		<option value="Tuvalu">Tuvalu</option>
-		<option value="Uganda">Uganda</option>
-		<option value="Ukraine">Ukraine</option>
-		<option value="United Arab Emirates">United Arab Emirates</option>
-		<option value="United Kingdom">United Kingdom</option>
-		<option value="United States">United States</option>
-		<option value="United States Minor Is.">United States Minor Is.</option>
-		<option value="Uruguay">Uruguay</option>
-		<option value="Uzbekistan">Uzbekistan</option>
-		<option value="Vanuatu">Vanuatu</option>
-		<option value="Venezuela">Venezuela</option>
-		<option value="Viet Nam">Viet Nam</option>
-		<option value="Virgin Islands (British)">Virgin Islands (British)</option>
-		<option value="Virgin Islands (U.S.)">Virgin Islands (U.S.)</option>
-		<option value="Wallis And Futuna Islands">Wallis And Futuna Islands</option>
-		<option value="Western Sahara">Western Sahara</option>
-		<option value="Yemen">Yemen</option>
-		<option value="Yugoslavia">Yugoslavia</option>
-		<option value="Zaire">Zaire</option>
-		<option value="Zambia">Zambia</option>
-		<option value="Zimbabwe">Zimbabwe</option>
-
-	</select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row row-sm">
-                                                <div class="col-sm-12">
-                                                    <div class="row row-sm">
-                                                        <div class="col-sm-6">
-                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">State *</label>
-
-                                                            <input name="ctl00$ContentPlaceHolder1$txtstate" type="text" value="None" id="ctl00_ContentPlaceHolder1_txtstate" class="form-control" required="" />
-                                                        </div>
-                                                        <div class="col-sm-6 mg-t-10 mg-sm-t-0">
-                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">City *</label>
-                                                            <input name="ctl00$ContentPlaceHolder1$txtcity" type="text" id="ctl00_ContentPlaceHolder1_txtcity" class="form-control" required="" />
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Address *</label>
-
-                                                    <input name="ctl00$ContentPlaceHolder1$txtraddress" type="text" id="ctl00_ContentPlaceHolder1_txtraddress" class="form-control" required="" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row row-sm">
-                                                <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Pincode/Zipcode *</label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtZip" type="text" id="ctl00_ContentPlaceHolder1_txtZip" class="form-control" required="" />
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row row-sm">
-                                                <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Email ID *</label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtEmail" type="text" value="rajputnishantyou@gmail.com" id="ctl00_ContentPlaceHolder1_txtEmail" disabled="disabled" class="form-control" required="" />
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row row-sm">
-                                                <div class="col-sm-12">
-                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Mobile *</label>
-                                                    <input name="ctl00$ContentPlaceHolder1$txtMobile" type="text" value="8448011453" id="ctl00_ContentPlaceHolder1_txtMobile" class="form-control" required="" />
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                         <div class="form-group">
-                                            <div class="row row-sm">
-                                                <div class="col-sm-12">
-                                                   
-                                                    <span class="chkbox "><input id="ctl00_ContentPlaceHolder1_chkEnableTwoFactorAuth" type="checkbox" name="ctl00$ContentPlaceHolder1$chkEnableTwoFactorAuth" /><label for="ctl00_ContentPlaceHolder1_chkEnableTwoFactorAuth">Enable Two Factor Authentication</label></span>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group" style="display: none;">
-                                            <div class="row row-sm">
-                                                <div class="col-sm-12">
-                                                    <div class="row row-sm">
-                                                        <div class="col-sm-6">
-                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Wallet Address</label>
-                                                            <input name="ctl00$ContentPlaceHolder1$txtaddress" type="text" id="ctl00_ContentPlaceHolder1_txtaddress" disabled="disabled" class="form-control" placeholder="Wallet Address" />
-                                                        </div>
-                                                        <div class="col-sm-6 mg-t-10 mg-sm-t-0">
-                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Investment Amount</label>
-                                                            <input name="ctl00$ContentPlaceHolder1$txtpackage" type="text" value="0.00" id="ctl00_ContentPlaceHolder1_txtpackage" disabled="disabled" class="form-control" placeholder="Current Package" />
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnsubmit" value="Save Details" id="ctl00_ContentPlaceHolder1_btnsubmit" class="btn btn-main-primary btn-block" />
-
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        
             </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="main-content-label mg-b-5">
+                                        Personal Details
+                                    </div>
+                                    <p class="mg-b-20">It is very easy to customize and it uses in your website applications.</p>
+                                    <div id="ctl00_ContentPlaceHolder1_div1" class="row">
+                                        <div class="col-md-12 col-lg-12 col-xl-6 mx-auto d-block">
+                                            <div class="card card-body pd-10 pd-md-20 border shadow-none">
+                                                <h5 class="card-title mg-b-20">Profile Details</h5>
+                                                <div class="form-group">
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-12">
+                                                            <div class="row row-sm">
+                                                                <div class="col-sm-6">
+                                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Sponser ID </label>
+                                                                    <input name="ctl00$ContentPlaceHolder1$txtspid" type="text" value="DCXa-999999" id="ctl00_ContentPlaceHolder1_txtspid" disabled="disabled" class="form-control" placeholder="your Sponser name" />
+                                                                </div>
+                                                                <div class="col-sm-6 mg-t-10 mg-sm-t-0">
+                                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Sponsor Name</label>
+                                                                    <input name="ctl00$ContentPlaceHolder1$txtspname" type="text" value="Kunj" id="ctl00_ContentPlaceHolder1_txtspname" disabled="disabled" class="form-control" placeholder="DD/MM/YYYY" />
+                                                                </div>
+                                                            </div>
         
-</div>
-
-                
-
-<script type="text/javascript">
-//<![CDATA[
-Sys.Application.add_init(function() {
-    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ContentPlaceHolder1_ctl01"));
-});
-//]]>
-</script>
-</form>
-            </div>
-
-
-        </div>
-
-        <div class="sidebar sidebar-right sidebar-animate">
-            <div class="p-3">
-                <a href="#" class="text-right float-right" data-toggle="sidebar-right" data-target=".sidebar-right"><i class="fe fe-x"></i></a>
-            </div>
-            <div class="tab-menu-heading border-0 card-header">
-                <div class="card-title mb-0">Notifications</div>
-                <div class="card-options ml-auto">
-                    <a href="#" class="sidebar-remove"><i class="fe fe-x"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">First Name *</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txtname" type="text" value="Nishant Rajput" id="ctl00_ContentPlaceHolder1_txtname" class="form-control" required="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-xs-6 col-sm-6">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Middle Name </label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txtMName" type="text" id="ctl00_ContentPlaceHolder1_txtMName" class="form-control" />
+                                                        </div>
+                                                        <div class="col-xs-6 col-sm-6">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Last Name *</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txtLName" type="text" id="ctl00_ContentPlaceHolder1_txtLName" class="form-control" required="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Date of Birth *</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txtdob" type="text" id="ctl00_ContentPlaceHolder1_txtdob" class="form-control" placeholder="DD/MM/YYYY" required="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Country *</label>
+                                                            <select name="ctl00$ContentPlaceHolder1$dropCountry" id="ctl00_ContentPlaceHolder1_dropCountry" class="form-control" required="">
+                <option selected="selected" value="">Select Country</option>
+                <option value="United States">United States</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="American Samoa">American Samoa</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Anguilla">Anguilla</option>
+                <option value="Antarctica">Antarctica</option>
+                <option value="Antigua And Barbuda">Antigua And Barbuda</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Belize">Belize</option>
+                <option value="Benin">Benin</option>
+                <option value="Bermuda">Bermuda</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Bosnia And Herzegowina">Bosnia And Herzegowina</option>
+                <option value="Botswana">Botswana</option>
+                <option value="Bouvet Island">Bouvet Island</option>
+                <option value="Brazil">Brazil</option>
+                <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Burundi">Burundi</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Cameroon">Cameroon</option>
+                <option value="Canada">Canada</option>
+                <option value="Cape Verde">Cape Verde</option>
+                <option value="Cayman Islands">Cayman Islands</option>
+                <option value="Central African Republic">Central African Republic</option>
+                <option value="Chad">Chad</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Christmas Island">Christmas Island</option>
+                <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Comoros">Comoros</option>
+                <option value="Congo">Congo</option>
+                <option value="Cook Islands">Cook Islands</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Cote D&#39;Ivoire">Cote D&#39;Ivoire</option>
+                <option value="Croatia (Local Name: Hrvatska)">Croatia (Local Name: Hrvatska)</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Cyprus">Cyprus</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Djibouti">Djibouti</option>
+                <option value="Dominica">Dominica</option>
+                <option value="Dominican Republic">Dominican Republic</option>
+                <option value="East Timor">East Timor</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Egypt">Egypt</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                <option value="Eritrea">Eritrea</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                <option value="Faroe Islands">Faroe Islands</option>
+                <option value="Fiji">Fiji</option>
+                <option value="Finland">Finland</option>
+                <option value="France">France</option>
+                <option value="French Guiana">French Guiana</option>
+                <option value="French Polynesia">French Polynesia</option>
+                <option value="French Southern Territories">French Southern Territories</option>
+                <option value="Gabon">Gabon</option>
+                <option value="Gambia">Gambia</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Germany">Germany</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Gibraltar">Gibraltar</option>
+                <option value="Greece">Greece</option>
+                <option value="Greenland">Greenland</option>
+                <option value="Grenada">Grenada</option>
+                <option value="Guadeloupe">Guadeloupe</option>
+                <option value="Guam">Guam</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Guinea">Guinea</option>
+                <option value="Guinea-Bissau">Guinea-Bissau</option>
+                <option value="Guyana">Guyana</option>
+                <option value="Haiti">Haiti</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Icel And">Icel And</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran (Islamic Republic Of)">Iran (Islamic Republic Of)</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Israel">Israel</option>
+                <option value="Italy">Italy</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Japan">Japan</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Kiribati">Kiribati</option>
+                <option value="Korea">Korea</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                <option value="Lao People&#39;S Dem Republic">Lao People&#39;S Dem Republic</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Lesotho">Lesotho</option>
+                <option value="Liberia">Liberia</option>
+                <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                <option value="Liechtenstein">Liechtenstein</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Luxembourg">Luxembourg</option>
+                <option value="Macau">Macau</option>
+                <option value="Macedonia">Macedonia</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="Malawi">Malawi</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Mali">Mali</option>
+                <option value="Malta">Malta</option>
+                <option value="Marshall Islands">Marshall Islands</option>
+                <option value="Martinique">Martinique</option>
+                <option value="Mauritania">Mauritania</option>
+                <option value="Mauritius">Mauritius</option>
+                <option value="Mayotte">Mayotte</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Micronesia, Federated States">Micronesia, Federated States</option>
+                <option value="Moldova, Republic Of">Moldova, Republic Of</option>
+                <option value="Monaco">Monaco</option>
+                <option value="Mongolia">Mongolia</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Mozambique">Mozambique</option>
+                <option value="Myanmar">Myanmar</option>
+                <option value="Namibia">Namibia</option>
+                <option value="Nauru">Nauru</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Netherlands Ant Illes">Netherlands Ant Illes</option>
+                <option value="New Caledonia">New Caledonia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Niger">Niger</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Niue">Niue</option>
+                <option value="Norfolk Island">Norfolk Island</option>
+                <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                <option value="Norway">Norway</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Palau">Palau</option>
+                <option value="Panama">Panama</option>
+                <option value="Papua New Guinea">Papua New Guinea</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Peru">Peru</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Pitcairn">Pitcairn</option>
+                <option value="Poland">Poland</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Reunion">Reunion</option>
+                <option value="Romania">Romania</option>
+                <option value="Russian Federation">Russian Federation</option>
+                <option value="Rwanda">Rwanda</option>
+                <option value="Saint K Itts And Nevis">Saint K Itts And Nevis</option>
+                <option value="Saint Lucia">Saint Lucia</option>
+                <option value="Saint Vincent, The Grenadines">Saint Vincent, The Grenadines</option>
+                <option value="Samoa">Samoa</option>
+                <option value="San Marino">San Marino</option>
+                <option value="Sao Tome And Principe">Sao Tome And Principe</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Senegal">Senegal</option>
+                <option value="Seychelles">Seychelles</option>
+                <option value="Sierra Leone">Sierra Leone</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Slovakia (Slovak Republic)">Slovakia (Slovak Republic)</option>
+                <option value="Slovenia">Slovenia</option>
+                <option value="Solomon Islands">Solomon Islands</option>
+                <option value="Somalia">Somalia</option>
+                <option value="South Africa">South Africa</option>
+                <option value="South Georgia , S Sandwich Is.">South Georgia , S Sandwich Is.</option>
+                <option value="Spain">Spain</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="St. Helena">St. Helena</option>
+                <option value="St. Pierre And Miquelon">St. Pierre And Miquelon</option>
+                <option value="Sudan">Sudan</option>
+                <option value="Suriname">Suriname</option>
+                <option value="Svalbard, Jan Mayen Islands">Svalbard, Jan Mayen Islands</option>
+                <option value="Sw Aziland">Sw Aziland</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                <option value="Taiwan">Taiwan</option>
+                <option value="Tajikistan">Tajikistan</option>
+                <option value="Tanzania, United Republic Of">Tanzania, United Republic Of</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Togo">Togo</option>
+                <option value="Tokelau">Tokelau</option>
+                <option value="Tonga">Tonga</option>
+                <option value="Trinidad And Tobago">Trinidad And Tobago</option>
+                <option value="Tunisia">Tunisia</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Turkmenistan">Turkmenistan</option>
+                <option value="Turks And Caicos Islands">Turks And Caicos Islands</option>
+                <option value="Tuvalu">Tuvalu</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="United States Minor Is.">United States Minor Is.</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+                <option value="Vanuatu">Vanuatu</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Viet Nam">Viet Nam</option>
+                <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                <option value="Virgin Islands (U.S.)">Virgin Islands (U.S.)</option>
+                <option value="Wallis And Futuna Islands">Wallis And Futuna Islands</option>
+                <option value="Western Sahara">Western Sahara</option>
+                <option value="Yemen">Yemen</option>
+                <option value="Yugoslavia">Yugoslavia</option>
+                <option value="Zaire">Zaire</option>
+                <option value="Zambia">Zambia</option>
+                <option value="Zimbabwe">Zimbabwe</option>
+        
+            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-12">
+                                                            <div class="row row-sm">
+                                                                <div class="col-sm-6">
+                                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">State *</label>
+        
+                                                                    <input name="ctl00$ContentPlaceHolder1$txtstate" type="text" value="None" id="ctl00_ContentPlaceHolder1_txtstate" class="form-control" required="" />
+                                                                </div>
+                                                                <div class="col-sm-6 mg-t-10 mg-sm-t-0">
+                                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">City *</label>
+                                                                    <input name="ctl00$ContentPlaceHolder1$txtcity" type="text" id="ctl00_ContentPlaceHolder1_txtcity" class="form-control" required="" />
+                                                                </div>
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Address *</label>
+        
+                                                            <input name="ctl00$ContentPlaceHolder1$txtraddress" type="text" id="ctl00_ContentPlaceHolder1_txtraddress" class="form-control" required="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-12">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Pincode/Zipcode *</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txtZip" type="text" id="ctl00_ContentPlaceHolder1_txtZip" class="form-control" required="" />
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-12">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Email ID *</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txtEmail" type="text" value="rajputnishantyou@gmail.com" id="ctl00_ContentPlaceHolder1_txtEmail" disabled="disabled" class="form-control" required="" />
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-12">
+                                                            <label class="main-content-label tx-11 tx-medium tx-gray-600">Mobile *</label>
+                                                            <input name="ctl00$ContentPlaceHolder1$txtMobile" type="text" value="8448011453" id="ctl00_ContentPlaceHolder1_txtMobile" class="form-control" required="" />
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <div class="form-group">
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-12">
+                                                           
+                                                            <span class="chkbox "><input id="ctl00_ContentPlaceHolder1_chkEnableTwoFactorAuth" type="checkbox" name="ctl00$ContentPlaceHolder1$chkEnableTwoFactorAuth" /><label for="ctl00_ContentPlaceHolder1_chkEnableTwoFactorAuth">Enable Two Factor Authentication</label></span>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <div class="row row-sm">
+                                                        <div class="col-sm-12">
+                                                            <div class="row row-sm">
+                                                                <div class="col-sm-6">
+                                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Wallet Address</label>
+                                                                    <input name="ctl00$ContentPlaceHolder1$txtaddress" type="text" id="ctl00_ContentPlaceHolder1_txtaddress" disabled="disabled" class="form-control" placeholder="Wallet Address" />
+                                                                </div>
+                                                                <div class="col-sm-6 mg-t-10 mg-sm-t-0">
+                                                                    <label class="main-content-label tx-11 tx-medium tx-gray-600">Investment Amount</label>
+                                                                    <input name="ctl00$ContentPlaceHolder1$txtpackage" type="text" value="0.00" id="ctl00_ContentPlaceHolder1_txtpackage" disabled="disabled" class="form-control" placeholder="Current Package" />
+                                                                </div>
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+        
+        
+                                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnsubmit" value="Save Details" id="ctl00_ContentPlaceHolder1_btnsubmit" class="btn btn-main-primary btn-block" />
+        
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="tabs-menu ">
-                <!-- Tabs -->
-                <ul class="nav panel-tabs">
-                    <li class=""><a href="#tab" class="active show" data-toggle="tab">Profile</a></li>
-                    <li class=""><a href="#tab1" data-toggle="tab" class="">Directs</a></li>
-                    <li><a href="#tab2" data-toggle="tab" class="">History</a></li>
 
-                </ul>
-            </div>
-            <div class="panel-body tabs-menu-body side-tab-body p-0 border-0 ">
-                <div class="tab-content">
-                    <div class="tab-pane active" id="tab">
-                        <div class="card-body p-0">
-                            <div class="header-user text-center mt-4">
-                                <span class="avatar avatar-xxl brround mx-auto">
-                                    <img src="{% static 'assets/img/faces/5.jpg' %}" alt="Profile-img" class="avatar avatar-xxl brround"></span>
-                                <div class=" text-center font-weight-semibold user mt-3 h6 mb-0">Elizabeth Jane</div>
-                                <span class="text-muted">App Developer</span>
-                                <br />
-                                <br />
-                                <!--	<div class="card-body">
-										<div class="form-group ">
-											<label class="form-label  text-left">Offline/Online</label>
-											<select class="form-control mb-4 nice-select " data-placeholder="Choose one">
-												<option value="1">Online</option>
-												<option value="2">Offline</option>
-											</select>
-										</div>
-										<div class="form-group mt-3">
-											<label class="form-label text-left">Website</label>
-											<select class="form-control nice-select " data-placeholder="Choose one">
-												<option value="1">DCXA.io</option>
-												<option value="2">riwebsoftindia.com</option>
-												<option value="3">dakshweb.com</option>
-												<option value="4">lelomoz.com</option>
-												<option value="5">tag11infotech.com</option>
-											</select>
-										</div>   
-									</div>-->
-                            </div>
-                            <a class="dropdown-item  border-top" href="#">
-                                <i class="dropdown-icon fe fe-edit mr-2"></i>Edit Profile
-                            </a>
-                            <a class="dropdown-item  border-top" href="#">
-                                <i class="dropdown-icon fe fe-help-circle mr-2"></i>Support
-                            </a>
-
-                            <a class="dropdown-item  border-top" href="#">
-                                <i class="dropdown-icon fe fe-mail mr-2"></i>Message
-                            </a>
-
-                            <div class="card-body border-top border-bottom">
-                                <div class="row">
-                                    <div class="col-4 text-center">
-                                        <a class="" href="#"><i class="dropdown-icon mdi  mdi-message-outline fs-20 m-0 leading-tight"></i></a>
-                                        <div>Inbox</div>
-                                    </div>
-                                    <div class="col-4 text-center">
-                                        <a class="" href="#"><i class="dropdown-icon mdi mdi-tune fs-20 m-0 leading-tight"></i></a>
-                                        <div>Settings</div>
-                                    </div>
-                                    <div class="col-4 text-center">
-                                        <a class="" href="Userlogout.aspx"><i class="dropdown-icon mdi mdi-logout-variant fs-20 m-0 leading-tight"></i></a>
-                                        <div>Sign out</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab1">
-                        <div class="chat">
-                            <div class="contacts_card">
-                                <div class="input-group mb-0 p-3">
-                                    <input type="text" placeholder="Search..." class="form-control search">
-                                    <div class="input-group-prepend mr-0">
-                                        <span class="input-group-text  search_btn  btn-primary"><i class="fa fa-search text-white"></i></span>
-                                    </div>
-                                </div>
-                                <ul class="contacts mb-0">
-                                    <li class="active">Direct Members
-                                    </li>
-                                    <!--	<li class="active">
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/12.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Maryam Naz</h5>
-													<small class="text-muted">is online</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>01-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/2.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class=" online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Sahar Darya</h5>
-													<small class="text-muted">left 7 mins ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>01-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/5.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Maryam Naz</h5>
-													<small class="text-muted">online</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>01-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/7.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Yolduz Rafi</h5>
-													<small class="text-muted">online</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>02-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/8.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Nargis Hawa</h5>
-													<small class="text-muted">30 mins ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>02-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/3.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Khadija Mehr</h5>
-													<small class="text-muted">50 mins ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>03-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/14.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Petey Cruiser</h5>
-													<small class="text-muted">1hr ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>03-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/11.jpg' %}" class="rounded-circle user_img" alt="img">
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Khadija Mehr</h5>
-													<small class="text-muted">2hr ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>03-02-2019</small></div>
-											</div>
-										</li> -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab2">
-
-                        <div class="list d-flex align-items-center border-bottom p-3">
-                            <div class="">
-                                <span class="avatar bg-primary brround avatar-md">D</span>
-                            </div>
-                            <div class="wrapper w-100 ml-3">
-                                <p class="mb-0 d-flex">
-                                    <b>Joing Fund 100$</b>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="mdi mdi-clock text-muted mr-1"></i>
-                                        <small class="text-muted ml-auto">11 Nov,2021</small>
-                                        <p class="mb-0"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list d-flex align-items-center p-3">
-                            <div class="">
-                                <span class="avatar bg-blue brround avatar-md">U</span>
-                            </div>
-                            <div class="wrapper w-100 ml-3">
-                                <p class="mb-0 d-flex">
-                                    <b>Upgrade 500$</b>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="mdi mdi-clock text-muted mr-1"></i>
-                                        <small class="text-muted ml-auto">11 Nov,2021</small>
-                                        <p class="mb-0"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab3">
-                        <div class="mt-3">
-                            <div class="d-flex p-3">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked="">
-                                    <span class="custom-control-label">Do Even More..</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox2" value="option2" checked="">
-                                    <span class="custom-control-label">Find an idea.</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox3" value="option3" checked="">
-                                    <span class="custom-control-label">Hangout with friends</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox4" value="option4">
-                                    <span class="custom-control-label">Do Something else</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox5" value="option5">
-                                    <span class="custom-control-label">Eat healthy, Eat Fresh..</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox6" value="option6" checked="">
-                                    <span class="custom-control-label">Finsh something more..</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox7" value="option7" checked="">
-                                    <span class="custom-control-label">Do something more</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox8" value="option8">
-                                    <span class="custom-control-label">Updated more files</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox9" value="option9">
-                                    <span class="custom-control-label">System updated</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top border-bottom">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox10" value="option10">
-                                    <span class="custom-control-label">Settings Changings...</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title="" data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="text-center pt-5">
-                                <a href="#" class="btn btn-primary">Add more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="main-footer ht-40">
-            <div class="container-fluid pd-t-0-f ht-100p">
-                <span>Copyright &copy; 2021 <a href="#">DCXA</a>. Designed by <a href="https://www.dcxa.io/">DCXA</a> All rights reserved.</span>
-            </div>
-        </div>
-
+        {% include 'includes/dashboard_footer.html' %}
     </div>
-    <!--End Page -->
-
-    <a href="#top" id="back-to-top"><i class="la la-chevron-up"></i></a>
-
-    <script src="{% static 'assets/plugins/ionicons/ionicons.js' %}"></script>
-    <script src="{% static 'assets/plugins/moment/moment.js' %}"></script>
-    <script src="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
-    <script src="{% static 'assets/plugins/rating/jquery.rating-stars.js' %}"></script>
-    <script src="{% static 'assets/plugins/rating/jquery.barrating.js' %}"></script>
-    <script src="{% static 'assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
-    <script src="{% static 'assets/js/eva-icons.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/side-menu/sidemenu.js' %}"></script>
-    <script src="{% static 'assets/plugins/sidebar/sidebar.js' %}"></script>
-    <script src="{% static 'assets/plugins/sidebar/sidebar-custom.js' %}"></script>
-    <script src="{% static 'assets/js/sticky.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js' %}"></script>
-    <script src="{% static 'assets/plugins/chart.js/Chart.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/raphael/raphael.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/peity/jquery.peity.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
-
-    <script src="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.pie.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.categories.js' %}"></script>
-    <script src="{% static 'assets/js/dashboard.sampledata.js' %}"></script>
-
-    <script src="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.js' %}"></script>
-    <script src="{% static 'assets/js/newsticker.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-nice-select/js/jquery.nice-select.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-nice-select/js/nice-select.js' %}"></script>
-    <script src="{% static 'assets/js/dashboard.js' %}"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
-    <script src="{% static 'assets/switcher/js/switcher.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/responsive.dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap4.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap4.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/jszip.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/pdfmake.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/vfs_fonts.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/responsive.bootstrap4.min.js' %}"></script>
-    <script src="{% static 'assets/js/table-data.js"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
-
-
-
-
-
-    <script src="{% static 'assets/plugins/select2/js/select2.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/fileuploads/js/fileupload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fileuploads/js/file-upload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.ui.widget.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.fileupload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.iframe-transport.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.fancy-fileupload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/fancy-uploader.js' %}"></script>
-    <script src="{% static 'assets/js/advanced-form-elements.js' %}"></script>
-    <script src="{% static 'assets/js/select2.js' %}"></script>
-    <script src="{% static 'assets/plugins/sumoselect/jquery.sumoselect.js' %}"></script>
-    <script src="{% static 'assets/plugins/telephoneinput/telephoneinput.js' %}"></script>
-    <script src="{% static 'assets/plugins/telephoneinput/inttelephoneinput.js' %}"></script>
-
-
+    {% include 'includes/dashboard_js.html' %}
+</class>
+</class>
 </body>
-
-</html>
