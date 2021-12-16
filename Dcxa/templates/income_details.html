@@ -1,71 +1,6 @@
 {% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Description" content="DCXa Coin Panel" />
-    <meta name="Author" content="DCXa Coin" />
-    <meta name="Keywords"
-        content="cryptocurrency, dashboard, admin, crypto, ico, bootstrap admin template, admin template, bootstrap dashboard template, crypto dashboard, cryptocurrency dashboard, ico dashboard, crypto admin, dashboard cryptocurrency, cryptocurrency trading dashboard, crypto dashboard template " />
-    <title>
-        Payout Statement
-    </title>
-    <link rel="icon" href="{% static 'assets/img/brand/favicon.png' %}" type="image/x-icon" />
-    <link href="{% static 'assets/plugins/icons/icons.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/sidemenu.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/morris.js' %}/morris.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/jquery-nice-select/css/nice-select.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/jquery-countdown/countdown.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/style.css' %}?version=14122021" rel="stylesheet" />
-    <link href="{% static 'assets/css/skin-modes.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/style-dark.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/switcher/css/switcher.css' %}" rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'assets/switcher/demo.css' %}" />
-    <link href="{% static 'assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/fileuploads/css/fileupload.css' %}?version=23112021" rel="stylesheet"
-        type="text/css" />
-    <link href="{% static 'assets/plugins/fancyuploder/fancy_fileupload.css' %}" rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'assets/plugins/sumoselect/sumoselect.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/plugins/telephoneinput/telephoneinput.css' %}" />
-    <link href="{% static 'assets/css/alertify.core.css' %}?version=23102021" rel="stylesheet" />
-    <link href="{% static 'assets/css/countercss.css' %}" rel="stylesheet" />
-    <script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/js/alertify.min.js' %}"></script>
-    <script src="{% static 'assets/js/mainjs.js' %}"></script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/616d66acf7c0440a591ec674/1fi9li57j';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <script type="text/javascript" async src="https://l.getsitecontrol.com/p4r8zqd7.js' %}"></script>
-    <!--End of Tawk.to Script-->
-</head>
-
+{% include 'includes/head_css_js.html' %}
 <body class="main-body app sidebar-mini Light-mode">
-
-    <!-- Loader -->
-
-
     <div class="page">
 
         {% include 'includes/loader.html' %}
@@ -112,5 +47,3 @@
     </div>
     {% include 'includes/dashboard_js.html' %}
 </body>
-
-</html>
