@@ -3,7 +3,8 @@
 {%block body %}
 {%load static%}
 
-    <form name="form2" method="post" action="./" id="form2">
+    <!-- <form name="form2" method="post" action="./" id="form2">
+        {% csrf_token %} -->
 <div>
 <input type="hidden" name="_EVENTTARGET" id="_EVENTTARGET" value="" />
 <input type="hidden" name="_EVENTARGUMENT" id="_EVENTARGUMENT" value="" />
@@ -103,7 +104,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form2', ['tUpdate
                                     </div>
 
 
-                                    <input type="submit" name="btnotp" value="Login" id="btnotp" class="btn btn-theme btn-block" />
+                                    <a href="/dashboard"><button name="btnotp" value="Login" id="btnotp" class="btn btn-theme btn-block">Submit</button></a> 
 
                                 </div>
 
@@ -141,6 +142,6 @@ Sys.Application.add_init(function() {
 });
 //]]>
 </script>
-</form>
+<!-- </form> -->
 
 {% endblock body %}
