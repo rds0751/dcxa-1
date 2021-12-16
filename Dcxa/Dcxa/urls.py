@@ -16,8 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from index import urls
+from django.urls import path
+
+def trigger_error(request):
+    division_by_zero = 1 / 0
 
 urlpatterns = [
     path('', include('index.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
+    path('sentry-debug/', trigger_error),
 ]
