@@ -47,7 +47,7 @@ def directteam(request):
 
 def levelview(request):
     return render(request,"levelteam.html")
-
+    
 def roiview(request):
     return render(request,'roiview.html')
 

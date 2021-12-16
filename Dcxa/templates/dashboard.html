@@ -1,4 +1,4 @@
-{% extends 'sidebar.html' %} 
+{% include 'includes/sidebar.html' %} 
 {% block title %}Dashboard {% endblock title %}
 {%block body %}
 {%load static%}
@@ -653,12 +653,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="main-footer ht-40">
-            <div class="container-fluid pd-t-0-f ht-100p">
-                <span>Copyright &copy; 2021 <a href="#">DCXA</a>. Designed by <a href="https://www.dcxa.io/">DCXA</a> All rights reserved.</span>
-            </div>
-        </div>
+    {% include 'includes/dashboard_footer.html' %}
 
     </div>
  
