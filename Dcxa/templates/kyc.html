@@ -1,970 +1,353 @@
-<!DOCTYPE html>
-<html lang="en">
 {% load static %}
+{% include 'includes/head_css_js.html' %}
+{% block head %}
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Description" content="DCXa Coin Panel" />
-    <meta name="Author" content="DCXa Coin" />
-    <meta name="Keywords"
-        content="cryptocurrency, dashboard, admin, crypto, ico, bootstrap admin template, admin template, bootstrap dashboard template, crypto dashboard, cryptocurrency dashboard, ico dashboard, crypto admin, dashboard cryptocurrency, cryptocurrency trading dashboard, crypto dashboard template " />
-    <title>
-        :: User KYC ::
-    </title>
-    <link rel="icon" href="{% static 'assets/img/brand/favicon.png' %}" type="image/x-icon" />
-    <link href="{% static 'assets/plugins/icons/icons.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/custom-scroll/jquery.mCustomScrollbar.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/sidemenu.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/morris.js' %}/morris.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/jquery-nice-select/css/nice-select.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/jquery-countdown/countdown.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/style.css' %}?version=14122021" rel="stylesheet" />
-    <link href="{% static 'assets/css/skin-modes.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/css/style-dark.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/switcher/css/switcher.css' %}" rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'assets/switcher/demo.css' %}" />
-    <link href="{% static 'assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet" />
-    <link href="{% static 'assets/plugins/fileuploads/css/fileupload.css' %}?version=23112021" rel="stylesheet"
-        type="text/css" />
-    <link href="{% static 'assets/plugins/fancyuploder/fancy_fileupload.css' %}" rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'assets/plugins/sumoselect/sumoselect.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/plugins/telephoneinput/telephoneinput.css' %}" />
-    <link href="{% static 'assets/css/alertify.core.css' %}?version=23102021" rel="stylesheet" />
-    <link href="{% static 'assets/css/countercss.css' %}" rel="stylesheet" />
-    <script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/js/alertify.min.js' %}"></script>
-    <script src="{% static 'assets/js/mainjs.js' %}"></script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/616d66acf7c0440a591ec674/1fi9li57j';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <script type="text/javascript" async src="https://l.getsitecontrol.com/p4r8zqd7.js' %}"></script>
-    <!--End of Tawk.to Script-->
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <link rel="shortcut icon" href="{% static 'kyc_static/images/favicon.png' %}">
+    <title>Kyc Form - Crypto | DashLite Admin Template</title>
+    <link rel="stylesheet" href="{% static 'kyc_static/assets/css/dashlite.css' %}">
+    <link id="skin-default" rel="stylesheet" href="{% static 'kyc_static/assets/css/theme.css' %}">
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-91615293-4');</script>
 </head>
+{% endblock %}
 
 <body class="main-body app sidebar-mini Light-mode">
-
-    <!-- Loader -->
-    <div id="global-loader" class="light-loader">
-        <img src="{% static 'assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
-    </div>
-
     <div class="page">
 
-
-        <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-        <aside class="app-sidebar sidebar-scroll ">
-            <div class="main-sidebar-header">
-                <a class=" desktop-logo logo-light" href="user.aspx">
-                    <img src="{% static 'assets/img/brand/logo.png' %}" class="main-logo" alt="logo"></a>
-                <a class=" desktop-logo logo-dark" href="user.aspx">
-                    <img src="{% static 'assets/img/brand/logo-white.png' %}" class="main-logo dark-theme"
-                        alt="logo"></a>
-                <a class="logo-icon mobile-logo icon-light" href="user.aspx">
-                    <img src="{% static 'assets/img/brand/favicon.png' %}" class="logo-icon" alt="logo"></a>
-                <a class="logo-icon mobile-logo icon-dark" href="user.aspx">
-                    <img src="{% static 'assets/img/brand/favicon-white.png' %}" class="logo-icon dark-theme"
-                        alt="logo"></a>
-            </div>
-            <div class="main-sidebar-body circle-animation ">
-
-                <ul class="side-menu circle">
-                    <li>
-                        <h3 class="">Dashboard</h3>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="User.aspx"><i class="side-menu__icon ti-desktop"></i><span
-                                class="side-menu__label">Dashboard</span></a>
-                    </li>
-
-
-
-
-                    <li>
-                        <h3>Statistics</h3>
-                    </li>
-
-
-                    <li class="slide">
-                        <a class="side-menu__item" data-toggle="slide" href="#">
-                            <i class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">My
-                                Profile</span><i class="angle fe fe-chevron-down"></i></a>
-                        <ul class="slide-menu">
-                            <li><a class="slide-item" href="UserProfile.aspx">Update Profile</a></li>
-                            <li><a class="slide-item" href="UserKYC.aspx">KYC</a></li>
-                            <li><a class="slide-item" href="#">Bank Information</a></li>
-                            <li><a class="slide-item" href="ChangePassword.aspx">Change Password</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="slide">
-                        <a class="side-menu__item" href="{% static 'Userpages/UserRegOpen.Aspx?refid=DCXa-232173"
-                            target="_blank"><i class="side-menu__icon ti-face-smile"></i><span
-                                class="side-menu__label">Add New Person</span></a>
-                    </li>
-
-                    <li class="slide">
-                        <a class="side-menu__item" data-toggle="slide" href="#">
-                            <i class="side-menu__icon ti-briefcase"></i><span class="side-menu__label">Level
-                                Associates</span><i class="angle fe fe-chevron-down"></i></a>
-                        <ul class="slide-menu">
-                            <li><a class="slide-item" href="UserdownlineDirect.aspx">Direct Team</a></li>
-                            <li><a class="slide-item" href="Userdownline.aspx">Level Team View</a></li>
-                            <li><a class="slide-item" href="Userroidownline.aspx">ROI Team View</a></li>
-                            <li><a class="slide-item" href="UserDownlineN.aspx">All Team Members</a></li>
-                            <li><a class="slide-item" href="treeview.aspx">My Tree View</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <h3>Wallets</h3>
-                    </li>
-
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userbuywallet.aspx"><i
-                                class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Buy
-                                Wallet</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="UserMemberTopUp.aspx"><i
-                                class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Buy
-                                Tokens</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="UserWalletTransfer.aspx"><i
-                                class="side-menu__icon ti-wallet"></i><span class="side-menu__label">Wallet
-                                Transfer</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="WalletStatementReport.aspx"><i
-                                class="side-menu__icon ti-wallet"></i><span class="side-menu__label">Wallet
-                                Statement</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="UserWalletPayment.aspx"><i
-                                class="side-menu__icon ti-wallet"></i><span class="side-menu__label">Withdrawal
-                                Request</span></a>
-                    </li>
-
-
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userbuyrealestate.aspx"><i
-                                class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Buy
-                                Property</span></a>
-                    </li>
-
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userbuysip.aspx"><i
-                                class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Buy
-                                SIP</span></a>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userbuyforex.aspx"><i
-                                class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Forex
-                                Investment</span></a>
-                    </li>
-
-                    <li>
-                        <h3>Reports</h3>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" data-toggle="slide" href="#"><i
-                                class="side-menu__icon ti-pencil-alt"></i><span class="side-menu__label">Income
-                                Reports</span><span class="badge badge-info side-badge">6</span><i
-                                class="angle fe fe-chevron-down"></i></a>
-                        <ul class="slide-menu">
-                            <li><a class="slide-item" href="UserpaidPayout.aspx">Income Details</a></li>
-                            <li><a class="slide-item" href="UserPoolStatus.aspx">Investment Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" data-toggle="slide" href="#">
-                            <i class="side-menu__icon ti-briefcase"></i><span class="side-menu__label">Support</span><i
-                                class="angle fe fe-chevron-down"></i></a>
-                        <ul class="slide-menu">
-                            <li><a class="slide-item" target="_blank"
-                                    href="https://support.dcxa.io/get_userdata/name/Nishant Rajput/email/rajputnishantyou@gmail.com/did/DCXa-232173">Complain
-                                    Ticket</a></li>
-                            <li><a class="slide-item" href="UserComplainStatus.aspx">Complain Ticket Status</a></li>
-                        </ul>
-                    </li>
-                    <li class="slide">
-                        <a class="side-menu__item" href="Userlogout.aspx"><i
-                                class="side-menu__icon ti-face-smile"></i><span class="side-menu__label">Sign
-                                Out</span></a>
-                    </li>
-
-
-
-
-
-                </ul>
-            </div>
-        </aside>
-
+        {% include 'includes/loader.html' %}
         <div class="main-content app-content">
-
-            <div class="main-header sticky side-header nav nav-item">
-                <div class="container-fluid">
-                    <div class="main-header-left ">
-                        <div class="app-sidebar__toggle mobile-toggle" data-toggle="sidebar">
-                            <a class="open-toggle" href="#"><i class="header-icons" data-eva="menu-outline"></i></a>
-                            <a class="close-toggle" href="#"><i class="header-icons" data-eva="close-outline"></i></a>
-                        </div>
-                        <div class="responsive-logo">
-                            <a href="user.aspx">
-                                <img src="{% static 'assets/img/brand/logo.png' %}" class="mobile-logo" alt="logo">
-                                <img src="{% static 'assets/img/brand/logo-theme-dark.png' %}" class="dark-mobile-logo"
-                                    alt="logo">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="main-header-center">
-                        <div class="main-header-center ml-3 d-sm-none d-md-none d-lg-block" style="font-size: 10px;">
-                            DCXa Rate $0.50
-                            <i class="mdi mdi-upload " style="color: green; font-size: 1.0em;"></i><span
-                                style="color: green;">100% </span>
-
-                        </div>
-
-                    </div>
-                    <div class="main-header-right" style="display: none;">
-                        <div class="nav nav-item  navbar-nav-right ml-auto">
-                            <form class="navbar-form nav-item my-auto d-lg-none" role="search">
-                                <div class="input-group nav-item my-auto">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button type="reset" class="btn btn-default">
-                                            <i class="ti-close"></i>
-                                        </button>
-                                        <button type="submit" class="btn btn-default nav-link">
-                                            <i class="ti-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>
-                            <div class="nav-item full-screen fullscreen-button">
-                                <a class="new nav-link full-screen-link" href="#"><i
-                                        class="ti-fullscreen"></i></span></a>
-                            </div>
-                            <div class="dropdown  nav-item main-header-message ">
-                                <a class="new nav-link" href="#"><i class="ti-email"></i><span
-                                        class="pulse-danger"></span></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp ">
-                                    <div class="main-dropdown-header  d-sm-none">
-                                        <a class="main-header-arrow" href="#"><i class="icon ion-md-arrow-back"></i></a>
-                                    </div>
-                                    <div class="menu-header-content text-left d-flex">
-                                        <div class="">
-                                            <h6 class="menu-header-title text-white mb-0">5 new Messages</h6>
-                                        </div>
-                                        <div class="my-auto ml-auto">
-                                            <span class="badge badge-pill badge-warning float-right">Mark All
-                                                Read</span>
-                                        </div>
-                                    </div>
-                                    <div class="main-message-list chat-scroll">
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="  drop-img  cover-image  "
-                                                data-image-src="{% static 'assets/img/faces/3.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Paul Molive</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">10 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image"
-                                                data-image-src="{% static 'assets/img/faces/2.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Sahar Dary</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">13 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">All set ! Now, time to get to you now......</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image"
-                                                data-image-src="{% static 'assets/img/faces/9.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Khadija Mehr</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">20 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">Are you ready to pickup your Delivery...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image"
-                                                data-image-src="{% static 'assets/img/faces/12.jpg' %}">
-                                                <span class="avatar-status bg-danger"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Barney Cull</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">30 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">Here are some products ...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image"
-                                                data-image-src="{% static 'assets/img/faces/5.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Petey Cruiser</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">35 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="text-center dropdown-footer">
-                                        <a href="text-center.html">VIEW ALL</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown nav-item main-header-notification">
-                                <a class="new nav-link " href="#"><i class="ti-bell animated bell-animations"></i><span
-                                        class=" pulse"></span></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="menu-header-content text-left d-flex">
-                                        <div class="">
-                                            <h6 class="menu-header-title text-white mb-0">7 new Notifications</h6>
-                                        </div>
-                                        <div class="my-auto ml-auto">
-                                            <span class="badge badge-pill badge-warning float-right">Mark All
-                                                Read</span>
-                                        </div>
-                                    </div>
-                                    <div class="main-notification-list Notification-scroll">
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-success-transparent">
-                                                <i class="la la-shopping-basket text-success"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New Order Received</h5>
-                                                <div class="notification-subtext">1 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-danger-transparent">
-                                                <i class="la la-user-check text-danger"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">22 verified registrations</h5>
-                                                <div class="notification-subtext">2 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-primary-transparent">
-                                                <i class="la la-check-circle text-primary"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">Project has been approved</h5>
-                                                <div class="notification-subtext">4 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-pink-transparent">
-                                                <i class="la la-file-alt text-pink"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New files available</h5>
-                                                <div class="notification-subtext">10 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-warning-transparent">
-                                                <i class="la la-envelope-open text-warning"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New review received</h5>
-                                                <div class="notification-subtext">1 day ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3" href="#">
-                                            <div class="notifyimg bg-purple-transparent">
-                                                <i class="la la-gem text-purple"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">Updates Available</h5>
-                                                <div class="notification-subtext">2 days ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="dropdown-footer">
-                                        <a href="#">VIEW ALL</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="navbar-toggler navresponsive-toggler d-sm-none" type="button"
-                                data-toggle="collapse" data-target="#navbarSupportedContent-4"
-                                aria-controls="navbarSupportedContent-4" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon fe fe-more-vertical "></span>
-                            </button>
-                            <div class="dropdown main-profile-menu nav nav-item nav-link">
-                                <a class="profile-user" href="#">
-                                    <img alt="" src="{% static 'assets/img/faces/5.jpg' %}"></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="main-header-profile header-img">
-                                        <div class="main-img-user">
-                                            <img alt="" src="{% static 'assets/img/faces/5.jpg' %}">
-                                        </div>
-                                        <h6>Elizabeth Jane</h6>
-                                        <span>Premium Member</span>
-                                    </div>
-                                    <a class="dropdown-item" href="#"><i class="far fa-user"></i>My Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="far fa-edit"></i>Edit Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="far fa-clock"></i>Activity Logs</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-sliders-h"></i>Account
-                                        Settings</a>
-                                    <a class="dropdown-item" href="page-signin.html"><i
-                                            class="fas fa-sign-out-alt"></i>Sign Out</a>
-                                </div>
-                            </div>
-                            <div class="dropdown main-header-message right-toggle">
-                                <a class="nav-link " data-toggle="sidebar-right" data-target=".sidebar-right">
-                                    <i class="ti-menu tx-20 bg-transparent"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="responsive main-header collapse" id="navbarSupportedContent-4">
-                <div
-                    class="mb-1 navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark d-sm-none ">
-                    <div class="navbar-collapse">
-                        <div class="d-flex order-lg-2 ml-auto">
-                            <form class="navbar-form nav-item my-auto d-lg-none" role="search">
-                                <div class="input-group nav-item my-auto">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button type="reset" class="btn btn-default">
-                                            <i class="ti-close"></i>
-                                        </button>
-                                        <button type="submit" class="btn btn-default nav-link">
-                                            <i class="ti-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                            </form>
-                            <div class="d-md-flex">
-                                <div class="nav-item full-screen fullscreen-button">
-                                    <a class="new nav-link full-screen-link" href="#"><i
-                                            class="ti-fullscreen"></i></span></a>
-                                </div>
-                            </div>
-                            <div class="dropdown  nav-item main-header-message header-contact">
-                                <a class="new nav-link" href="#"><i class="ti-email"></i><span
-                                        class=" pulse-danger"></span></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="main-dropdown-header d-sm-none">
-                                        <a class="main-header-arrow" href="#"><i class="icon ion-md-arrow-back"></i></a>
-                                    </div>
-                                    <div class="menu-header-content text-left d-flex">
-                                        <div class="">
-                                            <h6 class="menu-header-title text-white mb-0">5 new Messages</h6>
-                                        </div>
-                                        <div class="my-auto ml-auto">
-                                            <span class="badge badge-pill badge-warning float-right">Mark All
-                                                Read</span>
-                                        </div>
-                                    </div>
-                                    <div class="main-message-list text-scroll">
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="  drop-img  cover-image  "
-                                                data-image-src="{% static 'assets/img/faces/3.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Paul Molive</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">10 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image"
-                                                data-image-src="{% static 'assets/img/faces/2.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Sahar Dary</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">13 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">All set ! Now, time to get to you now......</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image"
-                                                data-image-src="{% static 'assets/img/faces/9.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Khadija Mehr</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">20 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">Are you ready to pickup your Delivery...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image"
-                                                data-image-src="{% static 'assets/img/faces/12.jpg' %}">
-                                                <span class="avatar-status bg-danger"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Barney Cull</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">30 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">Here are some products ...</p>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="p-3 d-flex border-bottom">
-                                            <div class="drop-img cover-image"
-                                                data-image-src="{% static 'assets/img/faces/5.jpg' %}">
-                                                <span class="avatar-status bg-teal"></span>
-                                            </div>
-                                            <div class="wd-90p">
-                                                <div class="d-flex">
-                                                    <h5 class="mb-1 name">Petey Cruiser</h5>
-                                                    <p class="time mb-0 text-right ml-auto float-right">35 min ago</p>
-                                                </div>
-                                                <p class="mb-0 desc">I'm sorry but i'm not sure how...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="text-center dropdown-footer">
-                                        <a href="text-center.html">VIEW ALL</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown nav-item main-header-notification">
-                                <a class="new nav-link" href="#"><i class="ti-bell "></i><span
-                                        class=" pulse"></span></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="menu-header-content text-left d-flex">
-                                        <div class="">
-                                            <h6 class="menu-header-title text-white mb-0">7 new Notifications</h6>
-                                        </div>
-                                        <div class="my-auto ml-auto">
-                                            <span class="badge badge-pill badge-warning float-right">Mark All
-                                                Read</span>
-                                        </div>
-                                    </div>
-                                    <div class="main-notification-list notify-scroll">
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-success-transparent">
-                                                <i class="la la-shopping-basket text-success"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New Order Received</h5>
-                                                <div class="notification-subtext">1 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-danger-transparent">
-                                                <i class="la la-user-check text-danger"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">22 verified registrations</h5>
-                                                <div class="notification-subtext">2 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-primary-transparent">
-                                                <i class="la la-check-circle text-primary"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">Project has been approved</h5>
-                                                <div class="notification-subtext">4 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-pink-transparent">
-                                                <i class="la la-file-alt text-pink"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New files available</h5>
-                                                <div class="notification-subtext">10 hour ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3 border-bottom" href="#">
-                                            <div class="notifyimg bg-warning-transparent">
-                                                <i class="la la-envelope-open text-warning"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">New review received</h5>
-                                                <div class="notification-subtext">1 day ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                        <a class="d-flex p-3" href="#">
-                                            <div class="notifyimg bg-purple-transparent">
-                                                <i class="la la-gem text-purple"></i>
-                                            </div>
-                                            <div class="ml-3">
-                                                <h5 class="notification-label mb-1">Updates Available</h5>
-                                                <div class="notification-subtext">2 days ago</div>
-                                            </div>
-                                            <div class="ml-auto">
-                                                <i class="las la-angle-right text-right text-muted"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="dropdown-footer">
-                                        <a href="#">VIEW ALL</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown main-profile-menu nav nav-item nav-link">
-                                <a class="profile-user" href="#">
-                                    <img alt="" src="{% static 'assets/img/faces/5.jpg' %}"></a>
-                                <div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
-                                    <div class="main-header-profile header-img">
-                                        <div class="main-img-user">
-                                            <img alt="" src="{% static 'assets/img/faces/5.jpg' %}">
-                                        </div>
-                                        <h6>Elizabeth Jane</h6>
-                                        <span>Premium Member</span>
-                                    </div>
-                                    <a class="dropdown-item" href="#"><i class="far fa-user"></i>My Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="far fa-edit"></i>Edit Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="far fa-clock"></i>Activity Logs</a>
-                                    <a class="dropdown-item" href="#"><i class="fas fa-sliders-h"></i>Account
-                                        Settings</a>
-                                    <a class="dropdown-item" href="page-signin.html"><i
-                                            class="fas fa-sign-out-alt"></i>Sign Out</a>
-                                </div>
-                            </div>
-                            <div class="dropdown main-header-message right-toggle">
-                                <a class="nav-link " data-toggle="sidebar-right" data-target=".sidebar-right">
-                                    <i class="ti-menu tx-20 bg-transparent"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+            {% include 'includes/dashboard_header.html' %}
+            {% include 'includes/sidebar.html' %}
             <div class="container-fluid">
-                <form name="aspnetForm" method="post" action="./Userbuysip.aspx" id="aspnetForm">
-                    <div>
-                        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-                        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-                        <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
-                        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
-                            value="/wEPDwUKLTg2NzcwNjI3NA8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgJmD2QWBAIBDxYCHgRUZXh0BQQwLjUwZAICD2QWAgIBD2QWAgICD2QWAmYPZBYIAgEPDxYCHwEFC0RDWGEtMjMyMTczZGQCAw8PFgIfAQUKMTUvMTIvMjAyMWRkAgUPEGRkFgFmZAIPDw8WAh8BBRFObyBEYXRhIEZvdW5kLi4uLmRkZHk6kwaiH0RS8Ujjx/jAE1Lb1osV3UeKqJ5Bcpe2QXHd" />
-                    </div>
+                <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
 
-                    <script type="text/javascript">
-                        //<![CDATA[
-                        var theForm = document.forms['aspnetForm'];
-                        if (!theForm) {
-                            theForm = document.aspnetForm;
-                        }
-                        function __doPostBack(eventTarget, eventArgument) {
-                            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-                                theForm.__EVENTTARGET.value = eventTarget;
-                                theForm.__EVENTARGUMENT.value = eventArgument;
-                                theForm.submit();
-                            }
-                        }
-//]]>
-                    </script>
-
-
-                    <script
-                        src="/WebResource.axd?d=f3B_zO2ET5BZu0NWd-VGKvhWRqxL8B-DDJwXVcSXVSoS_YMZb3ONJzLPMKGnxRcKjl8q1bAiXAAkSYfq1vMS_GnG-3PXDDo0Mzdbjb3OlSQ1&amp;t=637454068754849868"
-                        type="text/javascript"></script>
-
-
-                    <script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
-                    <script type="text/javascript" src="/ajaxpro/core.ashx"></script>
-                    <script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
-                    <script type="text/javascript" src="/ajaxpro/Userbuysip,App_Web_03ffos4k.ashx"></script>
-
-                    <script
-                        src="/ScriptResource.axd?d=zmiABBZHH6k-tBVvpkr0cIPuCp0gBJ7szRGvz7aYb2NipCiln2D5ZnlWKMknCn7_ebl3hUdDqPjbumT_A3PmLapdJtWF-qucPKpU3paRbgnYcVPi05UV8V3Vd6NCZu9gYWrMVy93A5MtRHI2sbgruouj6SwuER1OyX0T3zubex9H7KJUiMn4OaKo3F9ENyM80&amp;t=363be08"
-                        type="text/javascript"></script>
-                    <script type="text/javascript">
-                        //<![CDATA[
-                        if (typeof (Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
-//]]>
-                    </script>
-
-                    <script
-                        src="/ScriptResource.axd?d=IQfcZPVQ7g_cFzXNdQETqBRWOM0zcL7RfV-2vfJFJUsaX7cqLTc1GU0L2sxZiq3jAWDuvROq0Ulxwz7kYyzrBLqw5ROPpN1sESRNyXzF89nQXt74R0rsd9K3aF5A4I522NLtro3IFWg844vzAHFN6s59Pgy3jnm5M4rBhHhoyVrrffpSuD-XaGhVulgJVfMU0&amp;t=363be08"
-                        type="text/javascript"></script>
-                    <div>
-
-                        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1176E49A" />
-                        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
-                            value="/wEdAAsLsYiUdvj+GvSqjA6jN8NuqiY2JgUF27N8GzneirISf5pTien2PdzIhe7T3BLrKNj77yrf8AlN5SnTarqUbtIN9FD1acaiNxQQqsprljXyvAyEdBST6RXGYmN4lChuX9wra1fW+Lm4mRcIOqJBoYr45o4jtJZgNhgfcUTTPrih1NghW7/TD24hGa3s+shqJPckzlquYWDymr4OdFQ9Sm2Rslo6yC1xdqujPk3wdDna95IJs3rdRVXrjorstacBJmaSROT5VIsrshaS93ljMljt" />
-                    </div>
-
-
-                    <script type="text/javascript" language="javascript">
-
-
-
-
-                        function chktopup() {
-                            if (document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value != "") {
-                                if (isNaN(document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value) == true) {
-                                    alert("Please Enter TopUp Amount In Numeric Only");
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value = "0";
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                    return false;
-                                }
-
-                                var Response = Gatimoduleproj.UserMemberTopUp.ChkRBalance(document.getElementById('ctl00_ContentPlaceHolder1_TxtId').value, document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value);
-                                if (Response.value == "!") {
-                                    alert("You Have Not Sufficient Balance For Topup");
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value = "0";
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                    return false;
-                                }
-
-                                if (Response.value == "$") {
-                                    alert("Incorrect Distributor Id");
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value = "0";
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                    return false;
-                                }
-                                if (Response.value == "*") {
-                                    alert("Topup Amount Must Be Greater or equal to Previous Topup amount !");
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value = "0";
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                    return false;
-                                }
-                            }
-                        }
-
-
-                        function validate() {
-                            if (document.getElementById('ctl00_ContentPlaceHolder1_TxtId').value == "") {
-                                alert("Please Enter DistributorId");
-                                document.getElementById('ctl00_ContentPlaceHolder1_TxtId').focus();
-                                return false;
-                            }
-
-                            if (document.getElementById('ctl00_ContentPlaceHolder1_TxtDate').value == "") {
-                                alert("Please Enter TopUp DAte");
-                                document.getElementById('ctl00_ContentPlaceHolder1_TxtDate').focus();
-                                return false;
-                            }
-
-                            if (document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value == "") {
-                                alert("Please Enter TopUp Amount");
-                                document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                return false;
-                            }
-                            if (document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value != "") {
-                                if (isNaN(document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value) == true) {
-                                    alert("Please Enter TopUp Amount In Numeric Only");
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value = "0";
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                    return false;
-                                }
-                                if (parseInt(document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value) < 10) {
-                                    alert("Please Enter TopUp Amount Minimum 10$");
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value = "0";
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                    return false;
-                                }
-                                if ((parseInt(document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value) % 5) > 0) {
-                                    alert("Please Enter TopUp Amount multiple of 5$");
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value = "0";
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                    return false;
-                                }
-                                var Response = Gatimoduleproj.UserMemberTopUp.ChkRBalance(document.getElementById('ctl00_ContentPlaceHolder1_TxtId').value, document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value);
-                                if (Response.value == "!") {
-                                    alert("You Have Not Sufficient Ballance For Topup");
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value = "0";
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                    return false;
-                                }
-
-                                if (Response.value == "$") {
-                                    alert("Incorrect Distributor Id");
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').value = "0";
-                                    document.getElementById('ctl00_ContentPlaceHolder1_ddlproduct').focus();
-                                    return false;
-                                }
-                            }
-
-
-                            if (window.confirm("Are to sure to Topup ?") == false) {
-                                return false;
-                            }
-                            else {
-                                return true;
-                            }
-
-
-                        }
-
-
-
-                    </script>
-
-
-                    <script type="text/javascript">
-                        //<![CDATA[
-                        Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptManager1', 'aspnetForm', ['tctl00$ContentPlaceHolder1$UpdatePanel1', ''], [], [], 90, 'ctl00');
-//]]>
-                    </script>
-
-                    <div id="ctl00_ContentPlaceHolder1_updProgress" style="display:none;">
-
-                        <div
-                            style="position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; overflow: hidden; padding: 0; margin: 0; background-color: #F0F0F0; filter: alpha(opacity=50); opacity: 0.5; z-index: 100000;">
-                        </div>
-                        <div
-                            style="position: fixed; top: 30%; left: 30%; height: 60%; width: 40%; z-index: 100001; background-image: url('{% static 'images/ajax-loader.gif'); background-repeat: no-repeat; background-position: center;">
-                        </div>
-
-
-                    </div>
-
-
-                    <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
-
-
-
-                        <div class="col-lg-12 col-md-12" style="padding-top: 20px;">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="main-content-label mg-b-5">
-                                        FILE UPLOAD
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 col-xl-6 mx-auto d-block">
-                                           
-                                        </div>
-                                    </div>
-
-                                    <div class="row row-sm">
-                                        <div class="col-xl-12">
-                                            <div class="card mg-b-20">
-                                                <div class="card-header pb-0">
-                                                    <div class="d-flex justify-content-between">
-
-                                                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="nk-content-body">
+                                    <div class="kyc-app wide-sm m-auto">
+                                        <div class="nk-block-head nk-block-head-lg wide-xs mx-auto">
+                                            <div class="nk-block-head-content text-center">
+                                                <h2 class="nk-block-title fw-normal">Begin your ID-Verification</h2>
+                                                <div class="nk-block-des">
+                                                    <p>To comply with regulation each participant will have to go
+                                                        through indentity verification (KYC/AML) to prevent fraud
+                                                        causes. </p>
                                                 </div>
-                                                <div class="card-body">
-                                                    
-                                                    <div class="row">
-                                                        <div class="col-sm-12" style="font-weight: bold;margin:10px 0px;">
-                                                            <span id="ctl00_ContentPlaceHolder1_lblKycStatus"></span><br>
-                                                            <span id="ctl00_ContentPlaceHolder1_lblReason"></span>
+                                            </div>
+                                        </div>
+                                        <div class="nk-block">
+                                            <div class="card card-bordered">
+                                                <div class="nk-kycfm">
+                                                    <div class="nk-kycfm-head">
+                                                        <div class="nk-kycfm-count">01</div>
+                                                        <div class="nk-kycfm-title">
+                                                            <h5 class="title">Personal Details</h5>
+                                                            <p class="sub-title">Your simple personal information
+                                                                required for identification</p>
                                                         </div>
                                                     </div>
-                                                    <div class="row mb-4">
-                                                        <div class="col-sm-12 col-md-4">
-                                                            <div>
-                                                                <p class="text-muted card-sub-title">(1) <code>Upload Your Photo</code></p>
-                                                            </div>
-                                                            <div class="clearfix"></div>
-                                                            <div class="dropify-wrapper" style="height: 212px;"><div class="dropify-message"><span class="file-icon"></span> <p>Drag and drop a file here or click</p><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" name="ctl00$ContentPlaceHolder1$FileUpload1" id="ctl00_ContentPlaceHolder1_FileUpload1" class="dropify" data-height="200" style="min-height: 150px !important;"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
-                                                            
-                                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnupload1" value="Upload Documents" id="ctl00_ContentPlaceHolder1_btnupload1" class="btn btn-main-primary btn-block btn-filesubmit">
+                                                    <div class="nk-kycfm-content">
+                                                        <div class="nk-kycfm-note"><em class="icon ni ni-info-fill"
+                                                                data-toggle="tooltip" data-placement="right" title=""
+                                                                data-original-title="Tooltip on right"></em>
+                                                            <p>Please type carefully and fill out the form with your
+                                                                personal details. Your can’t edit these details once you
+                                                                submitted the form.</p>
                                                         </div>
-                                                        <div class="col-sm-12 col-md-4 mg-t-10 mg-sm-t-0">
-                                                            <div>
-                                                                <p class="text-muted card-sub-title">(2) <code>Upload Your Identity Proof</code></p>
+                                                        <div class="row g-4">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">First Name <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
                                                             </div>
-                                                            <div class="clearfix"></div>
-                                                            <div class="dropify-wrapper" style="height: 212px;"><div class="dropify-message"><span class="file-icon"></span> <p>Drag and drop a file here or click</p><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" name="ctl00$ContentPlaceHolder1$FileUpload2" id="ctl00_ContentPlaceHolder1_FileUpload2" class="dropify" data-height="200" style="min-height: 150px !important;"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
-                                                            
-                            
-                                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnupload2" value="Upload Documents" id="ctl00_ContentPlaceHolder1_btnupload2" class="btn btn-main-primary btn-block btn-filesubmit">
-                                                        </div>
-                                                        <div class="col-sm-12 col-md-4 mg-t-10 mg-sm-t-0">
-                                                            <div>
-                                                                <p class="text-muted card-sub-title">(3) <code>Upload Your Address Proof</code></p>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">Last Name <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
                                                             </div>
-                                                            <div class="clearfix"></div>
-                                                            <div class="dropify-wrapper" style="height: 212px;"><div class="dropify-message"><span class="file-icon"></span> <p>Drag and drop a file here or click</p><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" name="ctl00$ContentPlaceHolder1$FileUpload3" id="ctl00_ContentPlaceHolder1_FileUpload3" class="dropify" data-height="200" style="min-height: 150px !important;"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
-                                                            
-                                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnupload3" value="Upload Documents" id="ctl00_ContentPlaceHolder1_btnupload3" class="btn btn-main-primary btn-block btn-filesubmit">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">Email Address <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">Phone Number <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">Date of Birth <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg date-picker-alt">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">Telegram Username <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                            
-                            
+                                                    <div class="nk-kycfm-head">
+                                                        <div class="nk-kycfm-count">02</div>
+                                                        <div class="nk-kycfm-title">
+                                                            <h5 class="title">Your Address</h5>
+                                                            <p class="sub-title">Your simple personal information
+                                                                required for identification</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-kycfm-content">
+                                                        <div class="nk-kycfm-note"><em class="icon ni ni-info-fill"
+                                                                data-toggle="tooltip" data-placement="right" title=""
+                                                                data-original-title="Tooltip on right"></em>
+                                                            <p>Your can’t edit these details once you submitted the
+                                                                form.</p>
+                                                        </div>
+                                                        <div class="row g-4">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">Address Line 1 <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">Address Line 2</label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">City <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">State <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">Nationality <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg date-picker-alt">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <div class="form-label-group"><label
+                                                                            class="form-label">Zip Code <span
+                                                                                class="text-danger">*</span></label>
+                                                                    </div>
+                                                                    <div class="form-control-group"><input type="text"
+                                                                            class="form-control form-control-lg"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-kycfm-head">
+                                                        <div class="nk-kycfm-count">03</div>
+                                                        <div class="nk-kycfm-title">
+                                                            <h5 class="title">Document Upload</h5>
+                                                            <p class="sub-title">To verify your identity, please upload
+                                                                any of your document.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-kycfm-content">
+                                                        <div class="nk-kycfm-note"><em class="icon ni ni-info-fill"
+                                                                data-toggle="tooltip" data-placement="right" title=""
+                                                                data-original-title="Tooltip on right"></em>
+                                                            <p>In order to complete, please upload any of the following
+                                                                personal document.</p>
+                                                        </div>
+                                                        <ul class="nk-kycfm-control-list g-3">
+                                                            <li class="nk-kycfm-control-item"><input
+                                                                    class="nk-kycfm-control" type="radio"
+                                                                    name="id-proof" id="passport" data-title="Passport"
+                                                                    checked=""><label class="nk-kycfm-label"
+                                                                    for="passport"><span
+                                                                        class="nk-kycfm-label-icon"><span
+                                                                            class="label-icon"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 71.9904 75.9285">
+                                                                                <path
+                                                                                    d="M27.14,23.73A15.55,15.55,0,1,0,42.57,39.4v-.12A15.5,15.5,0,0,0,27.14,23.73Zm11.42,9.72H33a25.55,25.55,0,0,0-2.21-6.53A12.89,12.89,0,0,1,38.56,33.45ZM31,39.28a26.9929,26.9929,0,0,1-.2,3.24H23.49a26.0021,26.0021,0,0,1,0-6.48H30.8A29.3354,29.3354,0,0,1,31,39.28ZM26.77,26.36h.75a21.7394,21.7394,0,0,1,2.85,7.09H23.91A21.7583,21.7583,0,0,1,26.77,26.36Zm-3.28.56a25.1381,25.1381,0,0,0-2.2,6.53H15.72a12.88,12.88,0,0,1,7.78-6.53ZM14.28,39.28A13.2013,13.2013,0,0,1,14.74,36H20.9a29.25,29.25,0,0,0,0,6.48H14.74A13.1271,13.1271,0,0,1,14.28,39.28Zm1.44,5.83h5.57a25.9082,25.9082,0,0,0,2.2,6.53A12.89,12.89,0,0,1,15.72,45.11ZM27.51,52.2h-.74a21.7372,21.7372,0,0,1-2.85-7.09h6.44A21.52,21.52,0,0,1,27.51,52.2Zm3.28-.56A25.1413,25.1413,0,0,0,33,45.11h5.57a12.84,12.84,0,0,1-7.77,6.53Zm2.59-9.12a28.4606,28.4606,0,0,0,0-6.48h6.15a11.7,11.7,0,0,1,0,6.48ZM14.29,62.6H40v2.6H14.28V62.61ZM56.57,49l1.33-5,2.48.67-1.33,5Zm-6,22.52L55.24,54l2.48.67L53.06,72.14Zm21.6-61.24-29.8-8a5.13,5.13,0,0,0-6.29,3.61h0L33.39,16H6.57A2.58,2.58,0,0,0,4,18.55V70.38A2.57,2.57,0,0,0,6.52,73L6.57,73h29.7l17.95,4.85a5.12,5.12,0,0,0,6.28-3.6v-.06L75.8,16.61a5.18,5.18,0,0,0-3.6066-6.3763L72.18,10.23ZM6.57,70.38V18.55H45.14a2.57,2.57,0,0,1,2.57,2.57V67.79a2.57,2.57,0,0,1-2.55,2.59H6.57ZM73.34,15.91,58,73.48a2.59,2.59,0,0,1-2.48,1.93,2.5192,2.5192,0,0,1-.67-.09l-9-2.42a5.15,5.15,0,0,0,4.37-5.11V47.24l1.32.36,1.33-5-2.49-.67-.16.62V21.94l2.62.71,3.05,10,2.13.57L57.88,24l3.76,1,1.65,3,1.42.39-.25-4.09,2.24-3.42-1.41-.39L62.4,22.15l-3.76-1,4.76-7.92-2.13-.57-7.6,7.14-4-1.08A5.1,5.1,0,0,0,45.14,16H36.05l2.51-9.45a2.57,2.57,0,0,1,3.12-1.84h0l29.81,8.05a2.56,2.56,0,0,1,1.56,1.21A2.65,2.65,0,0,1,73.34,15.91ZM56.57,39.59l.66-2.5,2.44.65L59,40.24Zm4.88,1.31.66-2.51,2.44.66-.65,2.5Zm-9.76-2.61.66-2.51,2.45.66-.66,2.5Z"
+                                                                                    transform="translate(-3.9995 -2.101)"
+                                                                                    fill="#6476ff"></path>
+                                                                            </svg></span></span><span
+                                                                        class="nk-kycfm-label-text">Passport</span></label>
+                                                            </li>
+                                                            <li class="nk-kycfm-control-item"><input
+                                                                    class="nk-kycfm-control" type="radio"
+                                                                    name="id-proof" id="national-id"
+                                                                    data-title="National ID"><label
+                                                                    class="nk-kycfm-label" for="national-id"><span
+                                                                        class="nk-kycfm-label-icon"><span
+                                                                            class="label-icon"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 76 63">
+                                                                                <path
+                                                                                    d="M76,18.79,56.53,9.56a6.19,6.19,0,0,0-5.19,0l-19.5,9.23a3.35,3.35,0,0,0-1.9,2.55H8.33A6.26,6.26,0,0,0,2,27.51v38.3A6.27,6.27,0,0,0,8.33,72H71.67A6.27,6.27,0,0,0,78,65.81v-44A3.37,3.37,0,0,0,76,18.79Zm-.56,47a3.77,3.77,0,0,1-3.8,3.71H8.33a3.77,3.77,0,0,1-3.8-3.71V27.51a3.75,3.75,0,0,1,3.7993-3.7H29.87v9.34A34.49,34.49,0,0,0,44,60.41l7.51,5.8a4.11,4.11,0,0,0,4.94,0l7.51-5.8A36.5307,36.5307,0,0,0,75.47,45.62V65.81Zm0-32.66a32.09,32.09,0,0,1-13.1,25.34l-7.51,5.8a1.5,1.5,0,0,1-1.8,0l-7.51-5.8A32.05,32.05,0,0,1,32.4,33.15V21.83A.91.91,0,0,1,33,21l19.5-9.23a3.51,3.51,0,0,1,3,0L74.92,21a.91.91,0,0,1,.55.82V33.15ZM53.87,21.43a12.47,12.47,0,0,0-12.6,12.31,12.62,12.62,0,0,0,25.23,0,12.46,12.46,0,0,0-12.6178-12.3l-.0122,0Zm0,22.14A9.83,9.83,0,1,1,64,33.78a10,10,0,0,1-10.1,9.79Zm3.31-13.22-5.32,5.19-1.18-1.15a1.29,1.29,0,0,0-1.79,0,1.2,1.2,0,0,0-.013,1.697l.013.013h0l2.08,2a1.27,1.27,0,0,0,1.79,0L59,32.09a1.22,1.22,0,0,0,0-1.72h0a1.29,1.29,0,0,0-1.8,0ZM29.87,57.16h-20a1.24,1.24,0,1,0,0,2.47h20a1.24,1.24,0,0,0,0-2.47ZM19.73,62.1H9.89a1.24,1.24,0,0,0,0,2.48h9.84a1.24,1.24,0,0,0,0-2.48Zm8.66-14.28h0L24,45.71a.36.36,0,0,1-.22-.34V44.16a1.878,1.878,0,0,1,.18-.24,10.9991,10.9991,0,0,0,1.35-2.48,2.53,2.53,0,0,0,1.23-2.16V37.51a2.61,2.61,0,0,0-.46-1.43V34a4.69,4.69,0,0,0-1.15-3.43,6.68,6.68,0,0,0-5.19-1.85,6.67,6.67,0,0,0-5.18,1.85A4.61,4.61,0,0,0,13.4,34v2a2.46,2.46,0,0,0-.46,1.43v1.78a2.49,2.49,0,0,0,.78,1.81,10.148,10.148,0,0,0,1.52,3v1.2a.36.36,0,0,1-.21.33l-4.1,2.15A4.79,4.79,0,0,0,8.33,52v1.43a1.26,1.26,0,0,0,.37.88,1.33,1.33,0,0,0,.9.36H29.87a1.31,1.31,0,0,0,.9-.36,1.26,1.26,0,0,0,.37-.88V52.11A4.76,4.76,0,0,0,28.39,47.82Zm.21,4.4H10.87V52a2.27,2.27,0,0,1,1.25-2l4.12-2.16a2.85,2.85,0,0,0,1.54-2.5V43.72a1.3,1.3,0,0,0-.3-.8,7.39,7.39,0,0,1-1.4-2.8,1.53,1.53,0,0,0-.6-.83V37.46a1.22,1.22,0,0,0,.43-.92v-2.7a2.17,2.17,0,0,1,.53-1.58,4.38,4.38,0,0,1,3.28-1,4.43,4.43,0,0,1,3.26,1,2.22,2.22,0,0,1,.55,1.6.8552.8552,0,0,0,0,.16v2.56a1.36,1.36,0,0,0,.46,1l-.08,1.86a1.23,1.23,0,0,0-.84.8,8.5819,8.5819,0,0,1-1.19,2.31c-.1.14-.22.28-.33.41a1.22,1.22,0,0,0-.33.82v1.66A2.86,2.86,0,0,0,22.86,48l4.41,2a2.28,2.28,0,0,1,1.33,2.07v.15Z"
+                                                                                    transform="translate(-2 -8.9898)"
+                                                                                    fill="#6476ff"></path>
+                                                                            </svg></span></span><span
+                                                                        class="nk-kycfm-label-text">National
+                                                                        ID</span></label></li>
+                                                            <li class="nk-kycfm-control-item"><input
+                                                                    class="nk-kycfm-control" type="radio"
+                                                                    name="id-proof" id="driver-licence"
+                                                                    data-title="Driving License"><label
+                                                                    class="nk-kycfm-label" for="driver-licence"><span
+                                                                        class="nk-kycfm-label-icon"><span
+                                                                            class="label-icon"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 76 76">
+                                                                                <path
+                                                                                    d="M70.5,2H9.9A7.9167,7.9167,0,0,0,2,9.9V51.5A7.49,7.49,0,0,0,9.5,59H31.6a1.538,1.538,0,0,0,1.5-1.5A1.4727,1.4727,0,0,0,31.6,56H9.7A4.6946,4.6946,0,0,1,5,51.3V15H75V46.9a1.5,1.5,0,1,0,3,0V10.1C78,5.6,74.7,2,70.5,2ZM75,11H5V9.5A4.6115,4.6115,0,0,1,9.8,5H70.3a4.6115,4.6115,0,0,1,4.8,4.5V11ZM64.3,29.5a4.1408,4.1408,0,0,1-1.5,2.9.9593.9593,0,0,0-.3,1L63,35a.9879.9879,0,0,0,.7.7l3.9,1a2.0749,2.0749,0,0,1,1,.6.972.972,0,0,0,1.4-.1h0a.9663.9663,0,0,0-.1-1.4h0a5.7028,5.7028,0,0,0-2.2-1.1l-3-.8-.1-.5a7.08,7.08,0,0,0,1.6-3.1,1.8059,1.8059,0,0,0,1-1.4l.2-1.7a1.8411,1.8411,0,0,0-.8-1.8l.1-1.1.2-.2a2.5846,2.5846,0,0,0,.1-3.4,4.3847,4.3847,0,0,0-3.8-1.8,7.2965,7.2965,0,0,0-3.5.9c-4.1.1-4.6,2.4-4.6,4,0,.3.1.9.1,1.5-.1.1-.3.2-.4.3a1.9638,1.9638,0,0,0-.5,1.5l.2,1.7a2.0944,2.0944,0,0,0,1.1,1.5,6.1046,6.1046,0,0,0,1.5,3l-.1.6-3,.8A5.4636,5.4636,0,0,0,49.9,40a.9448.9448,0,0,0,1,1H65a1,1,0,0,0,0-2H52.1a3.1116,3.1116,0,0,1,2.5-2.3l3.6-.9a.9879.9879,0,0,0,.7-.7l.4-1.7a.8065.8065,0,0,0-.3-.9,4.6858,4.6858,0,0,1-1.4-2.9.8949.8949,0,0,0-1-.8l-.3-1.6a.9448.9448,0,0,0,1-1v-.1a19.0913,19.0913,0,0,1-.2-2c0-1,0-2,2.9-2a1.4213,1.4213,0,0,0,.6-.2,4.1045,4.1045,0,0,1,2.6-.7,2.1984,2.1984,0,0,1,2.1.9c.4.6.2.8.1.9l-.4.2a.9078.9078,0,0,0-.3.7L64.6,26a.7787.7787,0,0,0,.7.9h.2l-.1,1.6A1.0278,1.0278,0,0,0,64.3,29.5ZM34.1,27a1.538,1.538,0,0,0,1.5-1.5A1.4727,1.4727,0,0,0,34.1,24h-6a1.5,1.5,0,0,0,0,3ZM12.8,37h21a1.5,1.5,0,0,0,0-3h-21a1.538,1.538,0,0,0-1.5,1.5A1.4727,1.4727,0,0,0,12.8,37Zm-.4-10h9a1.5,1.5,0,0,0,0-3h-9a1.5,1.5,0,1,0,0,3ZM74.9,55a2.0059,2.0059,0,0,0-2-2h-.2a7.0756,7.0756,0,0,0-3.1,1c-1.4-3-3.8-5.6-5.4-6.4-1.1-.6-4.9-1.2-8.3-1.2s-7.1.6-8.2,1.2c-1.7.8-4,3.4-5.4,6.4a6.6831,6.6831,0,0,0-3.1-1,2.2959,2.2959,0,0,0-1.4.4A2.0876,2.0876,0,0,0,37,55a5.5585,5.5585,0,0,0,2,4c.2.1.3.2.5.3a16.4687,16.4687,0,0,0-1,5.8c0,2.1.2,5.8,1.5,7.7v2.4a2.9483,2.9483,0,0,0,2.8,2.9h3.4A2.8616,2.8616,0,0,0,49,75.3h0v-1a27.5212,27.5212,0,0,0,7,1,27.5212,27.5212,0,0,0,7-1v1a2.7754,2.7754,0,0,0,2.7,2.8H69a2.8183,2.8183,0,0,0,2.9-2.8h0V72.9c1.2-1.9,1.4-5.5,1.4-7.7a16.0869,16.0869,0,0,0-1-5.8.8643.8643,0,0,0,.6-.3A5.7634,5.7634,0,0,0,74.9,55ZM49.3,50.1a22.2387,22.2387,0,0,1,6.8-.8,30.84,30.84,0,0,1,6.8.8c1.1.5,3.6,3.4,4.6,6.5-2.7.4-9.1,1.2-11.5,1.2s-8.7-.9-11.4-1.2C45.7,53.5,48.2,50.7,49.3,50.1Zm-8.1,6.6c-.1-.2-.3-.3-.4-.5a2.1859,2.1859,0,0,1,.5.3c0,.1,0,.1-.1.2ZM46.1,75H43V74h3v1.1Zm23,0H66V74h3v1.1Zm.4-5H66.9a6.7381,6.7381,0,0,0-2.6.9h0a32.0084,32.0084,0,0,1-8.2,1.4,42.62,42.62,0,0,1-7.6-1.5,6.1538,6.1538,0,0,0-1.9-.2l-4,.4a19.5493,19.5493,0,0,1-.8-5.9,6.15,6.15,0,0,1,.1-1.4c1.9.1,4.2.7,4.2,1.4a1.52,1.52,0,0,0,1.4,1.5h0c.8,0,1.5-1.4,1.5-1.4v-.7c0-3.4-4.7-4-6.5-4.1.2-.5.4-1,.6-1.4h0c.4.1,9.8,1.4,13,1.4S68.7,59.1,69,59h0c.2.5.4.9.6,1.4-1.8.1-6.4.7-6.4,4.1a1.4036,1.4036,0,0,0,2.8,0v-.1c0-.7,2.2-1.3,4.2-1.4a6.602,6.602,0,0,1,.1,1.4A17.2549,17.2549,0,0,1,69.5,70Zm1.6-13.3c0-.1-.1-.1-.1-.2l.5-.3A2.1813,2.1813,0,0,1,71.1,56.7ZM59.2,64h-6a1.5,1.5,0,0,0,0,3h6a1.5,1.5,0,0,0,0-3Z"
+                                                                                    transform="translate(-2 -2)"
+                                                                                    fill="#6476ff"></path>
+                                                                            </svg></span></span><span
+                                                                        class="nk-kycfm-label-text">Driving
+                                                                        License</span></label></li>
+                                                        </ul>
+                                                        <h6 class="title">To avoid delays when verifying account, Please
+                                                            make sure bellow:</h6>
+                                                        <ul class="list list-sm list-checked">
+                                                            <li>Chosen credential must not be expaired.</li>
+                                                            <li>Document should be good condition and clearly visible.
+                                                            </li>
+                                                            <li>Make sure that there is no light glare on the card.</li>
+                                                        </ul>
+                                                        <div class="nk-kycfm-upload">
+                                                            <h6 class="title nk-kycfm-upload-title">Upload Here Your
+                                                                Copy</h6>
+                                                            <div class="row align-items-center">
+                                                                <div class="col-sm-8">
+                                                                    <div class="nk-kycfm-upload-box">
+                                                                        <div class="upload-zone dropzone dz-clickable">
+                                                                            <div class="dz-message" data-dz-message="">
+                                                                                <span class="dz-message-text">Drag and
+                                                                                    drop file</span><span
+                                                                                    class="dz-message-or">or</span><button
+                                                                                    class="btn btn-primary">SELECT</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4 d-none d-sm-block">
+                                                                    <div class="mx-md-4"><img
+                                                                            src="{% static 'kyc_static/images/icons/id-front.svg' %}"
+                                                                            alt="ID Front"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nk-kycfm-upload">
+                                                            <h6 class="title nk-kycfm-upload-title">Upload Here Your
+                                                                Copy</h6>
+                                                            <div class="row align-items-center">
+                                                                <div class="col-sm-8">
+                                                                    <div class="nk-kycfm-upload-box">
+                                                                        <div class="upload-zone dropzone dz-clickable">
+                                                                            <div class="dz-message" data-dz-message="">
+                                                                                <span class="dz-message-text">Drag and
+                                                                                    drop file</span><span
+                                                                                    class="dz-message-or">or</span><button
+                                                                                    class="btn btn-primary">SELECT</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4 d-none d-sm-block">
+                                                                    <div class="mx-md-4"><img
+                                                                            src="{% static 'kyc_static/images/icons/id-back.svg"
+                                                                            alt="ID Back"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-kycfm-footer">
+                                                        <div class="form-group">
+                                                            <div
+                                                                class="custom-control custom-control-xs custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="tc-agree"><label class="custom-control-label"
+                                                                    for="tc-agree">I Have Read The <a href="#">Terms Of
+                                                                        Condition</a> And <a href="#">Privacy
+                                                                        Policy</a></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div
+                                                                class="custom-control custom-control-xs custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="info-assure"><label class="custom-control-label"
+                                                                    for="info-assure">All The Personal Information I
+                                                                    Have Entered Is Correct.</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nk-kycfm-action pt-2"><button type="submit"
+                                                                class="btn btn-lg btn-primary">Process for
+                                                                Verify</button></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -972,478 +355,11 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
-
-
-                    </div>
-
-
-
-
-
-                    <script type="text/javascript">
-                        //<![CDATA[
-                        Sys.Application.add_init(function () {
-                            $create(Sys.UI._UpdateProgress, { "associatedUpdatePanelId": "ctl00_ContentPlaceHolder1_UpdatePanel1", "displayAfter": 500, "dynamicLayout": true }, null, null, $get("ctl00_ContentPlaceHolder1_updProgress"));
-                        });
-//]]>
-                    </script>
-                </form>
-            </div>
-
-
-        </div>
-
-        <div class="sidebar sidebar-right sidebar-animate">
-            <div class="p-3">
-                <a href="#" class="text-right float-right" data-toggle="sidebar-right" data-target=".sidebar-right"><i
-                        class="fe fe-x"></i></a>
-            </div>
-            <div class="tab-menu-heading border-0 card-header">
-                <div class="card-title mb-0">Notifications</div>
-                <div class="card-options ml-auto">
-                    <a href="#" class="sidebar-remove"><i class="fe fe-x"></i></a>
-                </div>
-            </div>
-            <div class="tabs-menu ">
-                <!-- Tabs -->
-                <ul class="nav panel-tabs">
-                    <li class=""><a href="#tab" class="active show" data-toggle="tab">Profile</a></li>
-                    <li class=""><a href="#tab1" data-toggle="tab" class="">Directs</a></li>
-                    <li><a href="#tab2" data-toggle="tab" class="">History</a></li>
-
-                </ul>
-            </div>
-            <div class="panel-body tabs-menu-body side-tab-body p-0 border-0 ">
-                <div class="tab-content">
-                    <div class="tab-pane active" id="tab">
-                        <div class="card-body p-0">
-                            <div class="header-user text-center mt-4">
-                                <span class="avatar avatar-xxl brround mx-auto">
-                                    <img src="{% static 'assets/img/faces/5.jpg' %}" alt="Profile-img"
-                                        class="avatar avatar-xxl brround"></span>
-                                <div class=" text-center font-weight-semibold user mt-3 h6 mb-0">Elizabeth Jane</div>
-                                <span class="text-muted">App Developer</span>
-                                <br />
-                                <br />
-                                
-                            </div>
-                            <a class="dropdown-item  border-top" href="#">
-                                <i class="dropdown-icon fe fe-edit mr-2"></i>Edit Profile
-                            </a>
-                            <a class="dropdown-item  border-top" href="#">
-                                <i class="dropdown-icon fe fe-help-circle mr-2"></i>Support
-                            </a>
-
-                            <a class="dropdown-item  border-top" href="#">
-                                <i class="dropdown-icon fe fe-mail mr-2"></i>Message
-                            </a>
-
-                            <div class="card-body border-top border-bottom">
-                                <div class="row">
-                                    <div class="col-4 text-center">
-                                        <a class="" href="#"><i
-                                                class="dropdown-icon mdi  mdi-message-outline fs-20 m-0 leading-tight"></i></a>
-                                        <div>Inbox</div>
-                                    </div>
-                                    <div class="col-4 text-center">
-                                        <a class="" href="#"><i
-                                                class="dropdown-icon mdi mdi-tune fs-20 m-0 leading-tight"></i></a>
-                                        <div>Settings</div>
-                                    </div>
-                                    <div class="col-4 text-center">
-                                        <a class="" href="Userlogout.aspx"><i
-                                                class="dropdown-icon mdi mdi-logout-variant fs-20 m-0 leading-tight"></i></a>
-                                        <div>Sign out</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab1">
-                        <div class="chat">
-                            <div class="contacts_card">
-                                <div class="input-group mb-0 p-3">
-                                    <input type="text" placeholder="Search..." class="form-control search">
-                                    <div class="input-group-prepend mr-0">
-                                        <span class="input-group-text  search_btn  btn-primary"><i
-                                                class="fa fa-search text-white"></i></span>
-                                    </div>
-                                </div>
-                                <ul class="contacts mb-0">
-                                    <li class="active">Direct Members
-                                    </li>
-                                    <!--	<li class="active">
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/12.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Maryam Naz</h5>
-													<small class="text-muted">is online</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>01-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/2.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class=" online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Sahar Darya</h5>
-													<small class="text-muted">left 7 mins ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>01-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/5.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Maryam Naz</h5>
-													<small class="text-muted">online</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>01-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/7.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Yolduz Rafi</h5>
-													<small class="text-muted">online</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>02-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/8.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Nargis Hawa</h5>
-													<small class="text-muted">30 mins ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>02-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/3.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Khadija Mehr</h5>
-													<small class="text-muted">50 mins ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>03-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/14.jpg' %}" class="rounded-circle user_img" alt="img">
-													<span class="online_icon"></span>
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Petey Cruiser</h5>
-													<small class="text-muted">1hr ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>03-02-2019</small></div>
-											</div>
-										</li>
-										<li>
-											<div class="d-flex bd-highlight w-100">
-												<div class="img_cont">
-													<img src="{% static 'assets/img/faces/11.jpg' %}" class="rounded-circle user_img" alt="img">
-												</div>
-												<div class="user_info">
-													<h5 class="mt-1 mb-1">Khadija Mehr</h5>
-													<small class="text-muted">2hr ago</small>
-												</div>
-												<div class="float-right text-right ml-auto mt-auto mb-auto"><small>03-02-2019</small></div>
-											</div>
-										</li> -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab2">
-
-                        <div class="list d-flex align-items-center border-bottom p-3">
-                            <div class="">
-                                <span class="avatar bg-primary brround avatar-md">D</span>
-                            </div>
-                            <div class="wrapper w-100 ml-3">
-                                <p class="mb-0 d-flex">
-                                    <b>Joing Fund 100$</b>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="mdi mdi-clock text-muted mr-1"></i>
-                                        <small class="text-muted ml-auto">11 Nov,2021</small>
-                                        <p class="mb-0"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="list d-flex align-items-center p-3">
-                            <div class="">
-                                <span class="avatar bg-blue brround avatar-md">U</span>
-                            </div>
-                            <div class="wrapper w-100 ml-3">
-                                <p class="mb-0 d-flex">
-                                    <b>Upgrade 500$</b>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="mdi mdi-clock text-muted mr-1"></i>
-                                        <small class="text-muted ml-auto">11 Nov,2021</small>
-                                        <p class="mb-0"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab3">
-                        <div class="mt-3">
-                            <div class="d-flex p-3">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox1"
-                                        value="option1" checked="">
-                                    <span class="custom-control-label">Do Even More..</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox2"
-                                        value="option2" checked="">
-                                    <span class="custom-control-label">Find an idea.</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox3"
-                                        value="option3" checked="">
-                                    <span class="custom-control-label">Hangout with friends</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox4"
-                                        value="option4">
-                                    <span class="custom-control-label">Do Something else</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox5"
-                                        value="option5">
-                                    <span class="custom-control-label">Eat healthy, Eat Fresh..</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox6"
-                                        value="option6" checked="">
-                                    <span class="custom-control-label">Finsh something more..</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox7"
-                                        value="option7" checked="">
-                                    <span class="custom-control-label">Do something more</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox8"
-                                        value="option8">
-                                    <span class="custom-control-label">Updated more files</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox9"
-                                        value="option9">
-                                    <span class="custom-control-label">System updated</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="d-flex p-3 border-top border-bottom">
-                                <label class="custom-control custom-checkbox mb-0">
-                                    <input type="checkbox" class="custom-control-input" name="example-checkbox10"
-                                        value="option10">
-                                    <span class="custom-control-label">Settings Changings...</span>
-                                </label>
-                                <span class="ml-auto">
-                                    <a href="#"><i class="si si-pencil text-primary mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Edit"></i></a>
-                                    <a href="#"><i class="si si-trash text-danger mr-2" data-toggle="tooltip" title=""
-                                            data-placement="top" data-original-title="Delete"></i></a>
-                                </span>
-                            </div>
-                            <div class="text-center pt-5">
-                                <a href="#" class="btn btn-primary">Add more</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="main-footer ht-40">
-            <div class="container-fluid pd-t-0-f ht-100p">
-                <span>Copyright &copy; 2021 <a href="#">DCXA</a>. Designed by <a href="https://www.dcxa.io/">DCXA</a>
-                    All rights reserved.</span>
-            </div>
-        </div>
-
+        {% include 'includes/dashboard_footer.html' %}
     </div>
-    <!--End Page -->
-
-    <a href="#top" id="back-to-top"><i class="la la-chevron-up"></i></a>
-
-    <script src="{% static 'assets/plugins/ionicons/ionicons.js' %}"></script>
-    <script src="{% static 'assets/plugins/moment/moment.js' %}"></script>
-    <script src="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
-    <script src="{% static 'assets/plugins/rating/jquery.rating-stars.js' %}"></script>
-    <script src="{% static 'assets/plugins/rating/jquery.barrating.js' %}"></script>
-    <script src="{% static 'assets/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
-    <script src="{% static 'assets/js/eva-icons.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/side-menu/sidemenu.js' %}"></script>
-    <script src="{% static 'assets/plugins/sidebar/sidebar.js' %}"></script>
-    <script src="{% static 'assets/plugins/sidebar/sidebar-custom.js' %}"></script>
-    <script src="{% static 'assets/js/sticky.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-ui/ui/widgets/datepicker.js' %}"></script>
-    <script src="{% static 'assets/plugins/chart.js' %}/Chart.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/raphael/raphael.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/peity/jquery.peity.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
-
-    <script src="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.pie.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery.flot/jquery.flot.categories.js' %}"></script>
-    <script src="{% static 'assets/js/dashboard.sampledata.js' %}"></script>
-
-    <script src="{% static 'assets/plugins/newsticker/jquery.jConveyorTicker.js' %}"></script>
-    <script src="{% static 'assets/js/newsticker.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-nice-select/js/jquery.nice-select.js' %}"></script>
-    <script src="{% static 'assets/plugins/jquery-nice-select/js/nice-select.js' %}"></script>
-    <script src="{% static 'assets/js/dashboard.js' %}"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
-    <script src="{% static 'assets/switcher/js/switcher.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/responsive.dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/jquery.dataTables.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.bootstrap4.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.buttons.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.bootstrap4.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/jszip.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/pdfmake.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/vfs_fonts.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.html5.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.print.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/buttons.colVis.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/dataTables.responsive.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatable/js/responsive.bootstrap4.min.js' %}"></script>
-    <script src="{% static 'assets/js/table-data.js' %}?version=21112021"></script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
-
-
-
-
-
-    <script src="{% static 'assets/plugins/select2/js/select2.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/fileuploads/js/fileupload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fileuploads/js/file-upload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.ui.widget.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.fileupload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.iframe-transport.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/jquery.fancy-fileupload.js' %}"></script>
-    <script src="{% static 'assets/plugins/fancyuploder/fancy-uploader.js' %}"></script>
-    <script src="{% static 'assets/js/advanced-form-elements.js' %}"></script>
-    <script src="{% static 'assets/js/select2.js' %}"></script>
-    <script src="{% static 'assets/plugins/sumoselect/jquery.sumoselect.js' %}"></script>
-    <script src="{% static 'assets/plugins/telephoneinput/telephoneinput.js' %}"></script>
-    <script src="{% static 'assets/plugins/telephoneinput/inttelephoneinput.js' %}"></script>
-
-
+    {% include 'includes/dashboard_js.html' %}
 </body>
-
-</html>
