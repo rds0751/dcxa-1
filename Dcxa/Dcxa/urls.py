@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from index import urls
 from django.urls import path
 
 def trigger_error(request):
@@ -23,6 +22,8 @@ def trigger_error(request):
 
 urlpatterns = [
     path('', include('index.urls')),
+    path('accounts/', include('allauth.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
     path('sentry-debug/', trigger_error),
+    path('signup/', include('users.urls')),  
 ]

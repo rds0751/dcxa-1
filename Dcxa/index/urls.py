@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from index import views
 
 urlpatterns = [
@@ -28,5 +28,6 @@ urlpatterns = [
     path('buyproperty',views.buyproperty),
     path('forex',views.forex),
     path('ticket',views.ticket),
-    path('ticket_status',views.ticket_status)
+    path('ticket_status',views.ticket_status),
+    path('loginn/',views.loginn)
 ]

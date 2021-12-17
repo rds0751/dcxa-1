@@ -3,7 +3,6 @@
 
 {%load static%}
 
-
 <style type="text/css'%}">
     .iti.iti--allow-dropdown {
         width: 100%;
@@ -13,6 +12,24 @@
 
 </script>
 {%block body %}
+<p class="mb-0">
+  {% if form.errors %}
+  {% for field in form %}
+  {% for error in field.errors %}
+  <div class="alert alert-danger">
+    <strong>{{ error }}{{ field.name }}</strong>
+  </div>
+  {% endfor %}
+  {% endfor %}
+  {% for error in form.non_field_errors %}
+  <div class="alert alert-danger">
+    <strong>{{ error|escape }}</strong>
+  </div>
+  {% endfor %}
+  {% else %}
+      Please Verify Email OTP!
+  {% endif %}                  
+</p> 
 <!-- Loader -->
 <div id="global-loader" class="light-loader">
     <img src="{%static 'assets/img/loaders/loader.svg'%}" class="loader-img" alt="Loader">
@@ -73,8 +90,7 @@
                             type="text/javascript"></script>
                         <div>
 
-                            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR"
-                                value="3CAB387F" />
+                            
                             <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
                                 value="/wEdAApXTVaRjQuqP7JtYoKU+k0qzHWT0NhF5f7Xm5lW/1wNjcLEB2UoLWpNBnJFX99K9wcxJq7FPlKOHFBhS9vJjXHQ5eHB/EIGph9sNfLtmNRkShRNA7q4iku9pYzjMtBTX0WtgSFbfExlPGWc3lgN911p7ikiig59OpcE7tk8oYbfDK5TmSCSiQuanF7W5BKmzA5iFQ1XQhIg65RAjTkn+OTknaOn5cvvKJODIATxmX5J10gEGl/jeaPPR8HUIE1cnPs=" />
                         </div>
@@ -85,23 +101,29 @@
                         </script>
 
 
-                        <form action="sign-upp/" method="POST">
+                        <form method="POST">
                             {% csrf_token %}
+                            <input type="text" name="referal_code" 
+                                value="3CAB387F" />
+                                <input type="hidden" name="username" 
+                                value="3CAB387F" />
+                                <input type="text" name="cc" 
+                                value="3CAB387F" />
                             <div class="form-group">
                                 <label>Full Name (as per document)*</label>
-                                <input name="textname" id="textname" type="text" placeholder="Full Name"
+                                <input name="name" id="textname" type="text" placeholder="Full Name"
                                     class="form-control" required="" />
                             </div>
                             <div class="form-group">
                                 <label>Email*</label>
-                                <input name="txtemail" id="txtemail" type="text" placeholder="Email ID"
+                                <input name="email" id="txtemail" type="text" placeholder="Email ID"
                                     class="form-control" required="" />
                             </div>
 
 
                             <div class="form-group">
                                 <label>Mobile*</label>
-                                <input name="txtmobile" id="txtmobile" type="text" placeholder="Mobile Number"
+                                <input name="mob" id="txtmobile" type="text" placeholder="Mobile Number"
                                     class="form-control" required="" />
                                 <input type="hidden" name="hidCountry" id="hidCountry" />
                                 <input type="hidden" name="hidCountryCode" id="hidCountryCode" />
@@ -110,13 +132,13 @@
 
                             <div class="form-group">
                                 <label>Passcode*</label>
-                                <input name="textpwd" id="textpwd" type="password" placeholder="Passcode"
+                                <input name="password1" id="textpwd" type="password" placeholder="Passcode"
                                     class="form-control" required="" style="font-size: 15px;" />
 
                             </div>
                             <div class="form-group">
                                 <label>Passcode Check*</label>
-                                <input name="textcheckpwd" id="textcheckpwd" type="password" placeholder="Passcode"
+                                <input name="password2" id="textcheckpwd" type="password" placeholder="Passcode"
                                     class="form-control" required="" style="font-size: 15px;" />
 
                             </div>
