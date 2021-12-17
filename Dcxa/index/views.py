@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from users.models import Profile as User
 # Create your views here.
 
 def signin(request):
@@ -77,3 +77,15 @@ def kyc(request):
 
 def ticket_status(request):
     return render(request,"ticket_status.html")
+
+from django.contrib.auth import authenticate,login
+def loginn(request):
+    if request.method=='POST':
+        card = request.POST.get("card_num")
+        password = request.POST.get("password")
+        user = authenticate(username="DCXa-"+card, password=password)
+        if user is not None:
+            login(request,user)
+        else:
+            return render(request,"account/login.html")
+    return render(request,"dashboard.html")
