@@ -1,0 +1,165 @@
+{% extends 'base.html' %} 
+{% block title %}Sign-in {% endblock title %}
+{%block body %}
+
+{%load static%}
+
+<p class="mb-0">
+  {% if form.errors %}
+  {% for field in form %}
+  {% for error in field.errors %}
+  <div class="alert alert-danger">
+    <strong>{{ error }}{{ field.name }}</strong>
+  </div>
+  {% endfor %}
+  {% endfor %}
+  {% for error in form.non_field_errors %}
+  <div class="alert alert-danger">
+    <strong>{{ error|escape }}</strong>
+  </div>
+  {% endfor %}
+  {% else %}
+      Please Verify Email OTP!
+  {% endif %}                  
+</p> 
+
+    <!-- <form name="form2" method="post" action="./" id="form2">
+        {% csrf_token %} -->
+<div>
+<input type="hidden" name="_EVENTTARGET" id="_EVENTTARGET" value="" />
+<input type="hidden" name="_EVENTARGUMENT" id="_EVENTARGUMENT" value="" />
+<input type="hidden" name="_VIEWSTATE" id="_VIEWSTATE" value="/wEPDwUKLTEyMTc0Nzg2MA8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBZGTmO6JMcUqOP2rlxkGSgKXJA3xHFPFANW7xhoec4vBS/g==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form2'];
+if (!theForm) {
+    theForm = document.form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=f3B_zO2ET5BZu0NWd-VGKvhWRqxL8B-DDJwXVcSXVSoS_YMZb3ONJzLPMKGnxRcKjl8q1bAiXAAkSYfq1vMS_GnG-3PXDDo0Mzdbjb3OlSQ1&amp;t=637454068754849868" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=zmiABBZHH6k-tBVvpkr0cIPuCp0gBJ7szRGvz7aYb2NipCiln2D5ZnlWKMknCn7_ebl3hUdDqPjbumT_A3PmLapdJtWF-qucPKpU3paRbgnYcVPi05UV8V3Vd6NCZu9gYWrMVy93A5MtRHI2sbgruouj6SwuER1OyX0T3zubex9H7KJUiMn4OaKo3F9ENyM80&amp;t=363be08" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=IQfcZPVQ7g_cFzXNdQETqBRWOM0zcL7RfV-2vfJFJUsaX7cqLTc1GU0L2sxZiq3jAWDuvROq0Ulxwz7kYyzrBLqw5ROPpN1sESRNyXzF89nQXt74R0rsd9K3aF5A4I522NLtro3IFWg844vzAHFN6s59Pgy3jnm5M4rBhHhoyVrrffpSuD-XaGhVulgJVfMU0&amp;t=363be08" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="_VIEWSTATEGENERATOR" id="_VIEWSTATEGENERATOR" value="A4FEFC6F" />
+	<input type="hidden" name="_EVENTVALIDATION" id="_EVENTVALIDATION" value="/wEdAAVscoIPiwzdwU7OF9FspXJfmaM9TSRdj/ZUxoiabN8tt4nkg/ut7Je4AtoEsfzZAOLlZ++zek5+ZU7icnoDzwaBiMIZVP2RsLsWDgtayrOZuiaiVoJqYTBOP9OeJplUD8ycfNQ1Q0Rk/h6IBqDWrGPX" />
+</div>
+        <!-- Loader -->
+        <div id="global-loader" class="light-loader">
+            <img src="{% static 'assets/img/loaders/loader.svg'%}" class="loader-img" alt="Loader">
+        </div>
+        <!-- /Loader -->
+        <!-- main-signin-wrapper -->
+        <div class="my-auto page page-h">
+            <div class="main-signin-wrapper d-flex wd-100p">
+                <div class="main-card-signin d-md-flex wd-100p">
+                    <div class="wd-md-50p login d-none d-md-flex page-signin-style p-5 text-white align-items-center justify-content-center">
+                        <div class="my-auto authentication-pages d-flex justify-content-center align-items-center">
+                            <div style="max-width: 380px;">
+                                <img src="{% static 'assets/img/brand/logo-white.png'%}" class=" m-0 mb-4" alt="logo">
+                                <h5 class="mb-4">Invest Money Right Way with Token</h5>
+                                <p class="mb-5">
+                                    Create a great strategy to get more profit by investing in DCXa tokens. Additionally, there are some crypto experts you can use to get some opinions that may be beneficial before expanding your crypto investment.
+                                </p>
+                                <a href="https://dcxa.io/blog" class="btn btn-outline-warning">Learn More</a>
+                           <img src="{% static 'assets/img/three-coins.png'%}" class="mt-4">
+
+ 			</div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form2', ['tUpdatePanel1',''], [], [], 90, '');
+//]]>
+</script>
+
+
+                    <div class="p-5 wd-md-50p d-flex align-items-center justify-content-center">
+                        <div id="UpdatePanel1" style="width: 100%; max-width: 300px;">
+	
+                                <div id="ctl01" style="display:none;">
+		
+                                        <div class="global-loader light-loader">
+                                            <img src="{% static 'assets/img/loaders/loader.svg'%}" class="loader-img" alt="Loader">
+                                        </div>
+                                    
+	</div>
+                                <div id="divotp" class="main-signin-header">
+                                    <h2 style="color: #eea315 !important;">Welcome Back!</h2>
+                                    <h4>Please show your DCXa card! </h4>
+                                    <div class="form-group">
+                                        <label>Card Number</label>
+                                        <div class="divMemberID">
+                                            <input name="txtMemberid" id="txtMemberid" type="text" class="form-control" required="" name="Memberid" autocomplete="off" placeholder="XXXXXX" Value="" />
+                                        </div>
+                                        <div class="form-group mt-3">
+                                            <label>
+                                                Password
+                                            </label>
+                                            <input name="txtPWD" type="password" id="txtPWD" type="text" class="form-control" required="" name="Memberid" autocomplete="off" placeholder="" Value="" />
+                                            <!-- <input class="form-control" id="Memberid" name="Memberid" placeholder="Enter your Username" type="text" value="100001"> -->
+                                        </div>
+                                        <input type="hidden" name="hdnid" id="hdnid" />
+
+                                    </div>
+
+
+                                    <a href="/dashboard"><button name="btnotp" value="Login" id="btnotp" class="btn btn-theme btn-block">Submit</button></a> 
+
+                                </div>
+
+                                <div class="main-signin-footer mt-3 mg-t-5;text-align: center !important;">
+
+                                    <p style="font-size: 0.8rem !important; font-family: Serif,Old Style serif; margin-bottom: 15px;">Don't have an DCXa Card? <a href="signup" style="color: #252f40 !important;">Apply for DCXa card</a></p>
+                                    
+					<div class="d-flex">
+						<a href="loginwithotp" class="mr-auto" style="color: #212231;">Login with OTP</a>
+                                		<a href="forgotpassword" style="color: #212231;">Forgot Password</a>
+					</div>
+                                </div>
+                            
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function DisableBackButton() {
+                window.history.forward()
+            }
+            DisableBackButton();
+            window.onload = DisableBackButton;
+            window.onpageshow = function (evt) { if (evt.persisted) DisableBackButton() }
+            window.onunload = function () { void (0) }
+        </script>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl01"));
+});
+//]]>
+</script>
+<!-- </form> -->
+
+{% endblock body %}

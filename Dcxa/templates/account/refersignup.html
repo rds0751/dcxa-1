@@ -1,0 +1,124 @@
+{% extends "account/base.html" %}
+
+{% load i18n static %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block inner %}
+<section>
+    <div class="page-header section-height-75">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
+            <div class="card card-plain mt-8">
+              <div class="card-header pb-0 text-left bg-transparent">
+                <h4 class="text-dark text-gradient">
+                  Hello Mr/s. Anonymous!
+                </h4>
+                <p class="mb-0">
+                    {% if msg %}
+                        {{ msg | safe }}
+                    {% else %}
+                        You can apply now for a new DCXa card.
+                    {% endif %}                 
+                </p>
+              </div>
+              <div class="card-body">
+                <form role="form text-left" method="POST" action="/accounts/signup/">
+                  
+                  {% csrf_token %}
+
+                  <label>Full Name (as per document)*</label>
+                  <div class="mb-3">
+                    {{ form.name }}
+                  </div>
+                  <span class="text-error" style="color: red">{{ form.name.errors }}</span>
+
+                  <label>Email*</label>
+                  <div class="mb-3">
+                    {{ form.email }}
+                  </div>
+                  <span class="text-error" style="color: red">{{ form.email.errors }}</span>
+
+                  <label>Mobile*</label>
+                  <div class="mb-3" style="display: inline-flex;">
+                    <input type="text" name="cc" placeholder="Country Code" class="form-control" required="" id="id_cc" style="width: 24%;" value="+91" autocomplete="off"><input type="text" name="mob" placeholder="Mobile" class="form-control" required="" id="id_mobile">
+                  </div>
+                  <span class="text-error" style="color: red">{{ form.mobile.errors }}</span>
+                  
+                  <label>Passcode*</label>
+                  <div class="mb-3">
+                    {{ form.password1 }}
+                  </div>
+                  <span class="text-error" style="color: red">{{ form.password1.errors }}</span>
+
+                  <label>Passcode Check*</label>
+                  <div class="mb-3">
+                    {{ form.password2 }}
+                  </div>
+                  <span class="text-error" style="color: red">{{ form.password2.errors }}</span>
+
+                  <label>Sponsor</label>
+                  <div class="mb-3">
+                    {% if user %}
+                      <input style="font-size: .8rem;" autocomplete="sedrctvghb" type="text" name="referal_code" placeholder="" onkeyup="this.value = this.value.toUpperCase();" class="form-control" id="text-field-hero-input" value="{{ user }}" readonly>
+
+                      {% else %}
+                      <input style="font-size: .8rem;" autocomplete="sedrctvghb" type="text" name="referal_code" placeholder="" class="form-control" id="text-field-hero-input">
+                      {% endif %}
+                  </div>
+                  <span class="text-error" style="color: red">{{ form.referal_code.errors }}</span>
+
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" required="" type="checkbox" id="rememberMe" checked="">
+                    <label class="form-check-label" for="rememberMe">Terms</label>
+                  </div>
+                  <div class="text-center">
+                    <button disabled type="submit" name="register" class="btn bg-gradient-dark w-100 mt-4 mb-0">Apply for DCXa Card</button>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                <p class="mb-4 text-sm mx-auto">
+                  Already have a DCXa card?
+                  <a href="{% url 'login' %}" 
+                     class="text-dark text-gradient font-weight-bold">Show DCXa Card</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
+              <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url('/static/assets/img/curved-images/curved6.jpg')"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+    $("#id_referal_code").keydown(function(e) {
+    var oldvalue=$(this).val();
+    var field=this;
+    setTimeout(function () {
+        if(field.value.indexOf('DCXa-') !== 0) {
+            $(field).val('DCXa-');
+        } 
+    }, 1);
+});
+  </script>
+{% endblock %}
+{% endblock %}

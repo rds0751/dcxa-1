@@ -1,8 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from users.models import profile
-from users.models import KYC
+from users.models import Profile
+from users.models import Kyc
 
-admin.site.register(profile)
-admin.site.register(KYC)
+admin.site.register(Profile)
+admin.site.register(Kyc)

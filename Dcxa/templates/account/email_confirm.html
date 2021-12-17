@@ -1,0 +1,45 @@
+{% extends "account/base.html" %}
+
+{% load i18n static %}
+
+{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block inner %}
+<div class="card mt-10 pb-4">
+  <div class="card-body p-4">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="d-flex flex-column h-100">
+          <h1>{% trans "Confirm E-mail Address" %}</h1>
+
+            {% if confirmation %}
+
+            <p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
+
+            <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+            {% csrf_token %}
+                <button class="btn btn-primary" type="submit">{% trans 'Confirm' %}</button>
+            </form>
+
+            {% else %}
+
+            {% url 'account_email' as email_url %}
+
+            <p>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
+
+            {% endif %}
+
+        </div>
+      </div>
+      <div class="col-lg-4 ms-auto text-center mt-5 mt-lg-0">
+        <div class="border-radius-lg h-100" style="background: black">
+          <img src="/static/assets/img/shapes/waves-white.svg" class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
+          <div class="position-relative d-flex align-items-center justify-content-center h-100">
+            <img class="w-50 position-relative z-index-2" style="width: 20rem" class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " src="{% static 'icon.png' %}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
