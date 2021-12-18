@@ -4,14 +4,16 @@ from django.db import models
 from .models import Profile
 from django.contrib.auth.models import User
 
-# def signup(request):
-#     if request.method=='POST':
-#         name = request.POST.get('textname')
-#         email = request.POST.get('txtemail')
-#         mobile = request.POST.get('txtmobile')
-#         firstpw = request.POST.get('textpwd')
-#         secondpw = request.POST.get('textcheckpwd')
-#         if firstpw==secondpw:
-#             p = User.objects.create_user(name,email,firstpw)
-#             p.save()
-#         return render(request,'dashboard.html')
+def bank_details(request):
+    username=request.user.username
+    print(request.POST)
+    if request.method=="POST":
+        account_no=request.POST.get('account_no')
+        confirm_account_no=request.POST.get('confirm_account_no')
+        ifsc_code=request.POST.get('ifsc_code')
+        iban_no=request.POST.get('iban_no')
+        swift_code= request.POST.get('swift_code')
+        passbook=request.FILES.get('passbook')
+        obj= Bank_Details(account_no=account_no, confirm_account_no=confirm_account_no, ifsc_code=ifsc_code, iban_no=iban_no, swift_code=swift_code,passbook=passbook)
+        obj.save()
+    return render(request,"dashboard.html")
