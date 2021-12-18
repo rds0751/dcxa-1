@@ -23,6 +23,7 @@ def trigger_error(request):
 urlpatterns = [
     path('', include('index.urls')),
     path('accounts/', include('allauth.urls')),
+    path('users/', include('users.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
     path('sentry-debug/', trigger_error),
     path('signup/', include('users.urls')),  
