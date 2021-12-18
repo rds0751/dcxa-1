@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from users.models import Profile as User
 # Create your views here.
 
@@ -72,6 +72,9 @@ def wallet_transfer(request):
 def ticket(request):
     return render(request, "ticket.html")
 
+def bank_details(request):
+    return render(request, "bank_details.html")
+
 def kyc(request):
     return render(request,"kyc.html")
 
@@ -86,6 +89,10 @@ def loginn(request):
         user = authenticate(username="DCXa-"+card, password=password)
         if user is not None:
             login(request,user)
+            return redirect('/dashboard/')
         else:
-            return render(request,"account/login.html")
-    return render(request,"dashboard.html")
+            return redirect('/accounts/login/')
+    return redirect('/accounts/login/')
+
+def after_reset(request):
+    return render(request,"after_reset.html")

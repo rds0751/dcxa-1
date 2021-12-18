@@ -2,6 +2,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.db import models
 from .models import Profile
+from .models import Bank_Details
 from django.contrib.auth.models import User
 
 def bank_details(request):

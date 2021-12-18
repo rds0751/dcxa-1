@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
         content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
-    <link rel="shortcut icon" href="{% static 'kyc_static/images/favicon.png' %}">
+    <!-- <link rel="shortcut icon" href="#"> -->
     <title>Kyc Form - Crypto | DashLite Admin Template</title>
-    <link rel="stylesheet" href="{% static 'kyc_static/assets/css/dashlite.css' %}">
-    <link id="skin-default" rel="stylesheet" href="{% static 'kyc_static/assets/css/theme.css' %}">
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script async="" src="https://www.googletagmanager.com/gtag/js"></script>
+    <link rel="stylesheet" href="{% static 'kyc_static\assests\css\dashlite.css'%}">
+    <!-- <link id="skin-default" rel="stylesheet" href="#"> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91615293-4"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-91615293-4');</script>
 </head>
+
 {% endblock %}
 
 <body class="main-body app sidebar-mini Light-mode">
@@ -382,7 +382,13 @@
                 </div>
             </div>
         </div>
+    
         {% include 'includes/dashboard_footer.html' %}
     </div>
     {% include 'includes/dashboard_js.html' %}
-</body>
+    <!-- <script src="{% static 'kyc_static\assests\js\bundle.js' %}"></script>
+    <script src="{% static 'kyc_static\assests\js\scripts.js' %}"></script>
+    <script src="{% static 'kyc_static\assests\js\demo-settings.js' %}"></script>
+    <script src="{% static 'kyc_static\assests\js\charts\chart-crypto.js' %}"></script> -->
+
+    </body>

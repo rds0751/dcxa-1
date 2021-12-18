@@ -28,6 +28,8 @@ urlpatterns = [
     path('buyproperty',views.buyproperty),
     path('forex',views.forex),
     path('ticket',views.ticket),
+    path('bank_details',views.bank_details),
     path('ticket_status',views.ticket_status),
-    path('loginn/',views.loginn)
+    path('loginn/',views.loginn),
+    path('after_reset',views.after_reset)
 ]
