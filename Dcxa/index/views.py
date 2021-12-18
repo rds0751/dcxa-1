@@ -72,6 +72,9 @@ def wallet_transfer(request):
 def ticket(request):
     return render(request, "ticket.html")
 
+def bank_details(request):
+    return render(request, "bank_details.html")
+
 def kyc(request):
     return render(request,"kyc.html")
 
@@ -89,7 +92,7 @@ def loginn(request):
             return redirect('/dashboard/')
         else:
             return redirect('/accounts/login/')
-     return redirect('/accounts/login/')
+    return redirect('/accounts/login/')
 
 def after_reset(request):
     return render(request,"after_reset.html")

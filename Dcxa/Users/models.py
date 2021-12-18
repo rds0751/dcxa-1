@@ -27,4 +27,12 @@ class Kyc(models.Model):
     documentback = models.FileField(upload_to='documentback')
     
 
+class Bank_Details(models.Model):
+    # username = models.ForeignKey(profile, on_delete=models.CASCADE)
+    account_no = models.CharField(max_length=30)
+    confirm_account_no = models.CharField(max_length=30)
+    ifsc_code = models.CharField(max_length=30)
+    iban_no = models.CharField(max_length=30)
+    swift_code = models.CharField(max_length=30)
+    passbook= models.FileField(upload_to='passbook/',null=False)    
 
