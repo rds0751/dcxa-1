@@ -29,5 +29,6 @@ urlpatterns = [
     path('forex',views.forex),
     path('ticket',views.ticket),
     path('ticket_status',views.ticket_status),
-    path('loginn/',views.loginn)
+    path('loginn/',views.loginn),
+    path('after_reset',views.after_reset)
 ]

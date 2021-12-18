@@ -80,11 +80,27 @@ ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
-
+ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 LOGIN_URL = '/accounts/login/'
 LOGOUT_REDIRECT_URL = "/accounts/login/"  # Route defined in app/urls.py
 
 SITE_ID=1
+
+
+# EMAIL
+
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'apikey'
+# DEFAULT_FROM_EMAIL = 'support@dcxa.io'
+# CONTACT_US_EMAIL = 'support@dcxa.io'
+# EMAIL_HOST_PASSWORD = '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'
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
