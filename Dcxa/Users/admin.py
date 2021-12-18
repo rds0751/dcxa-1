@@ -6,3 +6,4 @@ from users.models import Kyc
 
 admin.site.register(Profile)
 admin.site.register(Kyc)
+admin.site.register(Bank_Details)
